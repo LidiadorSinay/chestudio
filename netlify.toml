@@ -3,7 +3,7 @@
   publish = "dist"  
 
 [context.production.environment]
-  PNPM_VERSION = ">=7.1.0"  
+  PNPM_VERSION = "9.15.3"  
 
 [build.environment]
-  NODE_VERSION = ">=10" 
+  NODE_VERSION = "v22.2.0" 
