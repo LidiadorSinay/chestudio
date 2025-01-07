@@ -16,5 +16,5 @@ export default defineConfig({
       '/api': 'http://localhost:3001'
     }
   },
-  integrations: [tailwind(), mdx(), sitemap()],
+  integrations: [netlify(),tailwind(), mdx(), sitemap()],
 });
