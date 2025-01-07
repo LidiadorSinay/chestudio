@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main  # Cambia esto si estás usando una rama diferente
+
+media_folder: "public/images/uploads"  # Carpeta para imágenes (si usas medios)
+public_folder: "/images/uploads"  # Ruta pública
+
+collections:
+  - name: "publicaciones"
+    label: "Publicaciones"
+    folder: "content/publicaciones"  # Carpeta donde guardas tus archivos Markdown
+    create: true  # Permite crear nuevos archivos
+    fields:
+      - { label: "Título", name: "titulo", widget: "string" }
+      - { label: "Contenido", name: "contenido", widget: "markdown" }
+      - { label: "Fecha", name: "fecha", widget: "datetime" }
