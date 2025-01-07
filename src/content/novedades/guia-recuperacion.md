@@ -2,6 +2,7 @@
 titulo: "¿Cómo recuperar cuentas de Instagram? Guía legal."
 subtitulo: "El proceso de cómo recuperar cuentas de Instagram se ha transformado en una necesidad. En esta Guía legal lo averiguaremos."
 fecha: "7/1/2025"
+contenido: "texto"
 ---
 
 # ¿Cómo recuperar cuentas de Instagram?

@@ -10,6 +10,14 @@ const novedadesCollection = defineCollection({
   }),
 });
 
+export const novedades = {
+  titulo: z.string(),
+  subtitulo: z.string(),
+  fecha: z.string().transform((str) => new Date(str)),
+  contenido: { type: 'string', required: true },
+};
+
+
 export const collections = {
   novedades: novedadesCollection,  // Definir la colección 'novedades'
 };
