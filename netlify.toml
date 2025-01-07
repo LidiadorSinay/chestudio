@@ -1,0 +1,9 @@
+[build]
+  command = "pnpm astro build"
+  publish = "dist"  
+
+[context.production.environment]
+  PNPM_VERSION = ">=7.1.0"  
+
+[build.environment]
+  NODE_VERSION = ">=6.0" 
