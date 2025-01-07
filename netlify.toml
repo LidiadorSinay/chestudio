@@ -7,3 +7,8 @@
 
 [build.environment]
   NODE_VERSION = "v22.2.0" 
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
