@@ -1,0 +1,137 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Navbarlight from "@components/navbar/navbarlight.astro";
+
+// Información de las publicaciones
+const publicaciones = [
+  {
+    titulo: "PRUEBA PERICIAL INFORMATICA",
+    link: "https://www.hammurabi.com.ar/chalhub-la-prueba-pericial"
+  },
+  {
+    titulo: "RESGUARDO EVIDENCIA DIGITAL",
+    link: "https://www.linkedin.com/posts/agust%C3%ADn-chalhub-93a7ab7a_fallo-sala-mar-del-plata-activity-7174024966953152514-v1JK?utm_source=share&utm_medium=member_desktop"
+  },
+  {
+    titulo: "SENTENCIA OBTENIDA - DERECHO IMAGEN",
+    link: "https://www.diariojudicial.com/news-95817-una-demanda-para-la-foto"
+  },
+  {
+    titulo: "FALLO FACEBOOK ARGENTINA",
+    link: "https://www.linkedin.com/posts/agust%C3%ADn-chalhub-93a7ab7a_fallo-meta-activity-7089970919762214913-mZUs?utm_source=share&utm_medium=member_desktop"
+  }
+];
+---
+
+<Layout title="Publicaciones">
+  <Navbarlight />
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14 text-center">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        Publicaciones Recientes
+      </h1>
+      <p class="text-lg text-gray-600 mt-2">Encontrá aquí información útil</p>
+      <div class="mt-6">
+        <ul>
+          {publicaciones.map((publicacion) => (
+            <li key={publicacion.titulo} class="mb-6 border-b border-gray-300 pb-6">
+              <div class="flex justify-between items-center">
+                <h3 class="text-xl font-semibold text-gray-800">{publicacion.titulo}</h3>
+                <a 
+                  href={publicacion.link} 
+                  target="_blank" 
+                  class="uppercase text-c pill mt-3 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:#2d3748 transition-colors duration-300 ease-in-out">
+                  Ver publicación
+                </a>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  section {
+    background-color: var(--color-celeste-light);
+  }
+
+  h3 {
+    font-family: "Literata", sans-serif;
+    font-size: 1.25rem;
+    color: #333;
+  }
+
+  .material-symbols-outlined {
+    font-size: 2.5rem;
+    height: fit-content;
+  }
+
+  .mb-6 {
+    margin-bottom: 1.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+  }
+
+  .text-gray-800 {
+    color: #2d3748;
+  }
+
+  .font-semibold {
+    font-weight: 600;
+  }
+
+  .rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .hover\:bg-blue-700:hover {
+    background-color: #1d4ed8;
+  }
+
+  .transition-colors {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .pill {
+    border-radius: 9999px;
+  }
+
+  .border-b {
+    border-bottom-width: 1px;
+  }
+
+  .border-gray-300 {
+    border-color: #e2e8f0;
+  }
+
+  .pb-6 {
+    padding-bottom: 1.5rem;
+  }
+</style>

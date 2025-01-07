@@ -1,0 +1,118 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Navbarlight from "@components/navbar/navbarlight.astro";
+
+// Información de las publicaciones
+const novedades = [
+  {
+    titulo: "¿Cómo recuperar cuentas de Instagram? Guía legal.",
+    subtitulo: "El proceso de cómo recuperar cuentas de Instagram se ha transformado en una necesidad. En esta Guía legal lo averiguaremos.",
+    fecha: "7/1/2025",
+    imagen: "https://bildenlex.com/wp-content/uploads/2024/02/RECUPERAR-CUENTAS-DE-IG-1320x1319.png",
+    link: "/novedades/guia-recuperacion"
+  }
+];
+---
+
+<Layout title="Novedades">
+  <Navbarlight />
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight text-center">
+        Novedades Recientes
+      </h1>
+      <p class="text-lg text-gray-600 mt-2 text-center">Últimas actualizaciones y artículos de interés.</p>
+
+      <div class="mt-6 space-y-6">
+        {novedades.map((novedad) => (
+          <div key={novedad.titulo} class="flex items-center space-x-6 border-b-2 pb-6">
+            <img src={novedad.imagen} alt={novedad.titulo} class="w-32 h-32 object-cover rounded-md" />
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-gray-800">{novedad.titulo}</h3>
+              <p class="text-lg text-gray-600 mt-2">{novedad.subtitulo}</p>
+              <p class="text-sm text-gray-500 mt-1">{novedad.fecha}</p>
+              <a
+                href={novedad.link}
+                class="mt-4 inline-block text-blue-600 font-semibold hover:text-blue-800 transition-colors duration-300"
+              >
+                Leer más
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Container>
+</Layout>
+
+<style>
+  section {
+    background-color: var(--color-celeste-light);
+  }
+
+  .border-b-2 {
+    border-bottom-width: 2px;
+  }
+
+  .pb-6 {
+    padding-bottom: 1.5rem;
+  }
+
+  .space-y-6 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .text-xl {
+    font-size: 1.25rem;
+  }
+
+  .text-gray-800 {
+    color: #2d3748;
+  }
+
+  .text-lg {
+    font-size: 1.125rem;
+  }
+
+  .text-gray-600 {
+    color: #4a5568;
+  }
+
+  .text-gray-500 {
+    color: #a0aec0;
+  }
+
+  .text-blue-600 {
+    color: #3182ce;
+  }
+
+  .text-blue-800 {
+    color: #2b6cb0;
+  }
+
+  .hover\:text-blue-800:hover {
+    color: #2b6cb0;
+  }
+
+  .transition-colors {
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .duration-300 {
+    transition-duration: 300ms;
+  }
+
+  .ease-in-out {
+    transition-timing-function: ease-in-out;
+  }
+
+  .uppercase {
+    text-transform: uppercase;
+  }
+
+  .pill {
+    border-radius: 9999px;
+  }
+</style>

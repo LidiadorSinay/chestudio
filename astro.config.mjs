@@ -1,0 +1,21 @@
+import { defineConfig } from "astro/config";
+import tailwind from "@astrojs/tailwind";
+import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
+import node from '@astrojs/node';
+
+// https://astro.build/config
+export default defineConfig({
+  site: "https://chestudio.com",
+  output: "server",
+  output: 'server',
+  adapter: node({
+    mode: 'standalone',
+  }),
+  server: {
+    proxy: {
+      '/api': 'http://localhost:3001'
+    }
+  },
+  integrations: [tailwind(), mdx(), sitemap()],
+});

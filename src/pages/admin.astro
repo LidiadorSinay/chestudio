@@ -1,0 +1,334 @@
+---
+---
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            gap: 1rem;
+            margin-bottom: 20px;
+        }
+        #admin-panel {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        ul#entries {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            list-style-type: none;
+            padding: 0;
+            gap: 1rem;
+        }
+        .entry{
+            background-color: #fffecd;
+            width: fit-content;
+            border: 1px solid #5936f4 !important;
+        }
+        #entries li h2 {
+            margin-top: 0;
+        }
+        #entries li p {
+            margin-bottom: 5px;
+        }
+        #add-btn {
+            background-color: #5936f4;
+        }
+        #logout-btn {
+            background-color: #f44336;
+        }
+        #add-btn,
+        #logout-btn {
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        #add-btn:hover,
+        #logout-btn:hover {
+            filter: brightness(0.8);
+        }
+        /* Modal styles */
+        #modal {
+            display: none;
+            place-content: center;
+            align-items: center;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+        }
+        #modal-content {
+            background-color: #fefefe;
+            padding: 10px;
+            max-width: 500px;
+            max-height: 90%;
+            overflow: auto;
+            border-radius: 8px;
+        }
+        #close-btn {
+            margin-left: 95%;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        #close-btn:hover,
+        #close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        #entry-form #visible_div,
+        #entry-form input:not([type="checkbox"]),
+        #entry-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #entry-form textarea {
+            height: 150px;
+        }
+        #entry-form #visible_div {
+            display: flex;
+            justify-content: space-between;
+        }
+        #entry-form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #entry-form button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const token = localStorage.getItem('tokenChestudio');
+        if (!token) {
+            window.location.href = '/';
+        }
+
+        try {
+            const res = await fetch('http://localhost:3001/api/verify-token', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                },
+            });
+
+            if (!res.ok) {
+                throw new Error('Token inválido');
+            }
+
+            const data = await res.json();
+            if (!data.valid) {
+                throw new Error('Token inválido');
+            }
+        } catch (error) {
+            console.error(error.message);
+            window.location.href = '/';
+        }
+    </script>
+
+    <header>
+        <button id="add-btn" onclick="showModal()">Nueva Entrada</button>
+        <button id="logout-btn" onclick="logout()">Cerrar Sesión</button>
+    </header>
+    <div id="admin-panel">
+        <h1>Entradas del Blog</h1>
+        <ul id="entries"></ul>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal">
+        <div id="modal-content">
+            <span id="close-btn" onclick="closeModal()">&times;</span>
+            <form id="entry-form">
+                <input type="text" id="id_noticia" hidden />
+                <input type="text" id="titulo" placeholder="Titulo (*)" required />
+                <input type="text" id="subtitulo" placeholder="Subtitulo (*)" required />
+                <input type="text" id="categoria" placeholder="Categoria (*)" required />
+                <input type="date" id="fecha" />
+                <input type="text" id="imagen_url" placeholder="Imagen (*)" required />
+                <input type="text" id="imagen_descripcion" placeholder="Descripción de la imagen" />
+                <textarea id="contenido" placeholder="Contenido (*)" required></textarea>
+                <input type="text" id="tags" placeholder="Tags, separados por coma (*)" required/>
+                <input type="text" id="autor" placeholder="Autor" />
+                <div id="visible_div">
+                    <label for="visible">Visible</label>
+                    <input type="checkbox" id="visible" checked />
+                </div>
+                <button type="submit">Publicar</button>
+            </form>
+        </div>
+    </div>
+
+    <script is:inline>
+        let entries = [];
+
+        const fetchEntries = async () => {
+            const token = localStorage.getItem('tokenChestudio');
+            const response = await fetch('http://localhost:3001/api/noticias', {
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            const data = await response.json();
+            entries = data;
+            return data;
+        };
+
+        const addEntry = async (entry) => {
+            const token = localStorage.getItem('tokenChestudio');
+            const response = await fetch('http://localhost:3001/api/noticias', {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(entry),
+            });
+            return response.json();
+        };
+
+        const editEntry = async (id, entry) => {
+            const token = localStorage.getItem('tokenChestudio');
+            const response = await fetch(`http://localhost:3001/api/noticias/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${token}`,
+                },
+                body: JSON.stringify(entry),
+            });
+            return response.json();
+        };
+
+        const deleteEntry = async (id) => {
+            const token = localStorage.getItem('tokenChestudio');
+            await fetch(`http://localhost:3001/api/noticias/${id}`, {
+                method: "DELETE",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            document.querySelector(`#entry-${id}`).remove();
+        };
+
+        const logout = () => {
+            localStorage.removeItem('tokenChestudio');
+            window.location.href = '/login';
+        }
+
+        const showModal = (entry = {}) => {
+            document.getElementById('id_noticia').value = entry.id_noticia || '';
+            document.getElementById('titulo').value = entry.titulo || '';
+            document.getElementById('subtitulo').value = entry.subtitulo || '';
+            document.getElementById('categoria').value = entry.categoria || '';
+            document.getElementById('imagen_url').value = entry.imagen_url || '';
+            document.getElementById('imagen_descripcion').value = entry.imagen_descripcion || '';
+            document.getElementById('fecha').value = entry.fecha ? new Date(entry.fecha).toISOString().split('T')[0] : '';
+            document.getElementById('contenido').value = entry.contenido || '';
+            document.getElementById('tags').value = entry.tags || '';
+            document.getElementById('autor').value = entry.autor || '';
+            document.getElementById('visible').checked = entry.visible !== undefined ? entry.visible : true;
+            document.querySelector('#entry-form button').textContent = entry.id_noticia ? 'Actualizar' : 'Publicar';
+            document.getElementById('modal').style.display = 'grid';
+        }
+
+        const closeModal = () => {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const entries = await fetchEntries();
+            const entriesList = document.querySelector('#entries');
+            entriesList.innerHTML = entries.map(entry => `
+                <li id="entry-${entry.id_noticia}" class="entry">
+                    <h2>${entry.titulo}</h2>
+                    <p>${entry.contenido.length > 20 ? entry.contenido.substring(0,20) + "..." : entry.contenido}</p>
+                    <button onclick='showModal(${JSON.stringify(entry)})'>Editar</button>
+                    <button onclick='deleteEntry(${entry.id_noticia})'>Eliminar</button>
+                </li>
+            `).join('');
+        });
+
+        document.querySelector('#entry-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const entry = {
+                titulo: document.querySelector('#titulo').value,
+                contenido: document.querySelector('#contenido').value,
+                subtitulo: document.querySelector('#subtitulo').value,
+                categoria: document.querySelector('#categoria').value,
+                imagen_url: document.querySelector('#imagen_url').value,
+                imagen_descripcion: document.querySelector('#imagen_descripcion').value,
+                fecha: document.querySelector('#fecha').value,
+                tags: document.querySelector('#tags').value.split(","),
+                autor: document.querySelector('#autor').value,
+                visible: document.querySelector('#visible').checked,
+            };
+
+            const id = document.querySelector('#id_noticia').value;
+
+            if (id) {
+                const updatedEntry = await editEntry(id, entry);
+                console.log(updatedEntry);
+                const entryItem = document.querySelector(`#entry-${id}`);
+                entryItem.innerHTML = `
+                    <h2>${updatedEntry.body.titulo}</h2>
+                    <p>${updatedEntry.body.contenido}</p>
+                    <button onclick='showModal(${JSON.stringify(updatedEntry.body)})'>Editar</button>
+                    <button onclick='deleteEntry(${updatedEntry.body.id_noticia})'>Eliminar</button>
+                `;
+            } else {
+                const newEntry = await addEntry(entry);
+                const entriesList = document.querySelector('#entries');
+                entriesList.innerHTML += `
+                    <li id="entry-${newEntry.id_noticia}">
+                        <h2>${newEntry.titulo}</h2>
+                        <p>${newEntry.contenido}</p>
+                        <button onclick='showModal(${JSON.stringify(newEntry)})'>Edit</button>
+                        <button onclick='deleteEntry(${newEntry.id_noticia})'>Delete</button>
+                    </li>
+                `;
+            }
+
+            closeModal();
+            document.querySelector('#entry-form').reset();
+        });
+    </script>
+</body>
+</html>

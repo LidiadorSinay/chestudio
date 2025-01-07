@@ -1,0 +1,93 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Navbarlight from "@components/navbar/navbarlight.astro";
+import Picture from "astro/components/Picture.astro";
+
+// getStaticPaths define las rutas que deberían ser renderizadas de manera estática
+export async function getStaticPaths() {
+  /* return [
+    {params: {slug: "probando"}}
+  ] */
+  const response = await fetch("http://localhost:3001/api/blog/slugs");
+  /* if (!response.ok) {
+    throw new Error('Error fetching data');
+  } */
+  const data = await response.json();
+
+  console.log(data);
+
+  return data;
+}
+
+const { slug } = Astro.params;
+
+const fetchNoticia = async () => {
+  try {
+    const response = await fetch(`http://localhost:3001/api/user/noticia-by-slug/${slug}`);
+    /* if (!response.ok) {
+      throw new Error('Error fetching data');
+    } */
+    const data = await response.json();
+    console.log("tengo la noticia");
+    console.log(data);
+    data.fecha = new Date(data.fecha)
+    
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return [];
+  }
+};
+
+const post = await fetchNoticia();
+---
+
+<Layout title={post.titulo}>
+  <Navbarlight />
+  <Container>
+    <div class="mx-auto max-w-3xl mt-14">
+      <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+        {post.categoria}
+      </span>
+      <h1
+        class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
+        {post.titulo}
+      </h1>
+      <div class="flex gap-2 mt-3 items-center flex-wrap md:flex-nowrap">
+        <span class="text-gray-400">
+          {post.autor}
+        </span>
+        <span class="text-gray-400">•</span>
+        <time class="text-gray-400" datetime={post.fecha.toISOString()}>
+          {post.fecha.toLocaleDateString()}
+        </time>
+        <span class="text-gray-400 hidden md:block">•</span>
+        <div class="w-full md:w-auto flex flex-wrap gap-3">
+          {
+            post.tags.split(',').map((tag) => (
+              <span class="text-gray-400">#{tag}</span>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+    <Picture
+      src={post.imagen_url}
+      alt={post.imagen_texto_alternativo || "Chestudio"}
+      width={800}
+      height={600}
+      class="rounded-md object-cover object-center bg-white text-center mx-auto"
+    />
+    <div class="mx-auto prose prose-lg mt-6 max-w-3xl whitespace-pre-wrap">
+      {post.contenido}
+    </div>
+    <div class="text-center mt-8">
+      <a
+        href="/blog"
+        class="bg-gray-100 px-5 py-3 rounded-md hover:bg-gray-200 transition">
+        ← Volver al Blog</a
+      >
+    </div>
+  </Container>
+</Layout>

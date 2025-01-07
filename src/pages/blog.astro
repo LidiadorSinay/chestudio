@@ -1,0 +1,86 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import Navbarlight from "@components/navbar/navbarlight.astro";
+
+const fetchNoticias = async () => {
+  try {
+    const response = await fetch('http://localhost:3001/api/user/noticias');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return [];
+  }
+};
+
+const noticias = await fetchNoticias();
+---
+<style>
+  img{
+    height: 250px;
+  }
+</style>
+
+<Layout title="Blog">
+  <Navbarlight />
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Novedades</Fragment>
+      <Fragment slot="desc">
+        ¡Enterate de nuestras ultimas noticias!
+      </Fragment>
+    </Sectionhead>
+    <main class="mt-16">
+      {noticias.length > 0 ? (
+        <ul class="grid gap-16 max-w-4xl mx-auto">
+          {noticias.map((blogPostEntry, index) => (
+            <li>
+              <a href={`/blog/${blogPostEntry.slug}`}>
+                <div class="grid md:grid-cols-2 gap-5 md:gap-10 items-center">
+                  <Picture
+                    src={blogPostEntry.imagen_url}
+                    alt={blogPostEntry.imagen_texto_alternativo || "Chestudio"}
+                    sizes="(max-width: 800px) 100vw, 800px"
+                    width={800}
+                    height={600}
+                    loading={index <= 2 ? "eager" : "lazy"}
+                    decoding={index <= 2 ? "sync" : "async"}
+                    class="w-full rounded-md object-cover object-center bg-white"
+                  />
+                  <div>
+                    <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
+                      {blogPostEntry.categoria}
+                    </span>
+
+                    <h2 class="text-3xl font-semibold leading-snug tracking-tight mt-1 ">
+                      {blogPostEntry.titulo}
+                    </h2>
+
+                    <div class="flex gap-2 mt-3">
+                      <span class="text-gray-400">
+                        {blogPostEntry.autor}
+                      </span>
+                      <span class="text-gray-400">• </span>
+                      <time
+                        class="text-gray-400"
+                        datetime={new Date(blogPostEntry.fecha).toISOString()}>
+                        {new Date(blogPostEntry.fecha).toLocaleDateString()}
+                      </time>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+          ))
+        }
+        </ul>
+      ) : (
+        <p class="text-xl text-center">Ups! Parece que no se han encontrado noticias... Intenta nuevamente mas tarde.</p>
+      )}
+    </main>
+  </Container>
+</Layout>
