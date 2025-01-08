@@ -66,7 +66,7 @@ importers:
         specifier: ^9.0.2
         version: 9.0.2
       marked:
-        specifier: ^13.0.1
+        specifier: ^13.0.3
         version: 13.0.3
       multer:
         specifier: ^1.4.5-lts.1
@@ -7555,36 +7555,36 @@ snapshots:
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       codemirror: 5.65.18
       dayjs: 1.11.13
-      decap-cms-backend-aws-cognito-github-proxy: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-backend-github@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-azure: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-bitbucket: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-git-gateway: 3.2.2(qn6kpmutqvkfyrupw3iz7f4sya)
-      decap-cms-backend-github: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-gitlab: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-proxy: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      decap-cms-backend-test: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2)
-      decap-cms-core: 3.5.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/hoist-non-react-statics@3.3.6)(@types/react@19.0.3)(decap-cms-editor-component-image@3.1.3)(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-backend-aws-cognito-github-proxy: 3.2.2(ysmm67ow6kctpxd4ylup6npnza)
+      decap-cms-backend-azure: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-backend-bitbucket: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-backend-git-gateway: 3.2.2(yb43525mc57ghg36kg2mhik4tq)
+      decap-cms-backend-github: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-backend-gitlab: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-backend-proxy: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      decap-cms-backend-test: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2)
+      decap-cms-core: 3.5.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/hoist-non-react-statics@3.3.6)(@types/react@19.0.3)(decap-cms-editor-component-image@3.1.3)(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       decap-cms-editor-component-image: 3.1.3
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-lib-widgets: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-locales: 3.2.0
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-widget-boolean: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
-      decap-cms-widget-code: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)(codemirror@5.65.18)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)
-      decap-cms-widget-colorstring: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      decap-cms-widget-boolean: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-code: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)(codemirror@5.65.18)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)
+      decap-cms-widget-colorstring: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       decap-cms-widget-datetime: 3.2.3(@emotion/react@11.14.0(@types/react@19.0.3))
-      decap-cms-widget-file: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0)
-      decap-cms-widget-image: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-file@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2))(immutable@3.8.2)(prop-types@15.8.1)
-      decap-cms-widget-list: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-object@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
-      decap-cms-widget-map: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
-      decap-cms-widget-markdown: 3.2.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
-      decap-cms-widget-number: 3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      decap-cms-widget-object: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
-      decap-cms-widget-relation: 3.3.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2)
-      decap-cms-widget-select: 3.2.2(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
-      decap-cms-widget-string: 3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      decap-cms-widget-text: 3.1.3(@types/react@19.0.3)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      decap-cms-widget-file: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2)
+      decap-cms-widget-image: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-file@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2))(immutable@3.8.2)(prop-types@15.8.1)
+      decap-cms-widget-list: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-object@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-map: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-markdown: 3.2.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-number: 3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      decap-cms-widget-object: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-relation: 3.3.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2)
+      decap-cms-widget-select: 3.2.2(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-string: 3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      decap-cms-widget-text: 3.1.3(@types/react@19.0.3)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       immutable: 3.8.2
       lodash: 4.17.21
       prop-types: 15.8.1
@@ -7598,7 +7598,7 @@ snapshots:
       - react-native
       - supports-color
 
-  decap-cms-backend-aws-cognito-github-proxy@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-backend-github@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1):
+  decap-cms-backend-aws-cognito-github-proxy@3.2.2(ysmm67ow6kctpxd4ylup6npnza):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
@@ -7607,8 +7607,8 @@ snapshots:
       apollo-link-context: 1.0.20(graphql@15.9.0)
       apollo-link-http: 1.5.17(graphql@15.9.0)
       common-tags: 1.8.2
-      decap-cms-backend-github: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-backend-github: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       graphql: 15.9.0
@@ -7618,11 +7618,11 @@ snapshots:
       prop-types: 15.8.1
       semaphore: 1.1.0
 
-  decap-cms-backend-azure@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1):
+  decap-cms-backend-azure@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       immutable: 3.8.2
@@ -7631,12 +7631,12 @@ snapshots:
       prop-types: 15.8.1
       semaphore: 1.1.0
 
-  decap-cms-backend-bitbucket@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1):
+  decap-cms-backend-bitbucket@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       common-tags: 1.8.2
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       immutable: 3.8.2
@@ -7646,14 +7646,14 @@ snapshots:
       semaphore: 1.1.0
       what-the-diff: 0.6.0
 
-  decap-cms-backend-git-gateway@3.2.2(qn6kpmutqvkfyrupw3iz7f4sya):
+  decap-cms-backend-git-gateway@3.2.2(yb43525mc57ghg36kg2mhik4tq):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
-      decap-cms-backend-bitbucket: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-github: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-backend-gitlab: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-backend-bitbucket: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-backend-github: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-backend-gitlab: 3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       gotrue-js: 0.9.29
@@ -7663,16 +7663,16 @@ snapshots:
       minimatch: 3.1.2
       prop-types: 15.8.1
 
-  decap-cms-backend-github@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1):
+  decap-cms-backend-github@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       apollo-cache-inmemory: 1.6.6(graphql@15.9.0)
       apollo-client: 2.6.10(graphql@15.9.0)
       apollo-link-context: 1.0.20(graphql@15.9.0)
       apollo-link-http: 1.5.17(graphql@15.9.0)
       common-tags: 1.8.2
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       graphql: 15.9.0
@@ -7682,15 +7682,15 @@ snapshots:
       prop-types: 15.8.1
       semaphore: 1.1.0
 
-  decap-cms-backend-gitlab@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1):
+  decap-cms-backend-gitlab@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       apollo-cache-inmemory: 1.6.6(graphql@15.9.0)
       apollo-client: 2.6.10(graphql@15.9.0)
       apollo-link-context: 1.0.20(graphql@15.9.0)
       apollo-link-http: 1.5.17(graphql@15.9.0)
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       immutable: 3.8.2
@@ -7701,7 +7701,7 @@ snapshots:
     transitivePeerDependencies:
       - graphql
 
-  decap-cms-backend-proxy@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  decap-cms-backend-proxy@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
@@ -7709,7 +7709,7 @@ snapshots:
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
-  decap-cms-backend-test@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2):
+  decap-cms-backend-test@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
@@ -7719,7 +7719,7 @@ snapshots:
       prop-types: 15.8.1
       uuid: 8.3.2
 
-  decap-cms-core@3.5.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/hoist-non-react-statics@3.3.6)(@types/react@19.0.3)(decap-cms-editor-component-image@3.1.3)(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-core@3.5.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/hoist-non-react-statics@3.3.6)(@types/react@19.0.3)(decap-cms-editor-component-image@3.1.3)(decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2))(decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
@@ -7732,7 +7732,7 @@ snapshots:
       copy-text-to-clipboard: 3.2.0
       dayjs: 1.11.13
       decap-cms-editor-component-image: 3.1.3
-      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      decap-cms-lib-auth: 3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       decap-cms-lib-util: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-lib-widgets: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
@@ -7787,11 +7787,11 @@ snapshots:
 
   decap-cms-editor-component-image@3.1.3: {}
 
-  decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0):
+  decap-cms-lib-auth@3.0.5(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2):
     dependencies:
       immutable: 3.8.2
       lodash: 4.17.21
-      uuid: 3.4.0
+      uuid: 8.3.2
 
   decap-cms-lib-util@3.1.0(immutable@3.8.2)(lodash@4.17.21):
     dependencies:
@@ -7820,7 +7820,7 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  decap-cms-widget-boolean@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-widget-boolean@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
@@ -7828,7 +7828,7 @@ snapshots:
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
 
-  decap-cms-widget-code@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)(codemirror@5.65.18)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21):
+  decap-cms-widget-code@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)(codemirror@5.65.18)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       codemirror: 5.65.18
@@ -7841,7 +7841,7 @@ snapshots:
       - react-dom
       - supports-color
 
-  decap-cms-widget-colorstring@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  decap-cms-widget-colorstring@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
@@ -7855,33 +7855,33 @@ snapshots:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       dayjs: 1.11.13
 
-  decap-cms-widget-file@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0):
+  decap-cms-widget-file@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2):
     dependencies:
       '@dnd-kit/core': 6.3.1
       '@dnd-kit/modifiers': 6.0.1(@dnd-kit/core@6.3.1)
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1)
       '@emotion/react': 11.14.0(@types/react@19.0.3)
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       array-move: 4.0.0
       common-tags: 1.8.2
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       immutable: 3.8.2
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
-      uuid: 3.4.0
+      uuid: 8.3.2
     transitivePeerDependencies:
       - react-dom
 
-  decap-cms-widget-image@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-file@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2))(immutable@3.8.2)(prop-types@15.8.1):
+  decap-cms-widget-image@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-file@3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2))(immutable@3.8.2)(prop-types@15.8.1):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-widget-file: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0)
+      decap-cms-widget-file: 3.1.3(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2)
       immutable: 3.8.2
       prop-types: 15.8.1
 
-  decap-cms-widget-list@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-object@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-widget-list@3.2.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(decap-cms-widget-object@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@dnd-kit/core': 6.3.1
       '@dnd-kit/modifiers': 6.0.1(@dnd-kit/core@6.3.1)
@@ -7890,7 +7890,7 @@ snapshots:
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       decap-cms-lib-widgets: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
-      decap-cms-widget-object: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      decap-cms-widget-object: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       immutable: 3.8.2
       lodash: 4.17.21
       prop-types: 15.8.1
@@ -7898,7 +7898,7 @@ snapshots:
     transitivePeerDependencies:
       - react-dom
 
-  decap-cms-widget-map@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-widget-map@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
@@ -7907,7 +7907,7 @@ snapshots:
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
 
-  decap-cms-widget-markdown@3.2.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-widget-markdown@3.2.0(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
       '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
@@ -7939,22 +7939,22 @@ snapshots:
       unist-builder: 1.0.4
       unist-util-visit-parents: 2.1.2
 
-  decap-cms-widget-number@3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  decap-cms-widget-number@3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
-  decap-cms-widget-object@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-widget-object@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@emotion/react': 11.14.0(@types/react@19.0.3)
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       immutable: 3.8.2
       lodash: 4.17.21
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
 
-  decap-cms-widget-relation@3.3.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2):
+  decap-cms-widget-relation@3.3.2(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(lodash@4.17.21)(prop-types@15.8.1)(uuid@8.3.2):
     dependencies:
       '@dnd-kit/core': 6.3.1
       '@dnd-kit/modifiers': 6.0.1(@dnd-kit/core@6.3.1)
@@ -7974,7 +7974,7 @@ snapshots:
       - react-dom
       - supports-color
 
-  decap-cms-widget-select@3.2.2(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  decap-cms-widget-select@3.2.2(@types/react@19.0.3)(decap-cms-lib-widgets@3.1.0(immutable@3.8.2)(lodash@4.17.21))(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(immutable@3.8.2)(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       decap-cms-lib-widgets: 3.1.0(immutable@3.8.2)(lodash@4.17.21)
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
@@ -7987,12 +7987,12 @@ snapshots:
       - react-dom
       - supports-color
 
-  decap-cms-widget-string@3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  decap-cms-widget-string@3.1.3(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
-  decap-cms-widget-text@3.1.3(@types/react@19.0.3)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  decap-cms-widget-text@3.1.3(@types/react@19.0.3)(decap-cms-ui-default@3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       decap-cms-ui-default: 3.1.4(@emotion/react@11.14.0(@types/react@19.0.3))(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
@@ -10203,31 +10203,31 @@ snapshots:
       lodash: 4.17.21
       moment: 2.30.1
       netlify-cms-backend-azure: 1.3.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-backend-bitbucket: 2.14.0(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-backend-bitbucket: 2.14.0(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       netlify-cms-backend-git-gateway: 2.13.1(56p2odegzzkrudgqtr577xbfqq)
-      netlify-cms-backend-github: 2.14.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-backend-gitlab: 2.13.0(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-backend-github: 2.14.1(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-backend-gitlab: 2.13.0(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       netlify-cms-backend-proxy: 1.2.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       netlify-cms-backend-test: 2.11.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(uuid@3.4.0)
       netlify-cms-core: 2.55.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(@types/hoist-non-react-statics@3.3.6)(@types/react@19.0.3)(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1)(netlify-cms-editor-component-image@2.7.0)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-lib-widgets@1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-editor-component-image: 2.7.0
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
       netlify-cms-lib-widgets: 1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1)
       netlify-cms-locales: 1.39.0
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       netlify-cms-widget-boolean: 2.4.1(@emotion/core@10.3.1)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-widget-code: 1.3.4(@emotion/core@10.3.1)(@types/react@19.0.3)(codemirror@5.65.18)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))
       netlify-cms-widget-colorstring: 1.1.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-widget-date: 2.6.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-widget-date: 2.6.3(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       netlify-cms-widget-datetime: 2.7.4(@emotion/core@10.3.1)(moment@2.30.1)(netlify-cms-widget-date@2.6.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1))
-      netlify-cms-widget-file: 2.12.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0)
+      netlify-cms-widget-file: 2.12.1(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2)
       netlify-cms-widget-image: 2.8.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(netlify-cms-widget-file@2.12.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0))(prop-types@15.8.1)
       netlify-cms-widget-list: 2.10.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-widgets@1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(netlify-cms-widget-object@2.7.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-widget-map: 1.5.1(@emotion/core@10.3.1)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-widget-markdown: 2.15.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-widget-number: 2.5.0(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-widget-object: 2.7.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      netlify-cms-widget-object: 2.7.2(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-widget-relation: 2.11.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(@types/react@19.0.3)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-widgets@1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(uuid@3.4.0)
       netlify-cms-widget-select: 2.8.2(@types/react@19.0.3)(immutable@3.8.2)(netlify-cms-lib-widgets@1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       netlify-cms-widget-string: 2.3.0(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
@@ -10250,23 +10250,23 @@ snapshots:
       immutable: 3.8.2
       js-base64: 3.7.7
       lodash: 4.17.21
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       semaphore: 1.1.0
 
-  netlify-cms-backend-bitbucket@2.14.0(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  netlify-cms-backend-bitbucket@2.14.0(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       common-tags: 1.8.2
       immutable: 3.8.2
       js-base64: 3.7.7
       lodash: 4.17.21
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       semaphore: 1.1.0
       what-the-diff: 0.6.0
@@ -10280,18 +10280,18 @@ snapshots:
       jwt-decode: 3.1.2
       lodash: 4.17.21
       minimatch: 3.1.2
-      netlify-cms-backend-bitbucket: 2.14.0(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-backend-github: 2.14.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-backend-gitlab: 2.13.0(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-backend-bitbucket: 2.14.0(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-backend-github: 2.14.1(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-backend-gitlab: 2.13.0(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
-  netlify-cms-backend-github@2.14.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  netlify-cms-backend-github@2.14.1(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       apollo-cache-inmemory: 1.6.6(graphql@15.9.0)
       apollo-client: 2.6.10(graphql@15.9.0)
       apollo-link-context: 1.0.20(graphql@15.9.0)
@@ -10301,16 +10301,16 @@ snapshots:
       graphql-tag: 2.12.6(graphql@15.9.0)
       js-base64: 3.7.7
       lodash: 4.17.21
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       semaphore: 1.1.0
 
-  netlify-cms-backend-gitlab@2.13.0(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  netlify-cms-backend-gitlab@2.13.0(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(graphql@15.9.0)(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0))(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       apollo-cache-inmemory: 1.6.6(graphql@15.9.0)
       apollo-client: 2.6.10(graphql@15.9.0)
       apollo-link-context: 1.0.20(graphql@15.9.0)
@@ -10318,9 +10318,9 @@ snapshots:
       immutable: 3.8.2
       js-base64: 3.7.7
       lodash: 4.17.21
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       semaphore: 1.1.0
     transitivePeerDependencies:
@@ -10331,7 +10331,7 @@ snapshots:
       '@emotion/core': 10.3.1
       '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
   netlify-cms-backend-test@2.11.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(uuid@3.4.0):
@@ -10340,7 +10340,7 @@ snapshots:
       '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
       lodash: 4.17.21
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       uuid: 3.4.0
 
@@ -10367,10 +10367,10 @@ snapshots:
       lodash: 4.17.21
       moment: 2.30.1
       netlify-cms-editor-component-image: 2.7.0
-      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0)
+      netlify-cms-lib-auth: 2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2)
       netlify-cms-lib-util: 2.15.1(immutable@3.8.2)(lodash@4.17.21)
       netlify-cms-lib-widgets: 1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       node-polyglot: 2.6.0
       prop-types: 15.8.1
       react-dnd: 14.0.5(@types/hoist-non-react-statics@3.3.6)(@types/react@19.0.3)
@@ -10412,11 +10412,11 @@ snapshots:
 
   netlify-cms-editor-component-image@2.7.0: {}
 
-  netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@3.4.0):
+  netlify-cms-lib-auth@2.4.2(immutable@3.8.2)(lodash@4.17.21)(uuid@8.3.2):
     dependencies:
       immutable: 3.8.2
       lodash: 4.17.21
-      uuid: 3.4.0
+      uuid: 8.3.2
 
   netlify-cms-lib-util@2.15.1(immutable@3.8.2)(lodash@4.17.21):
     dependencies:
@@ -10434,10 +10434,10 @@ snapshots:
 
   netlify-cms-locales@1.39.0: {}
 
-  netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1):
+  netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       lodash: 4.17.21
       prop-types: 15.8.1
       react-aria-menubutton: 7.0.3
@@ -10450,7 +10450,7 @@ snapshots:
     dependencies:
       '@emotion/core': 10.3.1
       lodash: 4.17.21
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
 
@@ -10459,7 +10459,7 @@ snapshots:
       '@emotion/core': 10.3.1
       codemirror: 5.65.18
       lodash: 4.17.21
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       react-codemirror2: 7.3.0(codemirror@5.65.18)
       react-select: 4.3.1(@types/react@19.0.3)
     transitivePeerDependencies:
@@ -10471,40 +10471,40 @@ snapshots:
     dependencies:
       '@emotion/core': 10.3.1
       '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-color: 2.19.3
       validate-color: 2.2.4
 
-  netlify-cms-widget-date@2.6.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
+  netlify-cms-widget-date@2.6.3(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       moment: 2.30.1
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-datetime: 3.3.1(moment@2.30.1)
 
   netlify-cms-widget-datetime@2.7.4(@emotion/core@10.3.1)(moment@2.30.1)(netlify-cms-widget-date@2.6.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)):
     dependencies:
       '@emotion/core': 10.3.1
-      netlify-cms-widget-date: 2.6.3(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
+      netlify-cms-widget-date: 2.6.3(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(moment@2.30.1)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)
       react-datetime: 3.3.1(moment@2.30.1)
     transitivePeerDependencies:
       - moment
 
-  netlify-cms-widget-file@2.12.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0):
+  netlify-cms-widget-file@2.12.1(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       array-move: 4.0.0
       common-tags: 1.8.2
       immutable: 3.8.2
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)
-      uuid: 3.4.0
+      uuid: 8.3.2
     transitivePeerDependencies:
       - react-dom
 
@@ -10513,8 +10513,8 @@ snapshots:
       '@emotion/core': 10.3.1
       '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
       immutable: 3.8.2
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
-      netlify-cms-widget-file: 2.12.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@3.4.0)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-widget-file: 2.12.1(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))(uuid@8.3.2)
       prop-types: 15.8.1
 
   netlify-cms-widget-list@2.10.1(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-lib-widgets@1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1))(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(netlify-cms-widget-object@2.7.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
@@ -10524,8 +10524,8 @@ snapshots:
       immutable: 3.8.2
       lodash: 4.17.21
       netlify-cms-lib-widgets: 1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
-      netlify-cms-widget-object: 2.7.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-widget-object: 2.7.2(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2))
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)
@@ -10536,7 +10536,7 @@ snapshots:
     dependencies:
       '@emotion/core': 10.3.1
       lodash: 4.17.21
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       ol: 6.15.1
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
@@ -10551,7 +10551,7 @@ snapshots:
       lodash: 4.17.21
       mdast-util-definitions: 1.2.5
       mdast-util-to-string: 1.1.0
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
       rehype-parse: 6.0.2
@@ -10573,16 +10573,16 @@ snapshots:
 
   netlify-cms-widget-number@2.5.0(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
-  netlify-cms-widget-object@2.7.2(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
+  netlify-cms-widget-object@2.7.2(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(immutable@3.8.2)(lodash@4.17.21)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1)(react-immutable-proptypes@2.2.0(immutable@3.8.2)):
     dependencies:
       '@emotion/core': 10.3.1
-      '@emotion/styled': 10.3.0(@emotion/core@10.3.1)
+      '@emotion/styled': 11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3)
       immutable: 3.8.2
       lodash: 4.17.21
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
 
@@ -10593,7 +10593,7 @@ snapshots:
       immutable: 3.8.2
       lodash: 4.17.21
       netlify-cms-lib-widgets: 1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-select: 4.3.1(@types/react@19.0.3)
       react-sortable-hoc: 2.0.0(prop-types@15.8.1)
@@ -10608,7 +10608,7 @@ snapshots:
     dependencies:
       immutable: 3.8.2
       netlify-cms-lib-widgets: 1.8.1(immutable@3.8.2)(lodash@4.17.21)(moment@2.30.1)
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-immutable-proptypes: 2.2.0(immutable@3.8.2)
       react-select: 4.3.1(@types/react@19.0.3)
@@ -10619,12 +10619,12 @@ snapshots:
 
   netlify-cms-widget-string@2.3.0(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
 
   netlify-cms-widget-text@2.4.1(@types/react@19.0.3)(netlify-cms-ui-default@2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1))(prop-types@15.8.1):
     dependencies:
-      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@10.3.0(@emotion/core@10.3.1))(lodash@4.17.21)(prop-types@15.8.1)
+      netlify-cms-ui-default: 2.15.5(@emotion/core@10.3.1)(@emotion/styled@11.14.0(@emotion/react@11.14.0(@types/react@19.0.3))(@types/react@19.0.3))(lodash@4.17.21)(prop-types@15.8.1)
       prop-types: 15.8.1
       react-textarea-autosize: 8.5.6(@types/react@19.0.3)
     transitivePeerDependencies:

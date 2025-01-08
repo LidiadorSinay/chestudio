@@ -7,7 +7,7 @@ import Navbarlight from "@components/navbar/navbarlight.astro";
 import { fetchGoogleSheetData } from '../utils/google-sheets';
 
 // Obtener los datos de las publicaciones desde Google Sheets
-const sheetData = await fetchGoogleSheetData();
+const { publicaciones } = await fetchGoogleSheetData(); // Asegúrate de que solo usas publicaciones para este caso
 ---
 
 <Layout title="Publicaciones">
@@ -20,12 +20,12 @@ const sheetData = await fetchGoogleSheetData();
       <p class="text-lg text-gray-600 mt-2">Acá podés encontrar nuestros artículos y comentarios publicados, donde acordamos las últimas tendencias, novedades legales y temas relevantes en el ámbito del derecho tecnológico y digital</p>
       <div class="mt-6">
         <ul>
-          {sheetData.map((row) => (
+          {publicaciones.map((row) => (  // Usar 'publicaciones' en lugar de 'sheetData'
             <li key={row[0]} class="mb-6 border-b border-gray-300 pb-6">
               <div class="flex justify-between items-center">
                 <h3 class="text-xl font-semibold text-gray-800">{row[0]}</h3> {/* Titulo */}
                 <a 
-                  href={row[1]}  {/* Link */}
+                  href={row[1]}  {/* URL (columna B) */}
                   target="_blank" 
                   class="uppercase text-c pill mt-3 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:#2d3748 transition-colors duration-300 ease-in-out">
                   Ver publicación

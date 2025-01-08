@@ -1,0 +1,6 @@
+.markdown-body h1 {
+    font-size: 2rem;  /* equivalent to text-6xl in Tailwind */
+    font-weight: 700;    /* equivalent to font-bold in Tailwind */
+    color: #3b5e97;      /* equivalent to text-blue-600 in Tailwind */
+  }
+  

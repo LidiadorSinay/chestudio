@@ -16,19 +16,30 @@ async function fetchGoogleSheetData() {
     });
 
     // Crear el cliente de la API de Sheets
-    const sheets = google.sheets({ version: 'v4', auth });
+    const sheets = google.sheets({ version: 'v4', auth, timeout: 10000 });
 
-    // ID de la hoja de cálculo y el rango de celdas
-    const spreadsheetId = '1F26RlGkmd9KenJ4ljVUpQJfj7cTfk3jhD9exhVmJlC4'; // Reemplázalo con tu ID de hoja
-    const range = 'publicaciones!A1:B10'; // Ajusta el rango según tu hoja
+    // ID de la hoja de cálculo
+    const spreadsheetId = '1F26RlGkmd9KenJ4ljVUpQJfj7cTfk3jhD9exhVmJlC4'; // 
 
-    const response = await sheets.spreadsheets.values.get({
-      spreadsheetId,
-      range,
-    });
+    // Solicitar los datos de las pestañas "publicaciones" y "novedades"
+    const publicacionesRange = 'publicaciones!A1:B10'; // Ajusta el rango según tu hoja
+    const novedadesRange = 'novedades!A1:E10'; // Ajusta el rango de la pestaña novedades
 
-    const rows = response.data.values;
-    return rows;
+    const [publicacionesResponse, novedadesResponse] = await Promise.all([
+      sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range: publicacionesRange,
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range: novedadesRange,
+      }),
+    ]);
+
+    const publicaciones = publicacionesResponse.data.values;
+    const novedades = novedadesResponse.data.values;
+
+    return { publicaciones, novedades };
   } catch (error) {
     console.error('Error al obtener datos de Google Sheets:', error);
     throw error;

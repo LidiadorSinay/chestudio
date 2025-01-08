@@ -1,0 +1,45 @@
+---
+import { fetchGoogleSheetData } from '../../utils/google-sheets';
+
+// Obtener los datos de la hoja de Google Sheets
+const { publicaciones } = await fetchGoogleSheetData();
+
+// Tomar los datos de la primera fila (primer elemento del array)
+const novedad = publicaciones[0];  // Usar solo la primera fila
+
+// Verificar que los datos existen antes de usarlos
+const titulo = novedad ? novedad[0] : "";
+const descripcion = novedad ? novedad[1] : "";
+const fecha = novedad ? novedad[2] : "";
+const imagen = novedad ? novedad[3] : "";
+const cuerpoTexto = novedad ? novedad[4] : ""; // Usar texto directamente sin procesar
+---
+
+<Layout title="Guía Legal: ¿Cómo recuperar cuentas de Instagram?">
+  <Navbarlight />
+  <Container>
+    <!-- Sección de la Guía -->
+    <div class="w-full h-screen flex flex-col lg:flex-row">
+      <!-- Columna de Imagen (50% de la pantalla) -->
+      <div class="w-full lg:w-1/2 h-full bg-cover bg-center" style={`background-image: url(${imagen});`}>
+        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
+          <h1 class="text-4xl text-white font-bold text-center px-4">{titulo}</h1>
+        </div>
+      </div>
+
+      <!-- Columna de Contenido (50% de la pantalla) -->
+      <div class="w-full lg:w-1/2 p-8 flex flex-col justify-between">
+        <!-- Bajada (Descripción corta y fecha) -->
+        <div class="mb-6">
+          <p class="text-lg text-gray-600">{descripcion}</p>
+          <p class="text-sm text-gray-500 mt-2">{fecha}</p>
+        </div>
+
+        <!-- Cuerpo del artículo -->
+        <div class="mt-6 markdown-body">
+          <p class="text-base text-gray-700 whitespace-pre-wrap">{cuerpoTexto}</p>
+        </div>
+      </div>
+    </div>
+  </Container>
+</Layout>

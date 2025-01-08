@@ -1,0 +1,60 @@
+---
+import { fetchGoogleSheetData } from '../../utils/google-sheets';
+import Layout from '../../layouts/Layout.astro';
+import Navbarlight from "@components/navbar/navbarlight.astro";
+import Container from "@components/container.astro";
+import { marked } from 'marked'; // Asegúrate de que 'marked' esté bien importado
+import '../novedades.css';  // Importar el archivo CSS
+
+
+// Obtener los datos de la hoja de Google Sheets
+const { novedades } = await fetchGoogleSheetData();
+
+// Tomar los datos de la primera fila
+const novedad = novedades[0]; 
+
+// Verificar que los datos existen antes de usarlos
+const titulo = novedad ? novedad[0] : "";
+const descripcion = novedad ? novedad[1] : "";
+const fecha = novedad ? novedad[3] : "";
+const imagen = novedad ? novedad[2] : "";
+const cuerpoTexto = novedad ? marked(novedad[4]) : ""; // Convertir el texto Markdown a HTML
+console.log(cuerpoTexto); // Verifica si la conversión de Markdown a HTML es correcta
+---
+
+<Layout title="Guía Legal: ¿Cómo recuperar cuentas de Instagram?">
+  <Navbarlight />
+
+  <!-- Contenedor del banner -->
+  <div class="w-full h-[50vh] flex flex-col lg:flex-row">
+    <!-- Mitad izquierda: Imagen de fondo -->
+    <div class="w-full lg:w-1/3 h-full bg-cover bg-center" style={`background-image: url(${imagen});`}></div>
+
+    <!-- Mitad derecha: Título -->
+    <div class="w-full lg:w-2/3 h-full flex items-center justify-center bg-gray-100">
+      <h1 class="text-5xl font-bold text-center text-gray-800 px-8">{titulo}</h1>
+    </div>
+  </div>
+
+  <!-- Contenedor del contenido -->
+  <Container>
+    <!-- Bajada -->
+    <div class="mt-8">
+      <p class="text-2xl text-gray-700 font-semibold mb-2">{descripcion}</p>
+      <p class="text-sm text-gray-500">{fecha}</p>
+    </div>
+
+    <!-- Cuerpo del texto -->
+    <div class="mt-6 markdown-body">
+      <!-- Usar set:html para renderizar el HTML generado desde Markdown -->
+      <div class="text-base text-gray-800 whitespace-pre-wrap leading-relaxed" set:html={cuerpoTexto}></div>
+    </div>
+  </Container>
+
+  <!-- Estilos personalizados para los encabezados del Markdown -->
+  <style>
+    .markdown-body h1 {
+      @apply text-6xl font-bold text-blue-600;
+    }
+  </style>
+</Layout>
