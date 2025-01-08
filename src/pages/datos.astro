@@ -1,0 +1,19 @@
+---
+import { fetchGoogleSheetData } from '../utils/google-sheets';
+
+const sheetData = await fetchGoogleSheetData();
+---
+
+<html lang="es">
+  <head>
+    <title>Datos desde Google Sheets</title>
+  </head>
+  <body>
+    <h1>Datos desde Google Sheets</h1>
+    <ul>
+      {sheetData.map((row) => (
+        <li>{row.join(' - ')}</li>
+      ))}
+    </ul>
+  </body>
+</html>
