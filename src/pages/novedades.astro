@@ -10,12 +10,11 @@ const { novedades } = await fetchGoogleSheetData();
 ---
 
 <Layout title="Novedades">
-  <Navbarlight />
+  <Navbarlight />  
 
   <!-- Contenedor principal -->
   <div class="w-full mt-10">
     <h1 class="text-4xl font-bold text-center mb-6">Listado de Novedades</h1>
-
     <Container>
       <!-- Iterar sobre las novedades -->
       {novedades.map((novedad, index) => {
@@ -26,9 +25,9 @@ const { novedades } = await fetchGoogleSheetData();
         const link = `/novedad/${index}`; // Ruta dinámica basada en el índice
 
         return (
-          <div key={index} class="flex items-center mb-6 bg-white rounded-lg shadow-md overflow-hidden">
-            <!-- Primera columna: Imagen -->
-            <a href={link} class="w-1/4">
+          <div key={index} class="flex flex-col md:flex-row items-start mb-6 bg-white overflow-hidden border-b border-gray-300">
+            <!-- Imagen a la izquierda con enlace -->
+            <a href={link} class="md:w-1/4 flex">
               <img 
                 src={imagen} 
                 alt={titulo} 
@@ -36,21 +35,22 @@ const { novedades } = await fetchGoogleSheetData();
               />
             </a>
 
-            <!-- Segunda columna: Título, descripción y fecha -->
-            <div class="w-2/4 px-6 flex flex-col">
-              <h2 class="text-2xl font-semibold text-blue-600 mb-2">
-                <a href={link}>{titulo}</a>
-              </h2>
-              <p class="text-gray-700 mb-2">{descripcion}</p>
-              <p class="text-sm text-gray-500">{fecha}</p>
+            <!-- Información a la derecha -->
+            <div class="w-full md:w-2/4 p-4 px-8 flex flex-col justify-between">
+              <div>
+                <h2 class="text-2xl font-semibold  text-[#3b5e97] mb-2 text-justify">
+                  <a href={link}>{titulo}</a>
+                </h2>
+                <p class="text-gray-700 mb-2 text-justify">{descripcion}</p>
+                <p class="text-sm text-gray-500">{fecha}</p>
+              </div>
             </div>
 
-            <!-- Tercera columna: Botón -->
-            <div class="w-1/4 flex justify-center">
+            <!-- Botón "Ver" -->
+            <div class="mt-4 mb-4 md:w-1/4 flex items-center justify-center">
               <a 
                 href={link} 
-                class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
-              >
+                class="uppercase text-c pill mt-3 px-4 py-4 bg-blue-500 text-white font-semibold rounded-lg hover:#2d3748 transition-colors duration-300 ease-in-out">
                 Ver
               </a>
             </div>
@@ -60,3 +60,5 @@ const { novedades } = await fetchGoogleSheetData();
     </Container>
   </div>
 </Layout>
+
+

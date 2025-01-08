@@ -5,6 +5,8 @@ import Navbarlight from "@components/navbar/navbarlight.astro";
 import Container from "@components/container.astro";
 import { marked } from 'marked'; // Para procesar Markdown
 import '../novedades.css';
+import Cta from "@components/cta.astro";
+
 // Obtener el índice dinámico de la URL
 const { index } = Astro.params;
 
@@ -49,5 +51,7 @@ const cuerpoTexto = novedad[4] ? marked(novedad[4]) : "No hay contenido adiciona
     <div class="mt-6 markdown-body">
       <div class="text-base text-gray-800 whitespace-pre-wrap leading-relaxed" set:html={cuerpoTexto}></div>
     </div>
+            <Cta />
+
   </Container>
 </Layout>
