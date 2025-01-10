@@ -9,7 +9,18 @@ import { fetchGoogleSheetData } from '../utils/google-sheets';
 // Obtener los datos de las publicaciones desde Google Sheets
 const { publicaciones } = await fetchGoogleSheetData(); // Asegúrate de que solo usas publicaciones para este caso
 ---
+<style>
 
+* {
+        font-family: "Archivo", sans-serif;
+      }
+ 
+ h1, h2, h3 {
+    font-family: "Literata", serif;
+  }
+
+
+</style>
 <Layout title="Publicaciones">
   <Navbarlight />
   <Container>
