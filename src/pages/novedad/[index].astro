@@ -23,9 +23,6 @@ const fecha = novedad.fecha || "Fecha no disponible.";
 const imagen = novedad.imagen || "/default-image.jpg";
 const cuerpoTexto = novedad.contenido ? marked(novedad.contenido) : "No hay contenido adicional.";
 
-// URL canónica
-const canonicalURL = `https://chestudioabogados.com/novedades/${index}`; // URL dinámica
----
 
 <style>
   * {
@@ -41,8 +38,6 @@ const canonicalURL = `https://chestudioabogados.com/novedades/${index}`; // URL 
   <!-- SEO para la novedad dinámica -->
   <SEO
     title={titulo}
-    description={descripcion}
-    canonical={canonicalURL}
     openGraph={{
       basic: {
         url: canonicalURL,
