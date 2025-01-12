@@ -23,6 +23,8 @@ const fecha = novedad.fecha || "Fecha no disponible.";
 const imagen = novedad.imagen || "/default-image.jpg";
 const cuerpoTexto = novedad.contenido ? marked(novedad.contenido) : "No hay contenido adicional.";
 
+// Definir la URL canónica
+const canonicalURL = `https://mi-sitio-web.com/novedades/${index}`;
 
 <style>
   * {
@@ -85,7 +87,8 @@ const cuerpoTexto = novedad.contenido ? marked(novedad.contenido) : "No hay cont
 
     <!-- Cuerpo del texto -->
     <div class="mt-6 markdown-body">
-      <div class="text-base text-gray-800 whitespace-pre-wrap leading-relaxed" set:html={cuerpoTexto}></div>
+      <!-- Uso correcto de innerHTML en lugar de set:html -->
+      <div class="text-base text-gray-800 whitespace-pre-wrap leading-relaxed" innerHTML={cuerpoTexto}></div>
     </div>
 
     <Cta />
