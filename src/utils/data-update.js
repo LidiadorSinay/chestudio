@@ -1,5 +1,4 @@
-// src/utils/data-update.js
-import { fetchGoogleSheetData } from './google-sheets.js';  // Cambié la ruta
+import { fetchGoogleSheetData } from './google-sheets.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -15,10 +14,10 @@ async function updatePublicacionesJSON() {
     }));
 
     // Ruta al archivo publicaciones.json dentro de public/data
-    const publicacionesPath = path.resolve('../../public/data/publicaciones.json');
+    const publicacionesPath = path.resolve('public/data/publicaciones.json');
 
     // Escribir el nuevo contenido en el archivo publicaciones.json
-    fs.writeFileSync(publicacionesPath, JSON.stringify(publicacionesData, null, 2));
+    await fs.promises.writeFile(publicacionesPath, JSON.stringify(publicacionesData, null, 2));
 
     console.log('publicaciones.json actualizado correctamente.');
   } catch (error) {
