@@ -1,28 +1,40 @@
 ---
-import { fetchGoogleSheetData } from '../utils/google-sheets';
 import Layout from '../layouts/Layout.astro';
 import Navbarlight from "@components/navbar/navbarlight.astro";
 import Container from "@components/container.astro";
-import { marked } from 'marked'; // Asegúrate de que 'marked' esté bien importado
+import { SEO } from "astro-seo";
 
-// Obtener los datos de la hoja de Google Sheets
-const { novedades } = await fetchGoogleSheetData();
+// Importar el archivo JSON desde la carpeta public/data
+import novedades from '../../public/data/novedades.json';
+
+// Configuración de SEO
+const title = "Novedades | Chestudio";
+const description = "Descubre las últimas novedades de Chestudio, con artículos y actualizaciones relevantes sobre nuestra consultora.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const image = "/opengraph.jpg";  // Asegúrate de tener una imagen representativa
+
+const openGraphImage = new URL(image, Astro.site).toString();
 ---
-<style>
 
-* {
-        font-family: "Archivo", sans-serif;
-      }
- 
- h1, h2, h3 {
-    font-family: "Literata", serif;
-  }
-
-
-</style>
+<SEO
+  title={title}
+  description={description}
+  canonical={canonicalURL}
+  openGraph={{
+    basic: {
+      url: canonicalURL,
+      type: "website",
+      title: title,
+      image: openGraphImage,
+    },
+    image: {
+      alt: "Chestudio",
+    },
+  }}
+/>
 
 <Layout title="Novedades">
-  <Navbarlight />  
+  <Navbarlight />
 
   <!-- Contenedor principal -->
   <div class="w-full mt-10">
@@ -30,10 +42,10 @@ const { novedades } = await fetchGoogleSheetData();
     <Container>
       <!-- Iterar sobre las novedades -->
       {novedades.map((novedad, index) => {
-        const titulo = novedad[0];
-        const descripcion = novedad[1];
-        const imagen = novedad[2];
-        const fecha = novedad[3];
+        const titulo = novedad.titulo; 
+        const descripcion = novedad.descripcion; 
+        const imagen = novedad.imagen;
+        const fecha = novedad.fecha;
         const link = `/novedad/${index}`; // Ruta dinámica basada en el índice
 
         return (
@@ -50,8 +62,8 @@ const { novedades } = await fetchGoogleSheetData();
             <!-- Información a la derecha -->
             <div class="w-full md:w-2/4 p-4 px-8 flex flex-col justify-between">
               <div>
-                <h2 class="text-2xl font-semibold  text-[#3b5e97] mb-2 text-justify">
-                  <a href={link}> <h2> {titulo} </h2> </a>
+                <h2 class="text-2xl font-semibold text-[#3b5e97] mb-2 text-justify">
+                  <a href={link}>{titulo}</a>
                 </h2>
                 <p class="text-gray-700 mb-2 text-justify">{descripcion}</p>
                 <p class="text-sm text-gray-500">{fecha}</p>
@@ -72,5 +84,3 @@ const { novedades } = await fetchGoogleSheetData();
     </Container>
   </div>
 </Layout>
-
-

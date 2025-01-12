@@ -5,6 +5,8 @@ import Navbarlight from "@components/navbar/navbarlight.astro";
 
 // Importar el archivo JSON desde la carpeta public/data
 import publicaciones from '../../public/data/publicaciones.json';
+
+const canonicalURL = "https://chestudioabogados.com/publicaciones"; // Enlace canónico de la página de publicaciones
 ---
 
 <style>
@@ -19,6 +21,25 @@ import publicaciones from '../../public/data/publicaciones.json';
 
 <Layout title="Publicaciones">
   <Navbarlight />
+  
+  <!-- SEO para la página de publicaciones -->
+  <SEO
+    title="Publicaciones | Chestudio"
+    description="Accede a los artículos y comentarios publicados sobre las últimas tendencias legales en derecho tecnológico y digital."
+    canonical={canonicalURL}
+    openGraph={{
+      basic: {
+        url: canonicalURL,
+        type: "website",
+        title: "Publicaciones | Chestudio",
+        image: "https://chestudioabogados.com/opengraph-publicaciones.jpg", // Imagen predeterminada
+      },
+      image: {
+        alt: "Publicaciones de Chestudio",
+      },
+    }}
+  />
+  
   <Container>
     <div class="mx-auto max-w-3xl mt-14 text-center">
       <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight">
