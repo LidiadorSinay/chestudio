@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm astro build && npm run update-data"
+command = "pnpm astro build && npm run data-update"
   publish = "dist"  
 
 [context.production.environment]
