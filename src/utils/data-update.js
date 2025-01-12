@@ -17,8 +17,8 @@ async function updateDataJSON() {
     const novedadesData = novedades.map(row => ({
       titulo: row[0],    // Título de la novedad (columna A)
       descripcion: row[1], // Descripción de la novedad (columna B)
-      fecha: row[2],      // Fecha de la novedad (columna C)
-      imagen: row[3],     // URL de la imagen (columna D)
+      fecha: row[3],      // Fecha de la novedad (columna C)
+      imagen: row[2],     // URL de la imagen (columna D)
       contenido: row[4],  // Contenido de la novedad (columna E)
     }));
 
