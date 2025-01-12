@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "data-update": "node src/utils/data-update.js",
+    "build": "npm run data-update && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
