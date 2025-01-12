@@ -3,24 +3,20 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Navbarlight from "@components/navbar/navbarlight.astro";
 
-// Importar los datos desde el archivo de datos
-import { fetchGoogleSheetData } from '../utils/google-sheets';
-
-// Obtener los datos de las publicaciones desde Google Sheets
-const { publicaciones } = await fetchGoogleSheetData(); // Asegúrate de que solo usas publicaciones para este caso
+// Importar el archivo JSON desde la carpeta public/data
+import publicaciones from '../../public/data/publicaciones.json';
 ---
-<style>
 
-* {
-        font-family: "Archivo", sans-serif;
-      }
- 
- h1, h2, h3 {
+<style>
+  * {
+    font-family: "Archivo", sans-serif;
+  }
+  
+  h1, h2, h3 {
     font-family: "Literata", serif;
   }
-
-
 </style>
+
 <Layout title="Publicaciones">
   <Navbarlight />
   <Container>
@@ -31,12 +27,12 @@ const { publicaciones } = await fetchGoogleSheetData(); // Asegúrate de que sol
       <p class="text-lg text-gray-600 mt-2">Acá podés encontrar nuestros artículos y comentarios publicados, donde acordamos las últimas tendencias, novedades legales y temas relevantes en el ámbito del derecho tecnológico y digital</p>
       <div class="mt-6">
         <ul>
-          {publicaciones.map((row) => (  // Usar 'publicaciones' en lugar de 'sheetData'
-            <li key={row[0]} class="mb-6 border-b border-gray-300 pb-6">
+          {publicaciones.map((row, index) => (
+            <li key={index} class="mb-6 border-b border-gray-300 pb-6">
               <div class="flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-gray-800">{row[0]}</h3> {/* Titulo */}
+                <h3 class="text-xl font-semibold text-gray-800">{row.titulo}</h3> {/* Titulo */}
                 <a 
-                  href={row[1]}  {/* URL (columna B) */}
+                  href={row.url}  {/* URL (columna B) */}
                   target="_blank" 
                   class="uppercase text-c pill mt-3 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:#2d3748 transition-colors duration-300 ease-in-out">
                   Ver publicación

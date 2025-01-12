@@ -1,0 +1,80 @@
+---
+// Ruta de tu webhook de Netlify
+const WEBHOOK_URL = 'https://api.netlify.com/build_hooks/6783eb69227cc48642c468c3';
+
+// Estado para la contraseña y el mensaje
+let password = '';
+let message = '';
+const CORRECT_PASSWORD = '123'; // Cambia esto por una contraseña segura
+
+const triggerDeploy = async () => {
+  if (password !== CORRECT_PASSWORD) {
+    message = 'Contraseña incorrecta.';
+    return;
+  }
+
+  try {
+    const response = await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({}),
+    });
+
+    if (response.ok) {
+      message = '¡Sitio actualizado correctamente!';
+    } else {
+      message = 'Hubo un error al intentar actualizar el sitio.';
+    }
+  } catch (error) {
+    message = 'Error de conexión al intentar publicar los cambios.';
+  }
+};
+---
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  .button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .button:hover {
+    background-color: #0056b3;
+  }
+  .message {
+    margin-top: 20px;
+    font-size: 14px;
+    color: red;
+  }
+  input {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+</style>
+
+<div class="container">
+  <h1>Actualizar Sitio</h1>
+  <p>Ingresa la contraseña para publicar los cambios:</p>
+  <input 
+    type="password" 
+    placeholder="Contraseña" 
+    value={password} 
+    oninput={(e) => (password = e.target.value)}
+  />
+  <button class="button" onclick={triggerDeploy}>Publicar Cambios</button>
+  {message && <p class="message">{message}</p>}
+</div>
