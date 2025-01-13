@@ -5,7 +5,7 @@ import path from 'path';
 async function updateDataJSON() {
   try {
     // Obtener los datos de Google Sheets
-    const { publicaciones, novedades, features } = await fetchGoogleSheetData();
+    const { publicaciones, novedades, features, about } = await fetchGoogleSheetData();
 
     // Mapear los datos a un formato adecuado para publicaciones.json
     const publicacionesData = publicaciones.map(row => ({
@@ -30,19 +30,37 @@ async function updateDataJSON() {
         astroIcon: row[3],     
       }));
 
+      
+      // Mapear los datos a un formato adecuado para novedades.json
+      const aboutData = about.map(row => ({
+        name: row[0],   
+        role: row[1], 
+        img: row[2],      
+        desc1: row[3], 
+        desc2: row[4], 
+        desc3: row[5],     
+        linkedin: row[6],         
+      }));
+
+
+      
+
     // Ruta a los archivos JSON dentro de public/data
     const publicacionesPath = path.resolve('public/data/publicaciones.json');
     const novedadesPath = path.resolve('public/data/novedades.json');
     const featuresPath = path.resolve('public/data/features.json');
+    const aboutPath = path.resolve('public/data/about.json');
+
 
 
     // Escribir el nuevo contenido en los archivos JSON
     await fs.promises.writeFile(publicacionesPath, JSON.stringify(publicacionesData, null, 2));
     await fs.promises.writeFile(novedadesPath, JSON.stringify(novedadesData, null, 2));
     await fs.promises.writeFile(featuresPath, JSON.stringify(featuresData, null, 2));
+    await fs.promises.writeFile(aboutPath, JSON.stringify(aboutData, null, 2));
 
 
-    console.log('publicaciones.json, features.json novedades.json actualizados correctamente.');
+    console.log('publicaciones.json, features.json, about.json novedades.json actualizados correctamente.');
   } catch (error) {
     console.error('Error al actualizar los archivos JSON:', error);
   }
