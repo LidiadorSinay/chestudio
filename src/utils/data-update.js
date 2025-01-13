@@ -5,7 +5,7 @@ import path from 'path';
 async function updateDataJSON() {
   try {
     // Obtener los datos de Google Sheets
-    const { publicaciones, novedades } = await fetchGoogleSheetData();
+    const { publicaciones, novedades, features } = await fetchGoogleSheetData();
 
     // Mapear los datos a un formato adecuado para publicaciones.json
     const publicacionesData = publicaciones.map(row => ({
@@ -22,15 +22,27 @@ async function updateDataJSON() {
       contenido: row[4],  // Contenido de la novedad (columna E)
     }));
 
+      // Mapear los datos a un formato adecuado para novedades.json
+      const featuresData = features.map(row => ({
+        title: row[0],   
+        description: row[1], 
+        icon: row[2],      
+        astroIcon: row[3],     
+      }));
+
     // Ruta a los archivos JSON dentro de public/data
     const publicacionesPath = path.resolve('public/data/publicaciones.json');
     const novedadesPath = path.resolve('public/data/novedades.json');
+    const featuresPath = path.resolve('public/data/features.json');
+
 
     // Escribir el nuevo contenido en los archivos JSON
     await fs.promises.writeFile(publicacionesPath, JSON.stringify(publicacionesData, null, 2));
     await fs.promises.writeFile(novedadesPath, JSON.stringify(novedadesData, null, 2));
+    await fs.promises.writeFile(featuresPath, JSON.stringify(featuresData, null, 2));
 
-    console.log('publicaciones.json y novedades.json actualizados correctamente.');
+
+    console.log('publicaciones.json, features.json novedades.json actualizados correctamente.');
   } catch (error) {
     console.error('Error al actualizar los archivos JSON:', error);
   }

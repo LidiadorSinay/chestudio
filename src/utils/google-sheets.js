@@ -24,11 +24,14 @@ export async function fetchGoogleSheetData() {
     const spreadsheetId = '1F26RlGkmd9KenJ4ljVUpQJfj7cTfk3jhD9exhVmJlC4'; // 
 
     // Rango de las pestañas a consultar
-    const publicacionesRange = 'publicaciones!A1:B10'; // Ajusta el rango según tu hoja
-    const novedadesRange = 'novedades!A1:E10'; // Ajusta el rango de la pestaña novedades
+    const publicacionesRange = 'publicaciones!A1:B20'; 
+    const novedadesRange = 'novedades!A1:E20'; 
+    const featuresRange = 'features!A1:D20'; 
+    const aboutRange = 'about!A1:G10'; 
+
 
     // Obtener los datos de ambas pestañas
-    const [publicacionesResponse, novedadesResponse] = await Promise.all([
+    const [publicacionesResponse, novedadesResponse, featuresResponse, aboutResponse] = await Promise.all([
       sheets.spreadsheets.values.get({
         spreadsheetId,
         range: publicacionesRange,
@@ -37,14 +40,26 @@ export async function fetchGoogleSheetData() {
         spreadsheetId,
         range: novedadesRange,
       }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range: featuresRange,
+      }),
+      sheets.spreadsheets.values.get({
+        spreadsheetId,
+        range: aboutRange,
+      }),
     ]);
 
     // Extraemos los datos de las respuestas
     const publicaciones = publicacionesResponse.data.values;
     const novedades = novedadesResponse.data.values;
+    const features = featuresResponse.data.values;
+    const about = aboutResponse.data.values;
+
+
 
     // Devolvemos los datos obtenidos
-    return { publicaciones, novedades };
+    return { publicaciones, novedades, features, about };
   } catch (error) {
     console.error('Error al obtener datos de Google Sheets:', error);
     throw error;

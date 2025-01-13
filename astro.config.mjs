@@ -9,12 +9,27 @@ import node from '@astrojs/node';
 export default defineConfig({
   site: "https://chestudio.com",
   output: "server",
-  output: 'server',
   adapter: netlify(),
   server: {
     proxy: {
       '/api': 'http://localhost:3001'
     }
   },
-  integrations: [netlify(),tailwind(), mdx(), sitemap()],
+  integrations: [
+    netlify(),
+    tailwind(),
+    mdx(),
+    sitemap({
+      site: "https://chestudio.com", // Tu URL de producción
+      changefreq: "weekly",         // Frecuencia de actualización
+      priority: 0.8,                // Prioridad de las páginas
+      exclude: [],                  // No excluyas ninguna página, a menos que quieras
+      pages: [
+        "/publicaciones",           
+        "/novedades",   
+        "/novedad/0",
+        "/novedad/1"           
+      ],
+    })
+  ],
 });
