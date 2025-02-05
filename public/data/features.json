@@ -1,7 +1,7 @@
 [
   {
     "title": "Recuperacion y restablecimiento de cuentas de Instagram",
-    "description": "Gestionamos la recuperación y el restablecimiento de cuenta de Instagram ante eliminaciones, suspensiones, baneo o restricciones.",
+    "description": "Gestionamos la recuperación y el restablecimiento de cuenta de Instagram ante hackeos, eliminaciones, suspensiones, baneo o restricciones.",
     "icon": "",
     "astroIcon": "mdi:instagram"
   },
@@ -12,7 +12,7 @@
   },
   {
     "title": "Contratos",
-    "description": "Prestamos asesoramiento contractual, y redactamos acuerdos y contratos para Empresas, Startups y emprendedores.",
+    "description": "Prestamos asesoramiento contractual, y redactamos acuerdos y contratos para Startups, emprendedores, desarrolladores y empresas vinculadas al sector IA",
     "icon": "contract_edit"
   },
   {
@@ -26,8 +26,8 @@
     "icon": "brand_family"
   },
   {
-    "title": "Consumidor",
-    "description": "Efectuamos reclamos para la protección de los derechos de los consumidores.",
+    "title": "Plan de Ahorro y Consumidor",
+    "description": "somos especialistas en reclamos y asesoramiento vinculados a planes de ahorro automotor y defensa del consumidor. ",
     "icon": "shopping_cart"
   },
   {
@@ -44,15 +44,5 @@
     "title": "Salud",
     "description": "Estamos sumamente comprometidos con el derecho a la salud y discapacidad, por eso efectuamos reclamos y amparos contra prepagas y obras sociales.",
     "icon": "ecg_heart"
-  },
-  {
-    "title": "Laboral",
-    "description": "Brindamos asesoramiento en torno a conflictos y reclamos laborales, sobre todo los relacionados con implementación de la tecnología en el ámbito laboral.",
-    "icon": "business_center"
-  },
-  {
-    "title": "Asesoramiento Contable e Impositivo",
-    "description": "Ofrecemos el asesoramiento contable e impositivo en caso de que lo necesiten. El equipo está liderado por Mariano Chalhub.",
-    "icon": "calculate"
   }
 ]
