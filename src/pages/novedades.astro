@@ -46,7 +46,7 @@ const openGraphImage = new URL(image, Astro.site).toString();
         const descripcion = novedad.descripcion; 
         const imagen = novedad.imagen;
         const fecha = novedad.fecha;
-        const link = `/novedad/${index}`; // Ruta dinámica basada en el índice
+        const link = `/novedad/${novedad.enlace}`; // Usar el enlace personalizado
 
         return (
           <div key={index} class="flex flex-col md:flex-row items-start mb-6 bg-white overflow-hidden border-b border-gray-300">

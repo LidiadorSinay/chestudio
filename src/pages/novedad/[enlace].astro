@@ -9,17 +9,15 @@ import '../novedades.css';
 
 import novedades from '../../../public/data/novedades.json';
 
-const { index } = Astro.params;
-
-const novedad = novedades[parseInt(index)] ?? {};
-
+const { enlace } = Astro.params;
+const novedad = novedades.find(n => n.enlace === enlace) ?? {};
 const titulo = novedad.titulo || "Novedad no encontrada";
 const descripcion = novedad.descripcion || "No se encontró descripción.";
 const fecha = novedad.fecha || "Fecha no disponible.";
 const imagen = novedad.imagen || "/default-image.jpg";
 const contenido = novedad.contenido ? marked(novedad.contenido) : "";
 
-const canonicalURL = `https://mi-sitio-web.com/novedades/${index}`;
+const canonicalURL = `https://mi-sitio-web.com/novedades/${enlace}`;
 ---
 
 <style global>
@@ -89,12 +87,9 @@ const canonicalURL = `https://mi-sitio-web.com/novedades/${index}`;
     </div>
 
     <!-- Inyectar el HTML procesado con marked -->
-<div class="mt-6 markdown-body">
-  <!-- Usamos set:html para inyectar contenido HTML procesado -->
-  <div class="text-base text-gray-800 whitespace-pre-wrap leading-relaxed" set:html={contenido}></div>
-</div>
-
-
+    <div class="mt-6 markdown-body">
+      <div class="text-base text-gray-800 whitespace-pre-wrap leading-relaxed" set:html={contenido}></div>
+    </div>
     <Cta />
   </Container>
 </Layout>

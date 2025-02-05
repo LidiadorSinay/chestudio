@@ -25,7 +25,7 @@ export async function fetchGoogleSheetData() {
 
     // Rango de las pestañas a consultar
     const publicacionesRange = 'publicaciones!A1:B20'; 
-    const novedadesRange = 'novedades!A1:E20'; 
+    const novedadesRange = 'novedades!A1:F20'; 
     const featuresRange = 'features!A1:D20'; 
     const aboutRange = 'about!A1:G10'; 
 

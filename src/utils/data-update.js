@@ -20,6 +20,7 @@ async function updateDataJSON() {
       fecha: row[3],      // Fecha de la novedad (columna C)
       imagen: row[2],     // URL de la imagen (columna D)
       contenido: row[4],  // Contenido de la novedad (columna E)
+      enlace: row[5],     // Enlace personalizado (columna F)
     }));
 
       // Mapear los datos a un formato adecuado para novedades.json
