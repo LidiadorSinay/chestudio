@@ -1,7 +1,7 @@
 [
   {
     "title": "Recuperacion y restablecimiento de cuentas de Instagram",
-    "description": "Gestionamos la recuperación y el restablecimiento de cuenta de Instagram ante hackeos, eliminaciones, suspensiones, baneo o restricciones.",
+    "description": "Gestionamos la recuperación y el restablecimiento de cuenta de Instagram ante hackeos, eliminaciones, suspensiones, baneo o restricciones. También brindamos asesoramiento preventivo para cada negocio o marca y así mitigar riesgos.",
     "icon": "",
     "astroIcon": "mdi:instagram"
   },
@@ -11,13 +11,13 @@
     "icon": "gavel"
   },
   {
-    "title": "Contratos",
-    "description": "Prestamos asesoramiento contractual, y redactamos acuerdos y contratos para Startups, emprendedores, desarrolladores y empresas vinculadas al sector IA",
+    "title": "Contratos, registro de sociedades y asesoramiento personzalizado",
+    "description": "Prestamos asesoramiento personalizado, y redactamos acuerdos y contratos para Startups, emprendedores, desarrolladores, freelancers y Pymes. También nos encargamos del registro de tu sociedad.",
     "icon": "contract_edit"
   },
   {
     "title": "Delitos Informáticos",
-    "description": "Asesoramos en phishing y estafas online, suplantación de identidad, sextorsión, difusión no consentida de material íntimo, y deepfakes.",
+    "description": "Asesoramos en phishing y estafas online, estafas bancarias, suplantación de identidad, sextorsión, difusión no consentida de material íntimo, y deepfakes.",
     "icon": "touchpad_mouse"
   },
   {
@@ -27,7 +27,7 @@
   },
   {
     "title": "Plan de Ahorro y Consumidor",
-    "description": "somos especialistas en reclamos y asesoramiento vinculados a planes de ahorro automotor y defensa del consumidor. ",
+    "description": "somos especialistas en reclamos y asesoramiento vinculados a planes de ahorro automotor (demora en la entrega del auto, reposición ante robo, cargos indebidos, etc.) y defensa del consumidor. ",
     "icon": "shopping_cart"
   },
   {
