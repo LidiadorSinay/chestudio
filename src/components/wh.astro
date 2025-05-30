@@ -1,0 +1,41 @@
+---
+const { phone = "5491123456789" } = Astro.props;
+const whatsappUrl = `https://wa.me/${phone}`;
+---
+
+<style>
+  .whatsapp-button {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 1000;
+    background-color: #25d366;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+  }
+
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+  }
+
+  .whatsapp-button img {
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+</style>
+
+<a
+  href={whatsappUrl}
+  class="whatsapp-button"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chatear por WhatsApp"
+>
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+    alt="WhatsApp"
+  />
+</a>

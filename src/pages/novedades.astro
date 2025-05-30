@@ -6,6 +6,7 @@ import { SEO } from "astro-seo";
 
 // Importar el archivo JSON desde la carpeta public/data
 import novedades from '../../public/data/novedades.json';
+import Wh from '@components/wh.astro';
 
 // Configuración de SEO
 const title = "Novedades | Chestudio";
@@ -83,4 +84,5 @@ const openGraphImage = new URL(image, Astro.site).toString();
       })}
     </Container>
   </div>
+      <Wh phone="5491171387291" />
 </Layout>

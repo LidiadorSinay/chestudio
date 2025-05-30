@@ -7,6 +7,7 @@ import { SEO } from "astro-seo";
 
 // Importar el archivo JSON desde la carpeta public/data
 import publicaciones from '../../public/data/publicaciones.json';
+import Wh from "@components/wh.astro";
 
 const canonicalURL = "https://chestudioabogados.com/publicaciones"; // Enlace canónico de la página de publicaciones
 ---
@@ -66,5 +67,6 @@ const canonicalURL = "https://chestudioabogados.com/publicaciones"; // Enlace ca
         </ul>
       </div>
     </div>
+        <Wh phone="5491171387291" />
   </Container>
 </Layout>

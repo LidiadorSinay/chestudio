@@ -1,31 +1,125 @@
 ---
-import Icon from "astro-icon"
+import Icon from "astro-icon";
 ---
+
 <style>
-  * {
-    font-family: "Literata";
+  #contacto {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    max-width: 700px; /* Más ancho para desktop */
+    margin: 0 auto;
+  }
+
+  #contacto h2 {
+    font-family: "Literata", serif;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: var(--color-azul-accent);
+    margin-bottom: 2rem;
+  }
+
+  .contacto-lista {
+    display: flex;
+    flex-direction: column; /* vertical por defecto (mobile) */
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  .contacto-link {
+    font-family: "Literata", serif;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1.5rem;
+    color: var(--color-c);
+    text-decoration: underline;
+    border-radius: 0.75rem;
+    background-color: var(--color-celeste-light); /* color celeste en mobile */
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1); /* sombra más marcada en mobile */
+    min-width: 280px;
+    justify-content: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap; /* evita quiebre de texto */
+  }
+
+  /* Hover en mobile y desktop */
+  .contacto-link:hover {
+    background-color: var(--color-celeste-light);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    text-decoration: none;
+  }
+
+  .contacto-icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    color: var(--color-azul-accent);
+    flex-shrink: 0;
+  }
+
+  /* Diferenciar iconos con colores */
+  .contacto-link.whatsapp .contacto-icon {
+    color: #25d366; /* verde WhatsApp */
+  }
+
+  /* Ajustes para desktop */
+  @media (min-width: 601px) {
+    .contacto-lista {
+      flex-direction: row; /* horizontal en desktop */
+      justify-content: center;
+      flex-wrap: wrap; /* permite que bajen si no hay espacio */
+      gap: 2rem; /* un poco más de espacio horizontal */
+    }
+    .contacto-link {
+      background-color: white; /* fondo blanco en desktop */
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      text-decoration: underline;
+      min-width: 280px;
+      padding: 0.75rem 1.5rem;
+    }
+    .contacto-link:hover {
+      background-color: var(--color-celeste-light);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      text-decoration: none;
+    }
+  }
+
+  /* Ajustes para móviles */
+  @media (max-width: 600px) {
+    #contacto {
+      padding-top: 3rem;
+      padding-bottom: 1rem;
+      max-width: 95vw;
+    }
+    .contacto-link {
+      font-size: 1.25rem;
+      min-width: unset;
+      padding: 0.6rem 1rem;
+    }
   }
 </style>
 
-<section
-  id="contacto"
-  class="p-8 md:px-20 md:py-20 mt-20 mx-auto flex flex-col items-center text-center">
-  <span class="text-aa text-3xl leading-3">*</span>
-  <h2 class="text-aa text-3xl tracking-tight">Contacto</h2>
+<section id="contacto">
+  <h2>Contacto</h2>
+  <div class="contacto-lista">
+    <a
+      href="mailto:chestudioinfo@gmail.com"
+      rel="noopener"
+      class="contacto-link mail"
+    >
+      <Icon name="mdi:email" class="contacto-icon" />
+      chestudioinfo@gmail.com
+    </a>
 
-  <!-- <h3 class="text-aa text-3xl md:text-5xl tracking-tight mt-10">
-    ¿Te interesa trabajar con nosotros?
-  </h3> -->
-  <a href="mailto:chestudioinfo@gmail.com" class="text-c text-3xl md:text-4xl mt-5 underline" rel="noopener">
-    chestudioinfo@gmail.com
-  </a>
-  <a href="https://api.whatsapp.com/send?phone=5491171387291"
-    rel="noreferrer" target="_blank"
-    class="text-c text-3xl md:text-4xl mt-5 underline flex">
-    <Icon
-      class="w-10 h-10 underline"
-      name="ic:round-whatsapp"
-    />
-    +54 9 11-7138-7291
-  </a>
+    <a
+      href="https://api.whatsapp.com/send?phone=5491171387291"
+      rel="noreferrer"
+      target="_blank"
+      class="contacto-link whatsapp"
+    >
+      <Icon name="mdi:whatsapp" class="contacto-icon" />
+      +54 9 11-7138-7291
+    </a>
+  </div>
 </section>
