@@ -56,6 +56,7 @@ import Icon from "astro-icon";
     height: 1.75rem;
     color: var(--color-azul-accent);
     flex-shrink: 0;
+    pointer-events: none;
   }
 
   /* Diferenciar iconos con colores */
@@ -103,11 +104,12 @@ import Icon from "astro-icon";
 <section id="contacto">
   <h2>Contacto</h2>
   <div class="contacto-lista">
-    <a
-      href="mailto:chestudioinfo@gmail.com"
-      rel="noopener"
-      class="contacto-link mail"
-    >
+   <a
+  href="mailto:chestudioinfo@gmail.com"
+  rel="noopener noreferrer"
+  class="contacto-link mail"
+  id="mailtoLink"
+>
       <Icon name="mdi:email" class="contacto-icon" />
       chestudioinfo@gmail.com
     </a>
@@ -123,3 +125,16 @@ import Icon from "astro-icon";
     </a>
   </div>
 </section>
+
+<script is:inline>
+  window.addEventListener('DOMContentLoaded', () => {
+    const mailtoLink = document.getElementById('mailtoLink');
+    if (!mailtoLink) return;
+
+    mailtoLink.addEventListener('click', (e) => {
+      e.stopPropagation();   // Evita que otros listeners globales bloqueen el evento
+      e.preventDefault();    // Evita el comportamiento por defecto para controlarlo manualmente
+      window.location.href = mailtoLink.href;  // Abre el cliente de correo
+    });
+  });
+</script>
