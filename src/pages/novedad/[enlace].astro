@@ -10,6 +10,12 @@ import '../novedades.css';
 import novedades from '../../../public/data/novedades.json';
 import Wh from '@components/wh.astro';
 
+export async function getStaticPaths() {
+  return novedades.map(n => ({
+    params: { enlace: n.enlace },
+  }));
+}
+
 const { enlace } = Astro.params;
 const novedad = novedades.find(n => n.enlace === enlace) ?? {};
 const titulo = novedad.titulo || "Novedad no encontrada";
@@ -17,8 +23,7 @@ const descripcion = novedad.descripcion || "No se encontró descripción.";
 const fecha = novedad.fecha || "Fecha no disponible.";
 const imagen = novedad.imagen || "/default-image.jpg";
 const contenido = novedad.contenido ? marked(novedad.contenido) : "";
-
-const canonicalURL = `https://mi-sitio-web.com/novedades/${enlace}`;
+const canonicalURL = `https://mi-sitio-web.com/novedad/${enlace}`;
 ---
 
 <style global>.markdown-body {
@@ -86,12 +91,22 @@ const canonicalURL = `https://mi-sitio-web.com/novedades/${enlace}`;
         url: canonicalURL,
         type: "article",
         title: titulo,
-        description: descripcion,
         image: imagen,
+        description: descripcion,
+
       },
       image: {
+           url: imagen,
+        secure_url: imagen,
+                type: "image/jpeg",
+
         alt: `Imagen de la novedad: ${titulo}`,
       },
+    }}
+    twitter={{
+      title: titulo,
+      description: descripcion,
+      image: imagen,
     }}
   />
   
@@ -113,11 +128,11 @@ const canonicalURL = `https://mi-sitio-web.com/novedades/${enlace}`;
       <p class="text-sm text-gray-500">{fecha}</p>
     </div>
 
-    <!-- Inyectar el HTML procesado con marked -->
     <div class="mt-6 markdown-body">
-<div class="text-base text-gray-800" set:html={contenido}></div>
+      <div class="text-base text-gray-800" set:html={contenido}></div>
     </div>
+
     <Cta />
-        <Wh phone="5491171387291" />
+    <Wh phone="5491171387291" />
   </Container>
 </Layout>
