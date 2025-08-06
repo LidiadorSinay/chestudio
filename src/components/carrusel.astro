@@ -1,18 +1,41 @@
 ---
 import '../style/carrusel.css';
+import data from '../../public/data/carrusel.json';
+import Link from '@components/ui/link.astro';
+
+// Serializamos para pasar como atributo data al HTML
+const dataJSON = JSON.stringify(data);
+let currentIndex = 0; // Para el render inicial
+const current = data[currentIndex];
 ---
 
-<div class="main-container" id="main-container">
+<div class="main-container" id="main-container" data-carrusel={dataJSON}>
   <!-- Fondos superpuestos -->
-  <div id="bg-prev" class="background-layer"></div>
+  <div id="bg-prev" class="background-layer" style={`background-image: linear-gradient(180deg, #002d4255, #002d42), url('${current.fondo}')`}></div>
   <div id="bg-next" class="background-layer"></div>
 
   <!-- Contenido -->
   <div class="content" id="content">
-    <h1 id="slide-title"></h1>
-    <h2 id="slide-subtitle" class="subtitle" style="display:none;"></h2>
-    <p id="slide-bajada" style="display:none;"></p>
-    <a id="slide-button" href="#" target="_blank" rel="noopener noreferrer"></a>
+    <h1 id="slide-title">{current.titulo}</h1>
+    <h2
+      id="slide-subtitle"
+      class="subtitle"
+      style={current.subtitulo ? '' : 'display:none'}
+    >
+      {current.subtitulo}
+    </h2>
+    <p id="slide-bajada" style={current.bajada ? '' : 'display:none'}>
+      {current.bajada}
+    </p>
+    <Link
+      id="slide-button"
+      href={current.botonLink}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="pill uppercase"
+    >
+      {current.botonTexto}
+    </Link>
   </div>
 
   <div class="carousel-controls">
@@ -28,6 +51,9 @@ import '../style/carrusel.css';
 
 <script>
   document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("main-container");
+    const data = JSON.parse(container.getAttribute("data-carrusel"));
+
     const bgPrev = document.getElementById("bg-prev");
     const bgNext = document.getElementById("bg-next");
     const content = document.getElementById("content");
@@ -37,42 +63,14 @@ import '../style/carrusel.css';
     const buttonEl = document.getElementById("slide-button");
     const prevBtn = document.getElementById("prev-btn");
     const nextBtn = document.getElementById("next-btn");
-
-    const data = [
-      {
-        titulo: "Defendemos tus derechos",
-        subtitulo: "en la era digital.",
-        bajada: "",
-        botonTexto: "Saber más",
-        botonLink: "https://ejemplo.com/pdf",
-        fondo: "https://picsum.photos/id/1018/1000/600"
-      },
-      {
-        titulo: "¿Tu cuenta de Instagram",
-        subtitulo: "fue hackeada o suspendida?",
-        bajada: "Tips prácticos para recuperarla",
-        botonTexto: "Leer",
-        botonLink: "/investigaciones",
-        fondo: "https://static.wixstatic.com/media/67d70e_2eddb07b2b8d4c8f849ca37d7dbd163e~mv2.webp/v1/fill/w_946,h_541,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Imagen%20para%20nota%20guia%20cuentas%20instagram.webp"
-      },
-      {
-        titulo: "Sumate a la comunidad",
-        subtitulo: "",
-        bajada: "Eventos, charlas y más",
-        botonTexto: "Participar",
-        botonLink: "/comunidad",
-        fondo: "https://picsum.photos/id/1035/1000/600"
-      }
-    ];
+    const indicatorsContainer = document.getElementById("indicators");
 
     let currentIndex = 0;
     const totalSlides = data.length;
     let isAnimating = false;
-    let autoChange = true; // Controla si el cambio automático está activo
+    let autoChange = true;
 
-    const indicatorsContainer = document.getElementById("indicators");
-
-    // Crear puntos
+    // Crear puntos indicadores
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement("div");
       dot.classList.add("dot");
@@ -87,9 +85,8 @@ import '../style/carrusel.css';
       });
     }
 
-    bgPrev.style.backgroundImage = `linear-gradient(180deg, #002d4255, #002d42), url('${data[0].fondo}')`;
-    bgPrev.style.opacity = '1';
-    bgNext.style.opacity = '0';
+    bgPrev.style.opacity = "1";
+    bgNext.style.opacity = "0";
 
     function setContent(index) {
       const current = data[index];
@@ -112,8 +109,9 @@ import '../style/carrusel.css';
         bajadaEl.textContent = "";
       }
 
-      buttonEl.textContent = current.botonTexto;
+      // Actualizamos Link (recordá que Link renderiza a <a>, así que manipulamos sus props)
       buttonEl.href = current.botonLink;
+      buttonEl.textContent = current.botonTexto;
     }
 
     function animateChange(newIndex) {
@@ -136,25 +134,28 @@ import '../style/carrusel.css';
 
         content.classList.add("slide-in");
 
-        content.addEventListener("animationend", () => {
-          content.classList.remove("slide-in");
+        content.addEventListener(
+          "animationend",
+          () => {
+            content.classList.remove("slide-in");
 
-          const temp = bgPrev.style.backgroundImage;
-          bgPrev.style.backgroundImage = bgNext.style.backgroundImage;
-          bgPrev.style.opacity = "1";
-          bgNext.style.opacity = "0";
+            // Intercambiamos el fondo activo
+            bgPrev.style.backgroundImage = bgNext.style.backgroundImage;
+            bgPrev.style.opacity = "1";
+            bgNext.style.opacity = "0";
 
-          currentIndex = newIndex;
-          updateIndicators(currentIndex);  // Actualizar puntitos
+            currentIndex = newIndex;
+            updateIndicators(currentIndex);
 
-          isAnimating = false;
-        }, { once: true });
+            isAnimating = false;
+          },
+          { once: true }
+        );
       }, { once: true });
     }
 
     setContent(currentIndex);
 
-    // Función para detener cambio automático al usar flechas
     function userInteracted() {
       autoChange = false;
     }
@@ -171,8 +172,7 @@ import '../style/carrusel.css';
       animateChange(newIndex);
     });
 
-    // Intervalo que solo cambia si autoChange es true
-    const intervalId = setInterval(() => {
+    setInterval(() => {
       if (autoChange) {
         const newIndex = (currentIndex + 1) % totalSlides;
         animateChange(newIndex);

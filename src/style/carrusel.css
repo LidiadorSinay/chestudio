@@ -136,8 +136,7 @@
 .content a {
   display: inline-block;
   text-transform: uppercase;
-  background-color: #222;
-  color: white;
+  color: var(--color-celeste);
   padding: 0.75rem 1.75rem;
   border-radius: 9999px; /* pill shape */
   font-weight: 700;
@@ -145,6 +144,7 @@
   text-decoration: none;
   user-select: none;
   transition: background-color 0.3s ease;
+  margin-top: 6rem;
 }
 
 .content a:hover,
