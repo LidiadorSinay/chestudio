@@ -1,0 +1,182 @@
+---
+import '../style/carrusel.css';
+---
+
+<div class="main-container" id="main-container">
+  <!-- Fondos superpuestos -->
+  <div id="bg-prev" class="background-layer"></div>
+  <div id="bg-next" class="background-layer"></div>
+
+  <!-- Contenido -->
+  <div class="content" id="content">
+    <h1 id="slide-title"></h1>
+    <h2 id="slide-subtitle" class="subtitle" style="display:none;"></h2>
+    <p id="slide-bajada" style="display:none;"></p>
+    <a id="slide-button" href="#" target="_blank" rel="noopener noreferrer"></a>
+  </div>
+
+  <div class="carousel-controls">
+    <button id="prev-btn" aria-label="Previous Slide">&#10094;</button>
+
+    <div class="indicators" id="indicators">
+      <!-- Circulos generados por JS -->
+    </div>
+
+    <button id="next-btn" aria-label="Next Slide">&#10095;</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const bgPrev = document.getElementById("bg-prev");
+    const bgNext = document.getElementById("bg-next");
+    const content = document.getElementById("content");
+    const titleEl = document.getElementById("slide-title");
+    const subtitleEl = document.getElementById("slide-subtitle");
+    const bajadaEl = document.getElementById("slide-bajada");
+    const buttonEl = document.getElementById("slide-button");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    const data = [
+      {
+        titulo: "Defendemos tus derechos",
+        subtitulo: "en la era digital.",
+        bajada: "",
+        botonTexto: "Saber más",
+        botonLink: "https://ejemplo.com/pdf",
+        fondo: "https://picsum.photos/id/1018/1000/600"
+      },
+      {
+        titulo: "¿Tu cuenta de Instagram",
+        subtitulo: "fue hackeada o suspendida?",
+        bajada: "Tips prácticos para recuperarla",
+        botonTexto: "Leer",
+        botonLink: "/investigaciones",
+        fondo: "https://static.wixstatic.com/media/67d70e_2eddb07b2b8d4c8f849ca37d7dbd163e~mv2.webp/v1/fill/w_946,h_541,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Imagen%20para%20nota%20guia%20cuentas%20instagram.webp"
+      },
+      {
+        titulo: "Sumate a la comunidad",
+        subtitulo: "",
+        bajada: "Eventos, charlas y más",
+        botonTexto: "Participar",
+        botonLink: "/comunidad",
+        fondo: "https://picsum.photos/id/1035/1000/600"
+      }
+    ];
+
+    let currentIndex = 0;
+    const totalSlides = data.length;
+    let isAnimating = false;
+    let autoChange = true; // Controla si el cambio automático está activo
+
+    const indicatorsContainer = document.getElementById("indicators");
+
+    // Crear puntos
+    for (let i = 0; i < totalSlides; i++) {
+      const dot = document.createElement("div");
+      dot.classList.add("dot");
+      if (i === currentIndex) dot.classList.add("active");
+      indicatorsContainer.appendChild(dot);
+    }
+
+    function updateIndicators(index) {
+      const dots = indicatorsContainer.querySelectorAll(".dot");
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("active", i === index);
+      });
+    }
+
+    bgPrev.style.backgroundImage = `linear-gradient(180deg, #002d4255, #002d42), url('${data[0].fondo}')`;
+    bgPrev.style.opacity = '1';
+    bgNext.style.opacity = '0';
+
+    function setContent(index) {
+      const current = data[index];
+
+      titleEl.textContent = current.titulo;
+
+      if (current.subtitulo && current.subtitulo.trim() !== "") {
+        subtitleEl.style.display = "block";
+        subtitleEl.textContent = current.subtitulo;
+      } else {
+        subtitleEl.style.display = "none";
+        subtitleEl.textContent = "";
+      }
+
+      if (current.bajada && current.bajada.trim() !== "") {
+        bajadaEl.style.display = "block";
+        bajadaEl.textContent = current.bajada;
+      } else {
+        bajadaEl.style.display = "none";
+        bajadaEl.textContent = "";
+      }
+
+      buttonEl.textContent = current.botonTexto;
+      buttonEl.href = current.botonLink;
+    }
+
+    function animateChange(newIndex) {
+      if (isAnimating || newIndex === currentIndex) return;
+      isAnimating = true;
+
+      content.classList.add("slide-out");
+
+      content.addEventListener("animationend", () => {
+        content.classList.remove("slide-out");
+        setContent(newIndex);
+
+        bgNext.style.backgroundImage = `linear-gradient(180deg, #002d4255, #002d42), url('${data[newIndex].fondo}')`;
+
+        bgPrev.style.transition = "opacity 0.8s ease-in-out";
+        bgNext.style.transition = "opacity 0.8s ease-in-out";
+
+        bgPrev.style.opacity = "0";
+        bgNext.style.opacity = "1";
+
+        content.classList.add("slide-in");
+
+        content.addEventListener("animationend", () => {
+          content.classList.remove("slide-in");
+
+          const temp = bgPrev.style.backgroundImage;
+          bgPrev.style.backgroundImage = bgNext.style.backgroundImage;
+          bgPrev.style.opacity = "1";
+          bgNext.style.opacity = "0";
+
+          currentIndex = newIndex;
+          updateIndicators(currentIndex);  // Actualizar puntitos
+
+          isAnimating = false;
+        }, { once: true });
+      }, { once: true });
+    }
+
+    setContent(currentIndex);
+
+    // Función para detener cambio automático al usar flechas
+    function userInteracted() {
+      autoChange = false;
+    }
+
+    prevBtn.addEventListener("click", () => {
+      userInteracted();
+      const newIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      animateChange(newIndex);
+    });
+
+    nextBtn.addEventListener("click", () => {
+      userInteracted();
+      const newIndex = (currentIndex + 1) % totalSlides;
+      animateChange(newIndex);
+    });
+
+    // Intervalo que solo cambia si autoChange es true
+    const intervalId = setInterval(() => {
+      if (autoChange) {
+        const newIndex = (currentIndex + 1) % totalSlides;
+        animateChange(newIndex);
+      }
+    }, 4000);
+  });
+</script>

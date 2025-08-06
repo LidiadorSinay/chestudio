@@ -1,0 +1,23 @@
+[
+  {
+    "titulo": "Defendemos tus derechos en la era digital.",
+    "bajada": "",
+    "botonTexto": "Saber más",
+    "botonLink": "https://ejemplo.com/pdf",
+    "fondo": "https://picsum.photos/id/1018/1000/600"
+  },
+  {
+    "titulo": "Explorá nuestras investigaciones recientes",
+    "bajada": "Análisis profundo de casos actuales",
+    "botonTexto": "Leer",
+    "botonLink": "/investigaciones",
+    "fondo": "https://picsum.photos/id/1025/1000/600"
+  },
+  {
+    "titulo": "Sumate a la comunidad",
+    "bajada": "Eventos, charlas y más",
+    "botonTexto": "Participar",
+    "botonLink": "/comunidad",
+    "fondo": "https://picsum.photos/id/1035/1000/600"
+  }
+]
