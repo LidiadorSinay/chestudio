@@ -27,11 +27,14 @@ export async function fetchGoogleSheetData() {
     const publicacionesRange = 'publicaciones!A1:B20'; 
     const novedadesRange = 'novedades!A1:F20'; 
     const featuresRange = 'features!A1:D20'; 
-    const aboutRange = 'about!A1:G10'; 
+    const aboutRange = 'about!A1:G10';
+    const carruselRange = 'carrusel!A1:F10'; // NUEVO
+    
+ 
 
 
     // Obtener los datos de ambas pestañas
-    const [publicacionesResponse, novedadesResponse, featuresResponse, aboutResponse] = await Promise.all([
+    const [publicacionesResponse, novedadesResponse, featuresResponse, aboutResponse, carruselResponse] = await Promise.all([
       sheets.spreadsheets.values.get({
         spreadsheetId,
         range: publicacionesRange,
@@ -48,6 +51,8 @@ export async function fetchGoogleSheetData() {
         spreadsheetId,
         range: aboutRange,
       }),
+      sheets.spreadsheets.values.get({ spreadsheetId, range: carruselRange })
+
     ]);
 
     // Extraemos los datos de las respuestas
@@ -55,11 +60,13 @@ export async function fetchGoogleSheetData() {
     const novedades = novedadesResponse.data.values;
     const features = featuresResponse.data.values;
     const about = aboutResponse.data.values;
+    const carrusel = carruselResponse.data.values;
 
+    
 
 
     // Devolvemos los datos obtenidos
-    return { publicaciones, novedades, features, about };
+    return { publicaciones, novedades, features, about, carrusel };
   } catch (error) {
     console.error('Error al obtener datos de Google Sheets:', error);
     throw error;
