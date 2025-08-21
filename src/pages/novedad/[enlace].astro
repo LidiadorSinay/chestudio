@@ -1,32 +1,67 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { SEO } from "astro-seo";
 import Navbarlight from "@components/navbar/navbarlight.astro";
 import Container from "@components/container.astro";
-import { marked } from 'marked'; // Para procesar Markdown
+import { marked } from 'marked';
 import Cta from "@components/cta.astro";
-import '../novedades.css';
+import Wh from '@components/wh.astro';
+import '../../style/novedades.css';
 
 import novedades from '../../../public/data/novedades.json';
-import Wh from '@components/wh.astro';
+
+interface Novedad {
+  titulo: string;
+  descripcion: string;
+  fecha: string;
+  imagen: string;
+  contenido: string;
+  enlace: string;
+}
 
 export async function getStaticPaths() {
-  return novedades.map(n => ({
+  return novedades.map((n: Novedad) => ({
     params: { enlace: n.enlace },
   }));
 }
 
 const { enlace } = Astro.params;
-const novedad = novedades.find(n => n.enlace === enlace) ?? {};
-const titulo = novedad.titulo || "Novedad no encontrada";
-const descripcion = novedad.descripcion || "No se encontró descripción.";
-const fecha = novedad.fecha || "Fecha no disponible.";
-const imagen = novedad.imagen || "/default-image.jpg";
-const contenido = novedad.contenido ? marked(novedad.contenido) : "";
-const canonicalURL = `https://mi-sitio-web.com/novedad/${enlace}`;
+const novedad: Novedad | undefined = novedades.find((n: Novedad) => n.enlace === enlace);
+
+const titulo = novedad?.titulo || "Novedad no encontrada";
+const descripcion = novedad?.descripcion || "No se encontró descripción.";
+const fecha = novedad?.fecha || "Fecha no disponible.";
+const imagen = novedad?.imagen || "/default-image.jpg";
+const contenido = novedad?.contenido ? marked(novedad.contenido) : "";
+const canonicalURL = `https://chestudioabogados.com/novedad/${enlace}`;
+
+const seo = {
+  title: titulo + " | CHESTUDIO",
+  description: descripcion,
+  canonical: canonicalURL,
+  openGraph: {
+    basic: {
+      url: canonicalURL,
+      type: "article",
+      title: titulo,
+      image: imagen,
+      description: descripcion,
+    },
+    image: {
+      url: imagen,
+      alt: `Imagen de la novedad: ${titulo}`,
+      type: "image/jpeg",
+    },
+  },
+  twitter: {
+    title: titulo,
+    description: descripcion,
+    image: imagen,
+  },
+};
 ---
 
-<style global>.markdown-body {
+<style is:global>
+.markdown-body {
   line-height: 1.75;
   font-size: 1.05rem;
 }
@@ -79,37 +114,9 @@ const canonicalURL = `https://mi-sitio-web.com/novedad/${enlace}`;
   border: none;
   border-top: 1px solid #ddd;
 }
-
 </style>
 
-
-<Layout title={titulo}>
-  <SEO
-    title={titulo}
-    openGraph={{
-      basic: {
-        url: canonicalURL,
-        type: "article",
-        title: titulo,
-        image: imagen,
-        description: descripcion,
-
-      },
-      image: {
-           url: imagen,
-        secure_url: imagen,
-                type: "image/jpeg",
-
-        alt: `Imagen de la novedad: ${titulo}`,
-      },
-    }}
-    twitter={{
-      title: titulo,
-      description: descripcion,
-      image: imagen,
-    }}
-  />
-  
+<Layout seo={seo} title={titulo}>
   <Navbarlight />
 
   <div class="w-full flex flex-col lg:flex-row">

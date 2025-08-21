@@ -5,7 +5,7 @@ import path from 'path';
 async function updateDataJSON() {
   try {
     // Obtener los datos de Google Sheets
-    const { publicaciones, novedades, features, about } = await fetchGoogleSheetData();
+    const { publicaciones, novedades, features, about, carrusel } = await fetchGoogleSheetData();
 
     // Mapear los datos a un formato adecuado para publicaciones.json
     const publicacionesData = publicaciones.map(row => ({
@@ -43,6 +43,16 @@ async function updateDataJSON() {
         linkedin: row[6],         
       }));
 
+    // Carrusel (A–F → titulo, subtitulo, bajada, botonTexto, botonLink, fondo)
+    const carruselData = carrusel.map(row => ({
+      titulo: row[0] || "",
+      subtitulo: row[1] || "",
+      bajada: row[2] || "",
+      botonTexto: row[3] || "",
+      botonLink: row[4] || "",
+      fondo: row[5] || ""
+    }));
+
 
       
 
@@ -51,6 +61,8 @@ async function updateDataJSON() {
     const novedadesPath = path.resolve('public/data/novedades.json');
     const featuresPath = path.resolve('public/data/features.json');
     const aboutPath = path.resolve('public/data/about.json');
+    const carruselPath = path.resolve('public/data/carrusel.json'); // NUEVO
+
 
 
 
@@ -59,9 +71,11 @@ async function updateDataJSON() {
     await fs.promises.writeFile(novedadesPath, JSON.stringify(novedadesData, null, 2));
     await fs.promises.writeFile(featuresPath, JSON.stringify(featuresData, null, 2));
     await fs.promises.writeFile(aboutPath, JSON.stringify(aboutData, null, 2));
+    await fs.promises.writeFile(carruselPath, JSON.stringify(carruselData, null, 2)); // NUEVO
 
 
-    console.log('publicaciones.json, features.json, about.json novedades.json actualizados correctamente.');
+
+    console.log('publicaciones.json, features.json, about.json, novedades.json, actualizados correctamente.');
   } catch (error) {
     console.error('Error al actualizar los archivos JSON:', error);
   }

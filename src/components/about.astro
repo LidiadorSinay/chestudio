@@ -23,6 +23,11 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
   .hero {
     width: 250px;
   }
+
+  #about p {
+  text-align: justify;
+}
+
 </style>
 
 <section id="about" class="py-20 px-5 text-aa">
@@ -37,7 +42,8 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
   </div>
 
   <!-- Persona 1: Agustín -->
-  <div class="grid md:flex md:items-center justify-center gap-5 mt-16">
+ <div class="grid md:flex md:items-center justify-center gap-10 mt-16">
+
     <div class="grid gap-3">
       <Picture
         src={agusImage}

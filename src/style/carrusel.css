@@ -1,0 +1,204 @@
+      @import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+
+
+.main-container {
+  position: relative;
+  margin-top: -20vh;
+  width: 100%;
+  height: 95vh;
+  overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  border-bottom-right-radius: min(50vw, 25rem);
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-layer {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: opacity 0.8s ease-in-out;
+  border-bottom-right-radius: inherit;
+}
+
+#bg-prev {
+  opacity: 1;
+  z-index: 1;
+}
+
+#bg-next {
+  opacity: 0;
+  z-index: 0;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centramos todo */
+  gap: 1rem; /* Espacio pequeño entre elementos */
+  pointer-events: none; /* para que los hijos puedan controlar puntero */
+  z-index: 5;
+}
+
+.carousel-controls button {
+  pointer-events: all;
+  background: transparent; /* Sin fondo */
+  border: none;
+  color:  rgba(255, 255, 255, 0.4);
+  font-size: 1.5rem;
+  padding: 0 2rem; /* Sin relleno */
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0; /* Sin bordes redondeados */
+  transition: color 0.3s ease;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem; /* tamaño fijo para alinear */
+  height: 1rem;
+}
+
+.carousel-controls button:hover {
+  color: #ccc; /* Cambio suave de color al hover */
+}
+
+.indicators {
+  display: flex;
+  gap: 1rem;
+  pointer-events: none;
+  /* flex-grow: 1; */ /* Ya no es necesario que crezca */
+  justify-content: center;
+}
+
+.indicators .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.indicators .dot.active {
+  background: white;
+}
+
+.content {
+  position: relative;
+  max-width: 90%;
+  z-index: 2;
+}
+
+.content h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+  color: white;
+  font-family: "Literata" !important;
+}
+
+.subtitle {
+    font-family: "Archivo", !important;  
+  font-weight: 700 !important;                
+  font-size: 4rem !important;                  
+  line-height: 1.1;
+  margin-top: 0.5rem;
+}
+
+.content p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #ddd;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block; /* cambiará a none si vacío en Astro */
+}
+
+.content a {
+  display: inline-block;
+  text-transform: uppercase;
+  color: var(--color-celeste);
+  padding: 1rem 2rem;
+  border-radius: 9999px; /* pill shape */
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  user-select: none;
+  transition: background-color 0.3s ease;
+  margin-top: 6rem;
+}
+
+.content a:hover,
+.content a:focus {
+  outline: none;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 3;
+}
+
+.buttons button {
+  pointer-events: all;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+@keyframes slideOutLeft {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-out {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+.slide-in {
+  animation: slideInRight 0.5s forwards;
+}

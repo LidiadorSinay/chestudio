@@ -1,0 +1,34 @@
+[
+  {
+    "titulo": "Defendemos tus derechos",
+    "subtitulo": "en la era digital.",
+    "bajada": "",
+    "botonTexto": "Saber más",
+    "botonLink": "https://43ce9ff9-3ace-4065-bc1d-3dd7aad3db58.filesusr.com/ugd/67d70e_100f37085dc945f8bfd0d56a36bfb2f4.pdf",
+    "fondo": "chestudio.webp"
+  },
+  {
+    "titulo": "Ciberdelitos:",
+    "subtitulo": " ¿Sabes cómo protegerte? ",
+    "bajada": "Te explicamos las amenazas más comunes y cómo defenderse legalmente",
+    "botonTexto": "Saber más",
+    "botonLink": "/novedad/ciberdelitos-como-protegerte",
+    "fondo": "ciberdelitos.webp"
+  },
+  {
+    "titulo": "¿Tu cuenta de Instagram",
+    "subtitulo": "fue hackeada o suspendida?",
+    "bajada": "Tips prácticos para recuperarla",
+    "botonTexto": "Saber más",
+    "botonLink": "/novedad/recuperar-cuenta-instagram",
+    "fondo": "recuperacion-cuenta-carrusel.webp"
+  },
+  {
+    "titulo": "Conocé nuestras",
+    "subtitulo": "publicaciones",
+    "bajada": "",
+    "botonTexto": "Saber más",
+    "botonLink": "/publicaciones",
+    "fondo": "publicaciones.webp"
+  }
+]
