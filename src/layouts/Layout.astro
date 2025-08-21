@@ -5,18 +5,39 @@ import "@fontsource-variable/inter/index.css";
 
 export interface Props {
   title: string;
+  seo?: any;
 }
 
-const canonicalURL = "https://chestudioabogados.com/novedades";
+const { title, seo } = Astro.props;
+
+const defaultCanonicalURL = "https://chestudioabogados.com/novedades";
 
 const resolvedImageWithDomain = new URL(
   "/opengraph.jpg",
   Astro.site
 ).toString();
 
-const { title } = Astro.props;
+const defaultSEO = {
+  title: "CHESTUDIO",
+  description: "Chestudio es una consultora de abogados especializada en la resolucion de problemas.",
+  canonical: defaultCanonicalURL,
+  openGraph: {
+    basic: {
+      url: defaultCanonicalURL,
+      type: "website",
+      title: "Chestudio",
+      image: resolvedImageWithDomain,
+    },
+    image: {
+      alt: "Screenshot de la pagina de inicio de Chestudio",
+    },
+  },
+};
 
-const makeTitle = title ? title + " | " + "CHESTUDIO" : "CHESTUDIO";
+const seoData = seo || {
+  ...defaultSEO,
+  title: title ? `${title} | CHESTUDIO` : defaultSEO.title,
+};
 ---
 
 <!doctype html>
@@ -24,54 +45,37 @@ const makeTitle = title ? title + " | " + "CHESTUDIO" : "CHESTUDIO";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" media="(prefers-color-scheme: light)"/>
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" media="(prefers-color-scheme: dark)"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" media="(prefers-color-scheme: dark)" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
     <meta name="generator" content={Astro.generator} />
 
-    <SEO
-      title={makeTitle}
-      description="Chestudio es una consultora de abogados especializada en la resolucion de problemas."
-      canonical={canonicalURL}
-      openGraph={{
-        basic: {
-          url: canonicalURL,
-          type: "website",
-          title: `Chestudio`,
-          image: resolvedImageWithDomain,
-        },
-        image: {
-          alt: "Screenshot de la pagina de inicio de Chestudio",
-        },
-      }}
-    />
-    <!-- Google Tag Manager -->
-<script is:inline>
-  (function(w,d,s,l,i){
-    w[l]=w[l]||[];
-    w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
-    var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),
-        dl=l!='dataLayer'?'&l='+l:'';
-    j.async=true;
-    j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-    f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-KZD9JZ2M');
-</script>
+    <SEO {...seoData} />
 
-<!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){
+        w[l]=w[l]||[];
+        w[l].push({'gtm.start': new Date().getTime(), event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),
+            dl=l!='dataLayer'?'&l='+l:'';
+        j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+        f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-KZD9JZ2M');
+    </script>
+    <!-- End Google Tag Manager -->
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZD9JZ2M"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-
-<!-- End Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZD9JZ2M" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <slot />
     <Footer />

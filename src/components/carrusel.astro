@@ -1,27 +1,51 @@
 ---
 import '../style/carrusel.css';
-import data from '../../public/data/carrusel.json';
+import dataRaw from '../../public/data/carrusel.json';
 import Link from '@components/ui/link.astro';
 
-// Serializamos para pasar como atributo data al HTML
+import chestudio from '../assets/imgs/portadas/chestudio.webp';
+import ciberdelitos from '../assets/imgs/portadas/ciberdelitos.webp';
+import recuperacionCuenta from '../assets/imgs/portadas/recuperacion-cuenta-carrusel.webp';
+import publicaciones from '../assets/imgs/portadas/publicaciones.webp';
+
+const fondoMap = {
+  "chestudio.webp": chestudio,
+  "ciberdelitos.webp": ciberdelitos,
+  "recuperacion-cuenta-carrusel.webp": recuperacionCuenta,
+  "publicaciones.webp": publicaciones,
+};
+
+const data = dataRaw.map(item => {
+  const fondoImport = fondoMap[item.fondo];
+  return {
+    ...item,
+    fondo: fondoImport ? (fondoImport.src || fondoImport) : item.fondo,
+  };
+});
+
 const dataJSON = JSON.stringify(data);
-let currentIndex = 0; // Para el render inicial
+let currentIndex = 0;
 const current = data[currentIndex];
+
+function esLinkExterno(url) {
+  try {
+    const link = new URL(url, import.meta.env.SITE || 'https://chestudioabogados.com');
+    return link.hostname !== (new URL(import.meta.env.SITE || 'https://chestudioabogados.com')).hostname;
+  } catch {
+    return false;
+  }
+}
+
+const esExterno = esLinkExterno(current.botonLink);
 ---
 
 <div class="main-container" id="main-container" data-carrusel={dataJSON}>
-  <!-- Fondos superpuestos -->
   <div id="bg-prev" class="background-layer" style={`background-image: linear-gradient(180deg, #002d4255, #002d42), url('${current.fondo}')`}></div>
   <div id="bg-next" class="background-layer"></div>
 
-  <!-- Contenido -->
   <div class="content" id="content">
     <h1 id="slide-title">{current.titulo}</h1>
-    <h2
-      id="slide-subtitle"
-      class="subtitle"
-      style={current.subtitulo ? '' : 'display:none'}
-    >
+    <h2 id="slide-subtitle" class="subtitle" style={current.subtitulo ? '' : 'display:none'}>
       {current.subtitulo}
     </h2>
     <p id="slide-bajada" style={current.bajada ? '' : 'display:none'}>
@@ -30,8 +54,8 @@ const current = data[currentIndex];
     <Link
       id="slide-button"
       href={current.botonLink}
-      target="_blank"
-      rel="noopener noreferrer"
+      target={esExterno ? "_blank" : "_self"}
+      rel={esExterno ? "noopener noreferrer" : undefined}
       class="pill uppercase"
     >
       {current.botonTexto}
@@ -40,11 +64,7 @@ const current = data[currentIndex];
 
   <div class="carousel-controls">
     <button id="prev-btn" aria-label="Previous Slide">&#10094;</button>
-
-    <div class="indicators" id="indicators">
-      <!-- Circulos generados por JS -->
-    </div>
-
+    <div class="indicators" id="indicators"></div>
     <button id="next-btn" aria-label="Next Slide">&#10095;</button>
   </div>
 </div>
@@ -70,7 +90,6 @@ const current = data[currentIndex];
     let isAnimating = false;
     let autoChange = true;
 
-    // Crear puntos indicadores
     for (let i = 0; i < totalSlides; i++) {
       const dot = document.createElement("div");
       dot.classList.add("dot");
@@ -87,6 +106,15 @@ const current = data[currentIndex];
 
     bgPrev.style.opacity = "1";
     bgNext.style.opacity = "0";
+
+    function esLinkExterno(url) {
+      try {
+        const link = new URL(url, window.location.origin);
+        return link.hostname !== window.location.hostname;
+      } catch {
+        return false;
+      }
+    }
 
     function setContent(index) {
       const current = data[index];
@@ -109,9 +137,18 @@ const current = data[currentIndex];
         bajadaEl.textContent = "";
       }
 
-      // Actualizamos Link (recordá que Link renderiza a <a>, así que manipulamos sus props)
       buttonEl.href = current.botonLink;
       buttonEl.textContent = current.botonTexto;
+
+      if (esLinkExterno(current.botonLink)) {
+        buttonEl.target = "_blank";
+        buttonEl.rel = "noopener noreferrer";
+      } else {
+        buttonEl.target = "_self";
+        buttonEl.removeAttribute("rel");
+      }
+
+      bgNext.style.backgroundImage = `linear-gradient(180deg, #002d4255, #002d42), url('${current.fondo}')`;
     }
 
     function animateChange(newIndex) {
@@ -124,11 +161,8 @@ const current = data[currentIndex];
         content.classList.remove("slide-out");
         setContent(newIndex);
 
-        bgNext.style.backgroundImage = `linear-gradient(180deg, #002d4255, #002d42), url('${data[newIndex].fondo}')`;
-
         bgPrev.style.transition = "opacity 0.8s ease-in-out";
         bgNext.style.transition = "opacity 0.8s ease-in-out";
-
         bgPrev.style.opacity = "0";
         bgNext.style.opacity = "1";
 
@@ -139,7 +173,6 @@ const current = data[currentIndex];
           () => {
             content.classList.remove("slide-in");
 
-            // Intercambiamos el fondo activo
             bgPrev.style.backgroundImage = bgNext.style.backgroundImage;
             bgPrev.style.opacity = "1";
             bgNext.style.opacity = "0";

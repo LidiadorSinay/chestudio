@@ -75,7 +75,7 @@ async function updateDataJSON() {
 
 
 
-    console.log('publicaciones.json, features.json, about.json, novedades.json,  actualizados correctamente.');
+    console.log('publicaciones.json, features.json, about.json, novedades.json, actualizados correctamente.');
   } catch (error) {
     console.error('Error al actualizar los archivos JSON:', error);
   }

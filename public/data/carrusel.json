@@ -4,23 +4,31 @@
     "subtitulo": "en la era digital.",
     "bajada": "",
     "botonTexto": "Saber más",
-    "botonLink": "https://ejemplo.com/pdf",
-    "fondo": "https://picsum.photos/id/1018/1000/600"
+    "botonLink": "https://43ce9ff9-3ace-4065-bc1d-3dd7aad3db58.filesusr.com/ugd/67d70e_100f37085dc945f8bfd0d56a36bfb2f4.pdf",
+    "fondo": "chestudio.webp"
+  },
+  {
+    "titulo": "Ciberdelitos:",
+    "subtitulo": " ¿Sabes cómo protegerte? ",
+    "bajada": "Te explicamos las amenazas más comunes y cómo defenderse legalmente",
+    "botonTexto": "Saber más",
+    "botonLink": "/novedad/ciberdelitos-como-protegerte",
+    "fondo": "ciberdelitos.webp"
   },
   {
     "titulo": "¿Tu cuenta de Instagram",
     "subtitulo": "fue hackeada o suspendida?",
     "bajada": "Tips prácticos para recuperarla",
-    "botonTexto": "Leer",
-    "botonLink": "/investigaciones",
-    "fondo": "https://static.wixstatic.com/media/67d70e_2eddb07b2b8d4c8f849ca37d7dbd163e~mv2.webp/v1/fill/w_946,h_541,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Imagen%20para%20nota%20guia%20cuentas%20instagram.webp"
+    "botonTexto": "Saber más",
+    "botonLink": "/novedad/recuperar-cuenta-instagram",
+    "fondo": "recuperacion-cuenta-carrusel.webp"
   },
   {
-    "titulo": "Sumate a la comunidad",
-    "subtitulo": "",
-    "bajada": "Eventos, charlas y más",
-    "botonTexto": "Participar",
-    "botonLink": "/comunidad",
-    "fondo": "https://picsum.photos/id/1035/1000/600"
+    "titulo": "Conocé nuestras",
+    "subtitulo": "publicaciones",
+    "bajada": "",
+    "botonTexto": "Saber más",
+    "botonLink": "/publicaciones",
+    "fondo": "publicaciones.webp"
   }
 ]
