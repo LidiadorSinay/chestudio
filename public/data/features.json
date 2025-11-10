@@ -1,48 +1,45 @@
 [
   {
+    "title": "Delitos Informáticos y Ciberseguridad",
+    "description": "Somos especialistas en ciberdelitos y fraudes: vaciamiento de billeteras digitales, casos de phishing y estafas online, estafas bancarias, suplantación de identidad, sextorsión, difusión no consentida de material íntimo, y deep fakes.",
+    "icon": "mobile_lock_landscape"
+  },
+  {
     "title": "Recuperacion y restablecimiento de cuentas de Instagram",
     "description": "Gestionamos la recuperación y el restablecimiento de cuenta de Instagram ante hackeos, eliminaciones, suspensiones, baneo o restricciones. También brindamos asesoramiento preventivo para cada negocio o marca y así mitigar riesgos.",
     "icon": "",
     "astroIcon": "mdi:instagram"
+      
+
+  },
+  {
+    "title": "Contratos, registro de sociedades y asesoramiento personalizado a emprendedores, freelancers y startups",
+    "description": "Prestamos asesoramiento personalizado, y redactamos acuerdos y contratos para Startups, emprendedores, desarrolladores, freelancers y Pymes. También nos encargamos del registro de tu sociedad. Consultá por nuestro fee mensual.",
+    "icon": "contract_edit"
+
   },
   {
     "title": "Litigios",
     "description": "Contamos con amplia experiencia en litigios de toda índole, estando especializados en conflictos tecnológicos actuales.",
     "icon": "gavel"
+
   },
   {
-    "title": "Contratos, registro de sociedades y asesoramiento personzalizado",
-    "description": "Prestamos asesoramiento personalizado, y redactamos acuerdos y contratos para Startups, emprendedores, desarrolladores, freelancers y Pymes. También nos encargamos del registro de tu sociedad.",
-    "icon": "contract_edit"
-  },
-  {
-    "title": "Delitos Informáticos",
-    "description": "Somos especialisas en ciberdelitos y fraudes: vaciamiento de billeteras digitales, casos de phishing y estafas online, estafas bancarias, suplantación de identidad, sextorsión, difusión no consentida de material íntimo, y deepfakes.",
-    "icon": "touchpad_mouse"
-  },
-  {
-    "title": "Marcas",
-    "description": "Blindamos el negocio de emprendedores con la registración de su marca y la protección en línea",
-    "icon": "brand_family"
-  },
-  {
-    "title": "Plan de Ahorro y Consumidor",
-    "description": "somos especialistas en reclamos y asesoramiento vinculados a planes de ahorro automotor (demora en la entrega del auto, reposición ante robo, cargos indebidos, etc.) y defensa del consumidor. ",
-    "icon": "shopping_cart"
-  },
-  {
-    "title": "Sucesiones",
-    "description": "Asesoramos y elaboramos planificaciones sucesorias, sobre todo las relacionadas con cuestiones digitales.",
-    "icon": "diversity_3"
-  },
-  {
-    "title": "Seguros",
-    "description": "Representamos a nuestros clientes en reclamos contra compañías de seguros en los asuntos relacionados con esa actividad.",
-    "icon": "encrypted"
+    "title": "Propiedad Intelectual",
+    "description": "En el entorno digital, el verdadero valor de las empresas tecnológicas reside en sus activos intangibles. Brindamos asesoramiento integral para su protección legal, abarcando el registro de software, aplicaciones y bases de datos como propiedad intelectual; el diseño de estrategias para resguardar marcas y dominios digitales; la implementación de políticas y acuerdos que preserven secretos comerciales y know-how; y la defensa de derechos de autor frente a usos no autorizados en internet y redes sociales.Además, redactamos contratos de licencia y cesión adaptados a las necesidades de cada proyecto.",
+    "icon":"emoji_objects"
+
   },
   {
     "title": "Salud",
-    "description": "Estamos sumamente comprometidos con el derecho a la salud y discapacidad, por eso efectuamos reclamos y amparos contra prepagas y obras sociales.",
+    "description": "Creemos que toda persona tiene derecho a una atención de salud integral, digna y oportuna.Por eso acompañamos a cada persona en su proceso, brindando contención, asesoramiento y defensa jurídica para que pueda recibir la atención, el tratamiento y la cobertura que necesita.Nuetra misión es convertir cada reclamo en una respuesta concreta que garantice el acceso a la salud.",
     "icon": "ecg_heart"
+
+  },
+  {
+    "title": "Plan de Ahorro y Consumidor",
+    "description": "somos especialistas en reclamos y asesoramiento vinculados a planes de ahorro automotor (demora en la entrega del auto, reposición ante robo, cargos indebidos, etc.) y defensa del consumidor.",
+    "icon": "directions_car"
+
   }
 ]

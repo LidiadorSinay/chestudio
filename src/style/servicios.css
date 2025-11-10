@@ -1,0 +1,181 @@
+.servicios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+  section {
+    background-color: var(--color-celeste-light);
+    padding-bottom: 6vh;
+  }
+  h3 {
+    font-family: "Literata";
+    
+  }
+  h2 {font-family: "Literata", serif;
+  padding: 4vh 0 2vh 0;
+    font-size: 3rem; /* text-4xl → 36px */
+  font-weight: 700;   /* font-bold */
+  letter-spacing: normal; /* tracking normal */
+  margin-top: 0.25rem; /* mt-1 → 4px */
+  line-height: 2.5rem; /* leading-tight → ~40px */
+  padding-bottom: 1.25rem; /* pb-5 → 20px */
+}
+    
+  .material-symbols-outlined {
+    font-size: 2.5rem;
+    height: fit-content;
+  }
+  
+
+/* Franja general */
+.servicio-franja {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: start;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.servicio-franja.listado-alternado {
+  direction: rtl;
+}
+
+.servicio-franja.listado-alternado .bloque-texto {
+  direction: ltr;
+}
+
+/* Bloque texto */
+.bloque-texto {
+  padding: 3rem;
+  font-family: "Literata", serif;
+  color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 5rem;
+}
+
+/* Icono + título */
+.icono-titulo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #1f3a5f;
+  font-family: "Literata", serif;
+  flex-wrap: wrap; /* permite que el texto salte a otra línea si no entra */
+}
+
+.icono-titulo h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0;
+  flex: 1 1 auto; /* el texto puede ocupar más espacio */
+}
+
+
+/* Asegurar que el círculo siempre tenga tamaño fijo */
+.icono-titulo svg,
+.icono-titulo .icono-circulo {
+  background: var(--color-celeste);
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.75rem;
+  flex-shrink: 0; /* evita que se achique */
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f3a5f;
+}
+
+/* Línea divisoria */
+.divisor {
+  width: 100%;
+  height: 0.5rem;
+  background: var(--color-celeste-light);
+  margin: 1rem 0 1.5rem 0;
+}
+
+/* Texto */
+.inicio {
+  font-size: 1rem;
+  color: #1f3a5f;
+  margin-bottom: 0.75rem;
+}
+
+.ampliado {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Imagen */
+.bloque-imagen {
+  position: relative; /* necesario para el overlay */
+  width: 100%;
+  height: 100%;
+  align-self: start;
+  overflow: hidden;
+  background-color: #274770;
+
+}
+
+.bloque-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, filter 0.6s ease;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  filter: contrast(0.75) saturate(0.5) brightness(1.2);
+    opacity: 0.8;
+
+}
+
+/* Overlay azul degradado */
+.bloque-imagen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(214, 214, 214, 0.693),
+    rgba(50, 164, 216, 0.747)
+  );
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+/* Hover suave */
+.bloque-imagen:hover img {
+  transform: scale(1.05);
+  filter: contrast(1) saturate(1) brightness(1);
+}
+.bloque-imagen:hover::after {
+  opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .servicio-franja {
+    grid-template-columns: 1fr;
+  }
+
+  .bloque-imagen {
+    height: 250px;
+  }
+
+  h2{
+       font-size: 2.25rem; 
+  font-weight: 700;  
+  letter-spacing: normal; 
+  margin-top: 0.25rem; 
+  line-height: 2.5rem;
+  padding-bottom: 1.25rem; 
+  }
+}
