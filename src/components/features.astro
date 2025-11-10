@@ -1,6 +1,7 @@
 ---
 import { Icon } from "astro-icon";
 import featuresData from "../../public/data/features.json"; // Importación del JSON
+import Link from "./ui/link.astro";
 
 const features = featuresData; // Directamente usamos el array raíz
 ---
@@ -20,15 +21,39 @@ const features = featuresData; // Directamente usamos el array raíz
     font-size: 2.5rem;
     height: fit-content;
   }
+
+  h4{padding-bottom: 4vh;}
+ .pill2 {
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid #1f3a5f;
+    border-radius: 4rem;
+    font-weight: 600;
+    padding: 1.25rem 2.5rem;
+    transition: all 0.5s ease-in-out;
+    color: #1f3a5f;
+  }
+  .pill2:hover {
+    background-color: var(--color-azul-accent);
+    box-shadow: 0 5px 15px #fff;
+    color: #fff;
+  }
+  
   
 </style>
 
 <section id="servicios" class="px-5 py-20 text-aa">
   <div class="mt-16 md:mt-0 text-center">
     <h2 class="text-3xl lg:text-3xl lg:tracking-tight">Servicios</h2>
-    <p class="text-lg mt-4 text-balance">
+    <h4 class="text-lg mt-4 text-balance">
       Nos desempe&ntilde;amos en las siguientes áreas
-    </p>
+    </h4>
+        <Link
+      id="button"
+      href="/servicios"
+      class="pill2"
+    >
+Ver más    </Link>
   </div>
 
 <div class="grid md:grid-cols-2 mx-auto mt-16 gap-y-8 gap-x-5 max-w-5xl justify-items-center">
