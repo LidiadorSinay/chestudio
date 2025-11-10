@@ -1,0 +1,74 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbarlight from "@components/navbar/navbarlight.astro";
+import Container from "@components/container.astro";
+import { SEO } from "astro-seo";
+import Wh from '@components/wh.astro';
+
+import { Icon } from "astro-icon";
+import featuresData from "../../public/data/features2.json";
+import "../style/servicios.css";
+
+const features = featuresData;
+
+// SEO
+const title = "Servicios | Chestudio";
+const description = "Descubre los servicios de Chestudio: ciberseguridad, recuperación de cuentas, contratos, litigios, propiedad intelectual, salud y defensa del consumidor.";
+const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+const image = "/opengraph.jpg";
+const openGraphImage = new URL(image, Astro.site).toString();
+---
+
+<SEO
+  title={title}
+  description={description}
+  canonical={canonicalURL}
+  openGraph={{
+    basic: {
+      url: canonicalURL,
+      type: "website",
+      title: title,
+      image: openGraphImage,
+    },
+    image: {
+      alt: "Chestudio",
+    },
+  }}
+/>
+
+
+
+<Layout title="Servicios">
+  <Navbarlight />
+
+  <section class="servicios-container">
+    <Container>
+      <div class="text-center mb-12">
+        <h2>Servicios</h2>
+        <p class="intro">Nos desempeñamos en las siguientes áreas</p>
+      </div>
+
+      <div class="servicios-lista">
+  {features.map((item, index) => (
+    <div class="servicio-franja" class:listado-alternado={index % 2 === 1}>
+      <div class="bloque-texto">
+        <div class="icono-titulo">
+          {item.icon && <Icon name={item.icon} />}
+          <h3>{item.title}</h3>
+        </div>
+        <div class="divisor"></div>
+        <p class="inicio">{item.inicio}</p>
+{item.ampliado.split('\n\n').map(parrafo => (
+  <p class="ampliado">{parrafo}</p>
+))}      </div>
+      <div class="bloque-imagen">
+        {item.image && <img src={item.image} alt={item.title} loading="lazy" />}
+      </div>
+    </div>
+  ))}
+</div>
+    </Container>
+  </section>
+
+  <Wh phone="5491171387291" />
+</Layout>

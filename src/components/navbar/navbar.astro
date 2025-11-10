@@ -10,7 +10,7 @@ const menuitems = [
   },
   {
     title: "Servicios",
-    path: "/#servicios",
+    path: "/servicios",
   },
   {
     title: "Inicio",
@@ -36,12 +36,17 @@ const menuitems = [
   img {
     max-width: 300px;
     width: 70vw;
+    z-index: 200;
   }
   li{
     transition: all 0.25s ease-in-out;
+        z-index: 200;
+
   }
   li:hover{
     opacity: 0.5;
+        z-index: 200;
+
   }
   header {
   height: 20vh; /* o el valor medido */
@@ -49,6 +54,10 @@ const menuitems = [
 
 }
 nav{z-index: 10;}
+
+div{
+z-index: 200;
+}
 
 </style>
 

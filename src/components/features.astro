@@ -12,6 +12,10 @@ const features = featuresData; // Directamente usamos el array raíz
   h3 {
     font-family: "Literata";
   }
+  h2 {font-family: "Literata", serif;
+    font-size: 2.5rem;
+    font-weight: 400;}
+    
   .material-symbols-outlined {
     font-size: 2.5rem;
     height: fit-content;
@@ -29,7 +33,7 @@ const features = featuresData; // Directamente usamos el array raíz
 
 <div class="grid md:grid-cols-2 mx-auto mt-16 gap-y-8 gap-x-5 max-w-5xl justify-items-center">
     {features.map((item) => (
-      <div class="flex gap-4 items-center">
+      <div class="flex gap-4 items-top">
         <div class="bg-c rounded-full p-5 w-20 h-20 grid place-content-center shrink-0">
           {item.icon && (
             <span class="material-symbols-outlined">{item.icon}</span>
