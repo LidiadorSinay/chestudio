@@ -24,12 +24,7 @@
     "icon": "gavel"
 
   },
-  {
-    "title": "Propiedad Intelectual",
-    "description": "En el entorno digital, el verdadero valor de las empresas tecnológicas reside en sus activos intangibles. Brindamos asesoramiento integral para su protección legal, abarcando el registro de software, aplicaciones y bases de datos como propiedad intelectual; el diseño de estrategias para resguardar marcas y dominios digitales; la implementación de políticas y acuerdos que preserven secretos comerciales y know-how; y la defensa de derechos de autor frente a usos no autorizados en internet y redes sociales.Además, redactamos contratos de licencia y cesión adaptados a las necesidades de cada proyecto.",
-    "icon":"emoji_objects"
 
-  },
   {
     "title": "Salud",
     "description": "Creemos que toda persona tiene derecho a una atención de salud integral, digna y oportuna.Por eso acompañamos a cada persona en su proceso, brindando contención, asesoramiento y defensa jurídica para que pueda recibir la atención, el tratamiento y la cobertura que necesita.Nuetra misión es convertir cada reclamo en una respuesta concreta que garantice el acceso a la salud.",
@@ -40,6 +35,12 @@
     "title": "Plan de Ahorro y Consumidor",
     "description": "somos especialistas en reclamos y asesoramiento vinculados a planes de ahorro automotor (demora en la entrega del auto, reposición ante robo, cargos indebidos, etc.) y defensa del consumidor.",
     "icon": "directions_car"
+
+  },
+    {
+    "title": "Propiedad Intelectual",
+    "description": "En el entorno digital, el verdadero valor de las empresas tecnológicas reside en sus activos intangibles. Brindamos asesoramiento integral para su protección legal, abarcando el registro de software, aplicaciones y bases de datos como propiedad intelectual; el diseño de estrategias para resguardar marcas y dominios digitales; la implementación de políticas y acuerdos que preserven secretos comerciales y know-how; y la defensa de derechos de autor frente a usos no autorizados en internet y redes sociales.Además, redactamos contratos de licencia y cesión adaptados a las necesidades de cada proyecto.",
+    "icon":"emoji_objects"
 
   }
 ]
