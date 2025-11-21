@@ -2,6 +2,7 @@
 import { Picture } from "astro:assets";
 import agusImage from "assets/imgs/Agustin_Chalhub.jpg";
 import caroImage from "assets/imgs/Lipchack.jpeg";
+import guilleImage from "assets/imgs/Guillermo.jpg";
 import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
 ---
 
@@ -109,5 +110,39 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
         <p>{aboutData[1].desc3}</p>
       </div>
     </div>
+
   </div>
+<!-- Persona 2: Guillermo -->
+  <div class="grid md:flex md:items-center justify-center gap-5 mt-16">
+    <div class="grid gap-3">
+      <Picture
+        src={guilleImage}
+        alt="Carolina Lipchak, abogada"
+        class="hero transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-contain"
+      />
+      <a
+        class="text-c underline"
+        href={aboutData[2].linkedin}
+        rel="noreferrer"
+        target="_blank"
+      >EMAIL<span class="material-symbols-outlined">north_east</span>
+      </a>
+    </div>
+    <div class="grid gap-3">
+      <h3 class="text-4xl">
+        {aboutData[1].name.split(" ")[0]} <span class="font-bold">{aboutData[2].name.split(" ")[2]}</span>
+      </h3>
+      <span class="flex gap-2 rounded-full bg-af w-fit px-6 text-white uppercase">
+        {aboutData[2].role}
+      </span>
+      <div class="max-w-md grid gap-2">
+        <p>{aboutData[2].desc1}</p>
+        <p>{aboutData[2].desc2}</p>
+        <p>{aboutData[2].desc3}</p>
+      </div>
+    </div>
+
+  </div>
+
+  
 </section>
