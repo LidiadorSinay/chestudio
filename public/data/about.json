@@ -1,28 +1,47 @@
 [
   {
     "name": "Agustín Chalhub",
-    "role": "Founder",
-    "img": "/assets/imgs/abogado_chalhub.png",
+    "role": "Socio fundador",
+    "img": "/assets/imgs/Agustin.png",
     "desc1": "Agustín es abogado egresado de la Universidad de Buenos Aires (UBA), con posgrado en Cibercrimen y Evidencia Digital en la Universidad de Hartmann (México). A lo largo de su carrera profesional adquirió una gran experiencia en estudios jurídicos de primer nivel (Marval O' Farrel & Mairal, Nicholson & Cano). ",
     "desc2": "Durante ese camino se desempeñó en distintas áreas del Derecho, lo cual hoy en día le proporciona un valor agregado a la hora de asesorar y aconsejar a los clientes. Asimismo, ha colaborado en distintos proyectos académicos, y realiza publicaciones periódicas de doctrina enfocada en Derecho y Nuevas Tecnologías para editoriales como Hammurabi.",
     "desc3": "Actualmente se especializa en ciberdelitos y fraudes, litigios de alta complejidad, resguardo de evidencia digital, conflictos tecnológicos, asesoramiento a Startups, emprendedores, desarrolladores (contratos SAAS), y empresas vinculadas al sector IA.",
-    "linkedin": "https://www.linkedin.com/in/agust%C3%ADn-chalhub-93a7ab7a/"
+    "linkedin": "https://www.linkedin.com/in/agustinchalhub/"
+  },
+  {
+    "name": "Guillermo Haiuk",
+    "role": "Socio",
+    "img": "/assets/imgs/Guillermo.jpg",
+    "desc1": "Guillermo es abogado egresado de la Universidad de Buenos Aires (UBA), becario AUSAID ALAF y becario del International Visitor Program (IVP-USDOS).",
+    "desc2": "Cuenta con amplia experiencia en litigios vinculados al derecho a la salud, con una sólida práctica en la defensa de derechos de pacientes, reclamos frente a obras sociales y prepagas, y acceso a tratamientos médicos y medicamentos.",
+    "desc3": "Es especialista en el acompañamiento estratégico y de gestión de emprendedores, sociedades comerciales y organizaciones de la sociedad civil. Su enfoque incluye la constitución de estructuras legales y el diseño de estrategias jurídicas que impulsan el desarrollo sostenible de los proyectos, combinando conocimiento jurídico con empatía y visión estratégica.",
+    "linkedin": "https://www.linkedin.com/in/guillermo-haiuk-a83632371/"
   },
   {
     "name": "Carolina Lipchak",
-    "role": "Associate",
-    "img": "/assets/imgs/abogada_lipchack.jpg",
+    "role": "Socia",
+    "img": "/assets/imgs/Carolina.jpg",
     "desc1": "Carolina es abogada egresada de la Universidad de Buenos Aires (UBA) y una profesional multifacética que combina su pasión por el derecho con su vocación docente.",
     "desc2": "Su experiencia en diversas áreas del derecho y asesorando a emprendedores le otorgan una visión integral de las problemáticas legales y la capacidad de brindar soluciones adaptadas a cada caso.",
     "desc3": "Se especializa en reclamos y asesoramiento de Planes de Ahorro Automotor, y Defensa del Consumidor, registro de sociedades, y en asesoramiento estratégico y contractual para emprendedores y freelancers.",
     "linkedin": "https://ar.linkedin.com/in/carolina-lipchak-16074712b"
   },
   {
-    "name": "Guillermo Haiuk",
-    "role": "Associate",
-    "img": "/assets/imgs/Guillermo.jpg",
-    "desc1": "Guillermo es abogado egresado de la Universidad de Buenos Aires (UBA), becario AUSAID ALAF y becario del International Visitor Program (IVP-USDOS).",
-    "desc2": "Cuenta con amplia experiencia en litigios vinculados al derecho a la salud, con una sólida práctica en la defensa de derechos de pacientes, reclamos frente a obras sociales y prepagas, y acceso a tratamientos médicos y medicamentos.",
-    "desc3": "Es especialista en el acompañamiento estratégico y de gestión de emprendedores, sociedades comerciales y organizaciones de la sociedad civil. Su enfoque incluye la constitución de estructuras legales y el diseño de estrategias jurídicas que impulsan el desarrollo sostenible de los proyectos, combinando conocimiento jurídico con empatía y visión estratégica."
+    "name": "Juliana Quiroga",
+    "role": "Consultora asociada",
+    "img": "/assets/imgs/Juliana.jpg",
+    "desc1": "Abogada egresada de la Universidad de Buenos Aires, con orientación en derecho tributario, especializada en derecho empresarial, tecnología y propiedad intelectual.",
+    "desc2": "Cuenta con experiencia en el asesoramiento integral a empresas y startups en el desarrollo de sus negocios, participando en procesos de estructuración societaria, redacción y negociación de contratos comerciales y tecnológicos, y protección de derechos de propiedad intelectual.",
+    "desc3": "Se enfoca en brindar soluciones legales prácticas y estratégicas, orientadas a prevenir riesgos y acompañar el crecimiento de proyectos innovadores en entornos dinámicos.",
+    "linkedin": "https://www.linkedin.com/in/quirogajuliana/"
+  },
+  {
+    "name": "Federico Grasman",
+    "role": "Paralegal",
+    "img": "/assets/imgs/Federico.jpg",
+    "desc1": "Estudiante de la UBA, brinda apoyo clave en investigación jurídica y gestión de casos del estudio.",
+    "desc2": "",
+    "desc3": "",
+    "linkedin": "https://www.linkedin.com/in/federico-grasman-2b78972a8/"
   }
 ]

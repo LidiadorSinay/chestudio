@@ -1,8 +1,10 @@
 ---
 import { Picture } from "astro:assets";
-import agusImage from "assets/imgs/Agustin_Chalhub.jpg";
-import caroImage from "assets/imgs/Lipchack.jpeg";
+import agusImage from "assets/imgs/Agustin.jpg";
+import caroImage from "assets/imgs/Carolina.jpg";
 import guilleImage from "assets/imgs/Guillermo.jpg";
+import juliImage from "assets/imgs/Juliana.jpeg";
+import fedeImage from "assets/imgs/Federico.jpg";
 import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
 ---
 
@@ -81,11 +83,11 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
     </div>
   </div>
 
-  <!-- Persona 2: Carolina -->
+  <!-- Persona 2: Guillermo -->
   <div class="grid md:flex md:items-center justify-center gap-5 mt-16">
     <div class="grid gap-3">
       <Picture
-        src={caroImage}
+        src={guilleImage}
         alt="Carolina Lipchak, abogada"
         class="hero transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-contain"
       />
@@ -94,7 +96,7 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
         href={aboutData[1].linkedin}
         rel="noreferrer"
         target="_blank"
-      >LINKEDIN<span class="material-symbols-outlined">north_east</span>
+      >EMAIL<span class="material-symbols-outlined">north_east</span>
       </a>
     </div>
     <div class="grid gap-3">
@@ -112,11 +114,12 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
     </div>
 
   </div>
-<!-- Persona 2: Guillermo -->
+
+  <!-- Persona 3: Carolina -->
   <div class="grid md:flex md:items-center justify-center gap-5 mt-16">
     <div class="grid gap-3">
       <Picture
-        src={guilleImage}
+        src={caroImage}
         alt="Carolina Lipchak, abogada"
         class="hero transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-contain"
       />
@@ -125,20 +128,82 @@ import aboutData from "../../public/data/about.json"; // Importa el archivo JSON
         href={aboutData[2].linkedin}
         rel="noreferrer"
         target="_blank"
+      >LINKEDIN<span class="material-symbols-outlined">north_east</span>
+      </a>
+    </div>
+    <div class="grid gap-3">
+      <h3 class="text-4xl">
+        {aboutData[2].name.split(" ")[0]} <span class="font-bold">{aboutData[1].name.split(" ")[1]}</span>
+      </h3>
+      <span class="flex gap-2 rounded-full bg-af w-fit px-6 text-white uppercase">
+        {aboutData[1].role}
+      </span>
+      <div class="max-w-md grid gap-2">
+        <p>{aboutData[1].desc1}</p>
+        <p>{aboutData[1].desc2}</p>
+        <p>{aboutData[1].desc3}</p>
+      </div>
+    </div>
+
+  </div>
+<!-- Persona 4: Juliana -->
+  <div class="grid md:flex md:items-center justify-center gap-5 mt-16">
+    <div class="grid gap-3">
+      <Picture
+        src={juliImage}
+        alt="Carolina Lipchak, abogada"
+        class="hero transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-contain"
+      />
+      <a
+        class="text-c underline"
+        href={aboutData[3].linkedin}
+        rel="noreferrer"
+        target="_blank"
       >EMAIL<span class="material-symbols-outlined">north_east</span>
       </a>
     </div>
     <div class="grid gap-3">
       <h3 class="text-4xl">
-        {aboutData[2].name.split(" ")[0]} <span class="font-bold">{aboutData[2].name.split(" ")[1]}</span>
+        {aboutData[3].name.split(" ")[0]} <span class="font-bold">{aboutData[3].name.split(" ")[1]}</span>
       </h3>
       <span class="flex gap-2 rounded-full bg-af w-fit px-6 text-white uppercase">
-        {aboutData[2].role}
+        {aboutData[3].role}
       </span>
       <div class="max-w-md grid gap-2">
-        <p>{aboutData[2].desc1}</p>
-        <p>{aboutData[2].desc2}</p>
-        <p>{aboutData[2].desc3}</p>
+        <p>{aboutData[3].desc1}</p>
+        <p>{aboutData[3].desc2}</p>
+        <p>{aboutData[3].desc3}</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- Persona 5: Federico -->
+  <div class="grid md:flex md:items-center justify-center gap-5 mt-16">
+    <div class="grid gap-3">
+      <Picture
+        src={fedeImage}
+        alt="Carolina Lipchak, abogada"
+        class="hero transition group-hover:-translate-y-1 group-hover:shadow-xl bg-white object-contain"
+      />
+      <a
+        class="text-c underline"
+        href={aboutData[4].linkedin}
+        rel="noreferrer"
+        target="_blank"
+      >EMAIL<span class="material-symbols-outlined">north_east</span>
+      </a>
+    </div>
+    <div class="grid gap-3">
+      <h3 class="text-4xl">
+        {aboutData[4].name.split(" ")[0]} <span class="font-bold">{aboutData[4].name.split(" ")[1]}</span>
+      </h3>
+      <span class="flex gap-2 rounded-full bg-af w-fit px-6 text-white uppercase">
+        {aboutData[4].role}
+      </span>
+      <div class="max-w-md grid gap-2">
+        <p>{aboutData[4].desc1}</p>
+        <p>{aboutData[4].desc2}</p>
+        <p>{aboutData[4].desc3}</p>
       </div>
     </div>
 
