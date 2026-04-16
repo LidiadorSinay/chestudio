@@ -50,15 +50,13 @@
 
 /* Bloque texto */
 .bloque-texto {
-  padding: 3rem;
+  padding: 3rem 4rem;
   font-family: "Literata", serif;
   color: #0a0a0a;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-right: 5rem;
 }
-
 /* Icono + título */
 .icono-titulo {
   display: flex;
@@ -106,11 +104,17 @@
   font-size: 1rem;
   color: #1f3a5f;
   margin-bottom: 0.75rem;
-}
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;}
 
 .ampliado {
   font-size: 0.95rem;
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;  
+
 }
 
 /* Imagen */
