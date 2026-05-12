@@ -3,16 +3,16 @@ import '../style/carrusel.css';
 import dataRaw from '../../public/data/carrusel.json';
 import Link from '@components/ui/link.astro';
 
-import chestudio from '../assets/imgs/portadas/chestudio.webp';
-import ciberdelitos from '../assets/imgs/portadas/ciberdelitos.webp';
-import recuperacionCuenta from '../assets/imgs/portadas/recuperacion-cuenta-carrusel.webp';
-import publicaciones from '../assets/imgs/portadas/publicaciones.webp';
+import chestudio from '../assets/imgs/portadas/chestudio.jpg';
+import ciberdelitos from '../assets/imgs/portadas/ciberdelitos.jpg';
+import recuperacionCuenta from '../assets/imgs/portadas/recuperacionCuenta.jpg';
+import publicaciones from '../assets/imgs/portadas/publicaciones.jpg';
 
 const fondoMap = {
-  "chestudio.webp": chestudio,
-  "ciberdelitos.webp": ciberdelitos,
-  "recuperacion-cuenta-carrusel.webp": recuperacionCuenta,
-  "publicaciones.webp": publicaciones,
+  "chestudio.jpg": chestudio,
+  "ciberdelitos.jpg": ciberdelitos,
+  "recuperacionCuenta.jpg": recuperacionCuenta,
+  "publicaciones.jpg": publicaciones,
 };
 
 const data = dataRaw.map(item => {
