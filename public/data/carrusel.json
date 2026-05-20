@@ -6,7 +6,7 @@
     "botonTexto": "Saber más",
     "botonLink": "https://43ce9ff9-3ace-4065-bc1d-3dd7aad3db58.filesusr.com/ugd/67d70e_4440d6114fc4479e850d38b08a0c7cfc.pdf",
     "fondo": "chestudio.jpg",
-    "fondoMobile": "chestudioMobile.jpg"
+    "fondoMobile": "chestudio.jpg"
   },
   {
     "titulo": "Ciberdelitos:",
@@ -33,6 +33,6 @@
     "botonTexto": "Saber más",
     "botonLink": "/publicaciones",
     "fondo": "publicaciones.jpg",
-    "fondoMobile": "publicacionesMobile.jpg"
+    "fondoMobile": "publicaciones.jpg"
   }
 ]

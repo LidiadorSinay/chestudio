@@ -51,7 +51,7 @@ async function updateDataJSON() {
       botonTexto: row[3] || "",
       botonLink: row[4] || "",
       fondo: row[5] || "",
-      fondoMobile: row[5] || ""
+      fondoMobile: row[6] || ""
 
     }));
 
