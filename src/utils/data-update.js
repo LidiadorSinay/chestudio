@@ -50,7 +50,9 @@ async function updateDataJSON() {
       bajada: row[2] || "",
       botonTexto: row[3] || "",
       botonLink: row[4] || "",
-      fondo: row[5] || ""
+      fondo: row[5] || "",
+      fondoMobile: row[5] || ""
+
     }));
 
 
@@ -62,6 +64,7 @@ async function updateDataJSON() {
     const featuresPath = path.resolve('public/data/features.json');
     const aboutPath = path.resolve('public/data/about.json');
     const carruselPath = path.resolve('public/data/carrusel.json'); // NUEVO
+
 
 
 
