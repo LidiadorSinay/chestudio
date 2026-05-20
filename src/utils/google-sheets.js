@@ -28,7 +28,7 @@ export async function fetchGoogleSheetData() {
     const novedadesRange = 'novedades!A1:F20'; 
     const featuresRange = 'features!A1:D20'; 
     const aboutRange = 'about!A1:G10';
-    const carruselRange = 'carrusel!A1:F10'; // NUEVO
+    const carruselRange = 'carrusel!A1:G10'; // NUEVO
     
  
 

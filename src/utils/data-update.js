@@ -52,7 +52,6 @@ async function updateDataJSON() {
       botonLink: row[4] || "",
       fondo: row[5] || "",
       fondoMobile: row[6] || ""
-
     }));
 
 
