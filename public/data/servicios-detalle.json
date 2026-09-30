@@ -1,0 +1,60 @@
+[
+  {
+    "slug": "salud",
+    "title": "Salud",
+    "introTitle": "¿Cómo podemos ayudarte?",
+    "intro": "Acompañamos a personas y familias en todo el país en conflictos vinculados al acceso a la salud, medicamentos, tratamientos, prestaciones, cobertura de obras sociales y prepagas, discapacidad y cuidados.",
+    "productos": [
+      {
+        "title": "Prestaciones de salud",
+        "subtitle": "Cobertura y acceso a tratamientos",
+        "description": "Reclamamos por cobertura de medicamentos, estudios, tratamientos, prácticas médicas y dispositivos. Asesoramos en conflictos con obras sociales, prepagas y el Estado para garantizar el acceso efectivo a las prestaciones que correspondan.",
+        "items": [
+          "Cobertura de medicamentos de alto costo",
+          "Enfermedades poco frecuentes con cobertura obligatoria al 100%",
+          "Tratamientos crónicos",
+          "Estudios, prácticas médicas, reintegros y autorizaciones",
+          "Amparos y medidas urgentes"
+        ],
+        "video": null
+      },
+      {
+        "title": "Obras sociales y prepagas",
+        "subtitle": "Tus derechos como afiliado",
+        "description": "Te asesoramos frente a obras sociales y prepagas que no cumplen con lo que corresponde: cambios de cobertura, aumentos indebidos y continuidad del servicio.",
+        "items": [
+          "Cambio de obra social o prepaga sin recargo por preexistencias",
+          "Aumentos de cuota por edad o preexistencia",
+          "Continuidad de la cobertura al jubilarte, sin aumentos ni bajas",
+          "Reclamos por demoras o respuestas arbitrarias",
+          "Gestiones ante la Superintendencia de Servicios de Salud"
+        ],
+        "video": "/videos/obras-sociales-prepagas.mp4"
+      },
+      {
+        "title": "Discapacidad",
+        "subtitle": "Cobertura integral con Certificado Único de Discapacidad",
+        "description": "Reclamamos la cobertura completa que corresponde a personas con discapacidad, exigiendo el cumplimiento de la Ley 24.901 frente a obras sociales y prepagas que la desconocen.",
+        "items": [
+          "Cobertura al 100% de medicamentos y tratamientos relacionados con la discapacidad",
+          "Certificados de discapacidad (CUD) no reconocidos por la obra social",
+          "Prestaciones de rehabilitación, educación e integración social",
+          "Reintegros y autorizaciones vinculadas a discapacidad"
+        ],
+        "video": null
+      },
+      {
+        "title": "Cuidados y tercera edad",
+        "subtitle": "Acompañamiento para quien no puede valerse por sí mismo",
+        "description": "Reclamamos cuidadores domiciliarios, instituciones y hogares para adultos mayores o cualquier persona que necesite asistencia permanente, cuando la obra social o prepaga se niega a cubrirlos.",
+        "items": [
+          "Cuidadores domiciliarios y asistencia las 24 horas",
+          "Hogares e instituciones para adultos mayores",
+          "Reclamos por negativas o demoras en la cobertura de cuidados",
+          "Acompañamiento a familias en todo el proceso"
+        ],
+        "video": "/videos/cuidados-tercera-edad.mp4"
+      }
+    ]
+  }
+]
