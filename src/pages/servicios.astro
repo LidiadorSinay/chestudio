@@ -1,19 +1,19 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
 import Navbarlight from "@components/navbar/navbarlight.astro";
 import Container from "@components/container.astro";
 import { SEO } from "astro-seo";
-import Wh from "@components/wh.astro";
-import { Icon } from "astro-icon";
+import Wh from '@components/wh.astro';
 
+import { Icon } from "astro-icon";
 import featuresData from "../../public/data/features2.json";
 import "../style/servicios.css";
 
 const features = featuresData;
 
+// SEO
 const title = "Servicios | Chestudio";
-const description =
-  "Descubre los servicios de Chestudio: ciberseguridad, recuperación de cuentas, contratos, litigios, propiedad intelectual, salud y defensa del consumidor.";
+const description = "Descubre los servicios de Chestudio: ciberseguridad, recuperación de cuentas, contratos, litigios, propiedad intelectual, salud y defensa del consumidor.";
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 const image = "/opengraph.jpg";
 const openGraphImage = new URL(image, Astro.site).toString();
@@ -36,6 +36,8 @@ const openGraphImage = new URL(image, Astro.site).toString();
   }}
 />
 
+
+
 <Layout title="Servicios">
   <Navbarlight />
 
@@ -47,40 +49,24 @@ const openGraphImage = new URL(image, Astro.site).toString();
       </div>
 
       <div class="servicios-lista">
-        {features.map((item, index) => (
-          <div
-            class="servicio-franja"
-            class:listado-alternado={index % 2 === 1}
-          >
-            <div class="bloque-texto">
-              <div class="icono-titulo">
-                {item.icon && <Icon name={item.icon} />}
-                <h3>{item.title}</h3>
-              </div>
-
-              <div class="divisor"></div>
-
-              <p class="inicio">{item.inicio}</p>
-
-              {item.ampliado.split("\n\n").map((parrafo) => (
-                <p class="ampliado">{parrafo}</p>
-              ))}
-
-              {item.href && (
-                <a class="servicio-enlace" href={item.href}>
-                  Saber más <span aria-hidden="true">→</span>
-                </a>
-              )}
-            </div>
-
-            <div class="bloque-imagen">
-              {item.image && (
-                <img src={item.image} alt={item.title} loading="lazy" />
-              )}
-            </div>
-          </div>
-        ))}
+  {features.map((item, index) => (
+    <div class="servicio-franja" class:listado-alternado={index % 2 === 1}>
+      <div class="bloque-texto">
+        <div class="icono-titulo">
+          {item.icon && <Icon name={item.icon} />}
+          <h3>{item.title}</h3>
+        </div>
+        <div class="divisor"></div>
+        <p class="inicio">{item.inicio}</p>
+{item.ampliado.split('\n\n').map(parrafo => (
+  <p class="ampliado">{parrafo}</p>
+))}      </div>
+      <div class="bloque-imagen">
+        {item.image && <img src={item.image} alt={item.title} loading="lazy" />}
       </div>
+    </div>
+  ))}
+</div>
     </Container>
   </section>
 
