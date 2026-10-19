@@ -1,75 +1,122 @@
 ---
 import { Icon } from "astro-icon";
-import featuresData from "../../public/data/features.json"; // Importación del JSON
+import featuresData from "../../public/data/features2.json";
 import Link from "./ui/link.astro";
 
-const features = featuresData; // Directamente usamos el array raíz
+const features = featuresData;
 ---
 
 <style>
   section {
     background-color: var(--color-celeste-light);
   }
+
+  h2,
   h3 {
-    font-family: "Literata";
-  }
-  h2 {font-family: "Literata", serif;
-    font-size: 2.5rem;
-    font-weight: 400;}
-    
-  .material-symbols-outlined {
-    font-size: 2.5rem;
-    height: fit-content;
+    font-family: "Literata", serif;
   }
 
-  h4{padding-bottom: 4vh;}
- .pill2 {
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+
+  h4 {
+    padding-bottom: 4vh;
+  }
+
+  .pill2 {
     box-sizing: border-box;
-    background-color: transparent;
+    display: inline-block;
+    padding: 1.25rem 2.5rem;
     border: 2px solid #1f3a5f;
     border-radius: 4rem;
-    font-weight: 600;
-    padding: 1.25rem 2.5rem;
-    transition: all 0.5s ease-in-out;
+    background-color: transparent;
     color: #1f3a5f;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
   }
+
   .pill2:hover {
     background-color: var(--color-azul-accent);
     box-shadow: 0 5px 15px #fff;
     color: #fff;
   }
-  
-  
+
+  .servicio-encabezado {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 0.75rem;
+  }
+
+  .servicio-encabezado h3 {
+    margin: 0;
+  }
+
+  .servicio-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+    padding: 0.35rem 0.75rem;
+    border-radius: 999px;
+    background-color: #1f3a5f;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+
+  .servicio-boton:hover {
+    background-color: var(--color-azul-accent);
+  }
+
+  .servicio-boton span {
+    font-size: 0.9rem;
+  }
 </style>
 
 <section id="servicios" class="px-5 py-20 text-aa">
   <div class="mt-16 md:mt-0 text-center">
     <h2 class="text-3xl lg:text-3xl lg:tracking-tight">Servicios</h2>
+
     <h4 class="text-lg mt-4 text-balance">
-      Nos desempe&ntilde;amos en las siguientes áreas
+      Nos desempeñamos en las siguientes áreas
     </h4>
-        <Link
-      id="button"
-      href="/servicios"
-      class="pill2"
-    >
-Ver más    </Link>
+
+    <Link id="button" href="/servicios" class="pill2">
+      Ver más
+    </Link>
   </div>
 
-<div class="grid md:grid-cols-2 mx-auto mt-16 gap-y-8 gap-x-5 max-w-5xl justify-items-center">
+  <div
+    class="grid md:grid-cols-2 mx-auto mt-16 gap-y-8 gap-x-5 max-w-5xl justify-items-center"
+  >
     {features.map((item) => (
-      <div class="flex gap-4 items-top">
+      <div class="flex gap-4 items-start">
         <div class="bg-c rounded-full p-5 w-20 h-20 grid place-content-center shrink-0">
-          {item.icon && (
-            <span class="material-symbols-outlined">{item.icon}</span>
-          )}
-          {item.astroIcon && (
-            <Icon class="w-10 h-10" name={item.astroIcon} />
-          )}
+          {item.icon && <Icon class="w-10 h-10" name={item.icon} />}
         </div>
+
         <div class="max-w-xs">
-          <h3 class="font-semibold text-lg">{item.title}</h3>
-          <p class="font-light mt-2 leading-relaxed">{item.description}</p>
+          <div class="servicio-encabezado">
+            <h3 class="font-semibold text-lg">{item.title}</h3>
+
+            {item.href && (
+              <a class="servicio-boton" href={item.href}>
+                Saber más <span aria-hidden="true">→</span>
+              </a>
+            )}
+          </div>
+
+          <p class="font-light mt-2 leading-relaxed">
+            {item.inicio}
+          </p>
         </div>
       </div>
     ))}

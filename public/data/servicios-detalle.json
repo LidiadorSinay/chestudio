@@ -1,0 +1,120 @@
+[
+  {
+    "slug": "salud",
+    "title": "Salud",
+    "introTitle": "¿Cómo podemos ayudarte?",
+    "intro": "Acompañamos a personas y familias en todo el país en conflictos vinculados al acceso a la salud, medicamentos, tratamientos, prestaciones, cobertura de obras sociales y prepagas, discapacidad y cuidados.",
+    "productos": [
+      {
+        "title": "Prestaciones de salud",
+        "subtitle": "Cobertura y acceso a tratamientos",
+        "description": "Reclamamos por cobertura de medicamentos, estudios, tratamientos, prácticas médicas y dispositivos. Asesoramos en conflictos con obras sociales, prepagas y el Estado para garantizar el acceso efectivo a las prestaciones que correspondan.",
+        "items": [
+          "Cobertura de medicamentos de alto costo",
+          "Enfermedades poco frecuentes con cobertura obligatoria al 100%",
+          "Tratamientos crónicos",
+          "Estudios, prácticas médicas, reintegros y autorizaciones",
+          "Amparos y medidas urgentes"
+        ],
+        "video": null
+      },
+      {
+        "title": "Obras sociales y prepagas",
+        "subtitle": "Tus derechos como afiliado",
+        "description": "Te asesoramos frente a obras sociales y prepagas que no cumplen con lo que corresponde: cambios de cobertura, aumentos indebidos y continuidad del servicio.",
+        "items": [
+          "Cambio de obra social o prepaga sin recargo por preexistencias",
+          "Aumentos de cuota por edad o preexistencia",
+          "Continuidad de la cobertura al jubilarte, sin aumentos ni bajas",
+          "Reclamos por demoras o respuestas arbitrarias",
+          "Gestiones ante la Superintendencia de Servicios de Salud"
+        ],
+        "video": "/videos/obras-sociales-prepagas.mp4"
+      },
+      {
+        "title": "Discapacidad",
+        "subtitle": "Cobertura integral con Certificado Único de Discapacidad",
+        "description": "Reclamamos la cobertura completa que corresponde a personas con discapacidad, exigiendo el cumplimiento de la Ley 24.901 frente a obras sociales y prepagas que la desconocen.",
+        "items": [
+          "Cobertura al 100% de medicamentos y tratamientos relacionados con la discapacidad",
+          "Certificados de discapacidad (CUD) no reconocidos por la obra social",
+          "Prestaciones de rehabilitación, educación e integración social",
+          "Reintegros y autorizaciones vinculadas a discapacidad"
+        ],
+        "video": null
+      },
+      {
+        "title": "Cuidados y tercera edad",
+        "subtitle": "Acompañamiento para quien no puede valerse por sí mismo",
+        "description": "Reclamamos cuidadores domiciliarios, instituciones y hogares para adultos mayores o cualquier persona que necesite asistencia permanente, cuando la obra social o prepaga se niega a cubrirlos.",
+        "items": [
+          "Cuidadores domiciliarios y asistencia las 24 horas",
+          "Hogares e instituciones para adultos mayores",
+          "Reclamos por negativas o demoras en la cobertura de cuidados",
+          "Acompañamiento a familias en todo el proceso"
+        ],
+        "video": "/videos/cuidados-tercera-edad.mp4"
+      }
+    ]
+  },
+  {
+  "slug": "recuperacion-de-cuentas",
+  "title": "Recuperación de cuentas",
+  "introTitle": "¿Cómo podemos ayudarte?",
+  "intro": "Asistimos a personas, creadores de contenido, marcas y empresas de todo el país que perdieron el acceso a sus cuentas de Instagram, WhatsApp o TikTok por hackeos, suspensiones, inhabilitaciones o eliminaciones, con reclamos prejudiciales y acciones judiciales frente a las plataformas.",
+  "productos": [
+    {
+      "title": "Instagram",
+      "subtitle": "Cuentas hackeadas, suspendidas o eliminadas",
+      "description": "Intervenimos cuando perdiste el control de tu cuenta de Instagram o cuando Meta la suspendió, inhabilitó o eliminó sin una explicación clara. Reclamamos frente a la plataforma por la vía prejudicial y, cuando hace falta, por la vía judicial, para que el titular recupere el acceso a su cuenta.",
+      "items": [
+        "Cuentas hackeadas o con el correo y el teléfono modificados por terceros",
+        "Suspensiones e inhabilitaciones por supuesto incumplimiento de las normas comunitarias",
+        "Cuentas eliminadas o desactivadas sin aviso previo",
+        "Restricciones, baneos y bloqueos de funciones",
+        "Reclamos por denuncias falsas o supuestas infracciones de derechos de autor"
+      ],
+      "video": null
+    },
+    {
+      "title": "WhatsApp",
+      "subtitle": "Números bloqueados y cuentas comprometidas",
+      "description": "Asistimos a quienes no pueden usar WhatsApp porque su número fue bloqueado o porque un tercero tomó el control de la cuenta, una situación especialmente grave para comercios y profesionales que atienden a sus clientes por esa vía.",
+      "items": [
+        "Números bloqueados o suspendidos por WhatsApp",
+        "Cuentas tomadas por terceros mediante el robo del código de verificación",
+        "Bloqueos de WhatsApp Business que afectan la actividad comercial",
+        "Suplantación de identidad y pedidos de dinero a tus contactos",
+        "Reclamos ante Meta por la vía prejudicial y judicial"
+      ],
+      "video": null
+    },
+    {
+      "title": "TikTok",
+      "subtitle": "Recuperación de cuentas y apelación de baneos",
+      "description": "Reclamamos frente a TikTok por cuentas suspendidas, baneadas o eliminadas y por accesos indebidos de terceros, con especial atención a creadores de contenido cuya actividad e ingresos dependen de la cuenta.",
+      "items": [
+        "Cuentas baneadas de forma temporal o permanente",
+        "Cuentas hackeadas o con los datos de acceso modificados",
+        "Eliminación de contenido y sanciones injustificadas",
+        "Pérdida de la monetización y de las herramientas para creadores",
+        "Reclamos prejudiciales y acciones judiciales contra la plataforma"
+      ],
+      "video": null
+    },
+    {
+      "title": "Asesoramiento preventivo",
+      "subtitle": "Seguridad para marcas, empresas y creadores",
+      "description": "Acompañamos a marcas, empresas e influencers para reducir el riesgo de perder sus cuentas, revisando la configuración de seguridad, el cumplimiento de las políticas de cada plataforma y la documentación que acredita la titularidad del perfil.",
+      "items": [
+        "Revisión de la seguridad de la cuenta y de la verificación en dos pasos",
+        "Resguardo de la documentación que acredita la titularidad",
+        "Análisis de las normas comunitarias y de las políticas de derechos de autor",
+        "Preservación de evidencia digital ante un incidente",
+        "Acciones frente a cuentas falsas que suplantan tu marca o tu identidad"
+      ],
+      "video": null
+    }
+  ]
+}
+]
