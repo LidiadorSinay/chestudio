@@ -13,6 +13,14 @@ if (!servicio) {
   throw new Error("No se encontró el servicio Salud");
 }
 
+const whatsappPhone = "5491171387291";
+
+const whatsappLink = (producto: { title: string }): string => {
+  const mensaje = `Hola, quisiera recibir asesoramiento jurídico sobre ${producto.title}.`;
+
+  return `https://wa.me/${whatsappPhone}?text=${encodeURIComponent(mensaje)}`;
+};
+
 const seo = {
   title: `${servicio.title} | CHESTUDIO`,
   description: servicio.intro,
@@ -141,15 +149,21 @@ const seo = {
               }
             </ul>
 
-            <a href="/#contacto" class="conocer-mas">
-              <span>Conocer más</span>
-              <span
-                class="material-symbols-outlined flecha"
-                aria-hidden="true"
-              >
-                arrow_forward
-              </span>
-            </a>
+            <a
+  href={whatsappLink(producto)}
+  class="conocer-mas"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={`Consultar por WhatsApp sobre ${producto.title}`}
+>
+  <span>Conocer más</span>
+  <span
+    class="material-symbols-outlined flecha"
+    aria-hidden="true"
+  >
+    arrow_forward
+  </span>
+</a>
 
           </div>
         </div>

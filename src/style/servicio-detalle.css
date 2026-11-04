@@ -1,3 +1,4 @@
+
 /* ========================================
    PÁGINA
 ======================================== */
@@ -8,30 +9,32 @@
   min-height: 100vh;
 }
 
-
 /* ========================================
    HERO
 ======================================== */
 
+/* HERO GENERAL */
 .hero-servicio {
   position: relative;
-
   min-height: 390px;
-
   display: flex;
   align-items: center;
-
+  justify-content: center;
   padding: 0;
-
-  background-image: url("/images/servicios/salud/hero.webp");
   background-size: cover;
   background-position: center;
-
   overflow: hidden;
-
   border-bottom-right-radius: 170px;
-
   color: white;
+}
+
+/* HERO SALUD */
+.hero-salud {
+  background-image: url("/src/assets/imgs/portadas/salud.jpg");
+}
+
+/* HERO RECUPERACIÓN DE CUENTAS */
+.hero-recuperacion-cuentas {
 }
 
 .hero-overlay {
@@ -53,11 +56,25 @@
   z-index: 2;
 
   width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-contenido {
-  max-width: 620px;
+  width: 100%;
+  max-width: 800px;
+
+  margin: 0 auto;
   padding: 4.5rem 0 5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
 }
 
 .hero-categoria {
@@ -68,13 +85,14 @@
   font-weight: 700;
 
   letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .hero-linea {
   width: 230px;
   height: 2px;
 
-  margin: 0.8rem 0 1.5rem;
+  margin: 0.8rem auto 1.5rem;
 
   background-color: var(--color-celeste);
 }
@@ -87,6 +105,7 @@
   font-weight: 700;
 
   line-height: 1.08;
+  text-align: center;
 
   color: white;
 }
@@ -96,10 +115,10 @@
 
   font-size: 1.15rem;
   line-height: 1.5;
+  text-align: center;
 
   color: white;
 }
-
 
 /* ========================================
    CONTENIDO
@@ -108,7 +127,6 @@
 .contenido-servicio {
   padding-bottom: 7rem;
 }
-
 
 /* ========================================
    INTRO / ¿CÓMO PODEMOS AYUDARTE?
@@ -167,7 +185,6 @@
   gap: 1.5rem;
 }
 
-
 /* TARJETA */
 
 .producto {
@@ -181,7 +198,6 @@
 
   box-sizing: border-box;
 }
-
 
 /* ========================================
    PRODUCTO CON VIDEO
@@ -199,7 +215,6 @@
   align-items: stretch;
 }
 
-
 /* ========================================
    PRODUCTO SIN VIDEO
 ======================================== */
@@ -212,7 +227,6 @@
   max-width: 850px;
 }
 
-
 /* ========================================
    CONTENIDO
 ======================================== */
@@ -220,7 +234,6 @@
 .producto-contenido {
   min-width: 0;
 }
-
 
 /* ========================================
    ENCABEZADO
@@ -233,7 +246,6 @@
 
   gap: 1.2rem;
 }
-
 
 /* ICONO */
 
@@ -258,7 +270,6 @@
   font-size: 2rem;
 }
 
-
 /* TÍTULO */
 
 .producto-titulo {
@@ -281,7 +292,6 @@
   color: var(--color-azul-accent);
 }
 
-
 /* LÍNEA DEBAJO DEL TÍTULO */
 
 .producto-linea {
@@ -293,7 +303,6 @@
   background-color: var(--color-celeste-light);
 }
 
-
 /* ========================================
    CUERPO
 ======================================== */
@@ -303,7 +312,6 @@
 
   padding-top: 0.8rem;
 }
-
 
 /* SUBTÍTULO */
 
@@ -321,7 +329,6 @@
   color: var(--color-azul-accent);
 }
 
-
 /* DESCRIPCIÓN */
 
 .producto-descripcion {
@@ -335,7 +342,6 @@
 
   color: var(--color-azul-accent);
 }
-
 
 /* ========================================
    LISTADO
@@ -370,7 +376,6 @@
   color: var(--color-azul-accent);
 }
 
-
 /* CHECK CELESTE */
 
 .check {
@@ -397,7 +402,6 @@
 
   font-weight: 700;
 }
-
 
 /* ========================================
    CONOCER MÁS
@@ -448,7 +452,6 @@
 
   background-color: var(--color-azul-accent);
 }
-
 
 /* ========================================
    VIDEO
@@ -504,7 +507,7 @@
   }
 
   .hero-contenido {
-    max-width: 520px;
+    max-width: 100%;
 
     padding: 4rem 0;
   }
@@ -517,7 +520,6 @@
     font-size: 2.7rem;
   }
 
-
   /* INTRO */
 
   .introduccion-servicio {
@@ -528,38 +530,36 @@
     font-size: 2.25rem;
   }
 
+  /* PRODUCTOS */
 
-/* PRODUCTOS */
+  .productos-servicio {
+    gap: 1.25rem;
+  }
 
-.productos-servicio {
-  gap: 1.25rem;
+  .producto {
+    padding: 1.5rem;
+  }
+
+  .producto-con-video {
+    grid-template-columns: 1fr;
+
+    gap: 1.5rem;
+  }
+
+  .producto-sin-video .producto-contenido {
+    max-width: none;
+  }
+
+  .producto-video {
+    min-height: 300px;
+  }
+
+  .producto-video video {
+    min-height: 300px;
+
+    aspect-ratio: 16 / 9;
+  }
 }
-
-.producto {
-  padding: 1.5rem;
-}
-
-.producto-con-video {
-  grid-template-columns: 1fr;
-
-  gap: 1.5rem;
-}
-
-.producto-sin-video .producto-contenido {
-  max-width: none;
-}
-
-.producto-video {
-  min-height: 300px;
-}
-
-.producto-video video {
-  min-height: 300px;
-
-  aspect-ratio: 16 / 9;
-}
-}
-
 
 /* ========================================
    MOBILE
@@ -578,7 +578,12 @@
   }
 
   .hero-contenido {
+    max-width: 100%;
+
     padding: 3rem 0 4rem;
+
+    align-items: center;
+    text-align: center;
   }
 
   .hero-categoria {
@@ -588,22 +593,22 @@
   .hero-linea {
     width: 150px;
 
-    margin-top: 0.65rem;
-    margin-bottom: 1.25rem;
+    margin: 0.65rem auto 1.25rem;
   }
 
   .hero-servicio h1 {
     font-size: 2.25rem;
+    text-align: center;
   }
 
   .hero-servicio p {
     font-size: 1rem;
+    text-align: center;
   }
 
   .hero-servicio p br {
     display: none;
   }
-
 
   /* INTRO */
 
@@ -631,62 +636,61 @@
     margin-top: 1.25rem;
   }
 
-
   /* PRODUCTOS */
 
-.producto {
-  padding: 1.25rem;
+  .producto {
+    padding: 1.25rem;
 
-  border-radius: 1rem;
-}
+    border-radius: 1rem;
+  }
 
-.producto-encabezado {
-  gap: 0.85rem;
-}
+  .producto-encabezado {
+    gap: 0.85rem;
+  }
 
-.producto-icono {
-  width: 3.2rem;
-  height: 3.2rem;
+  .producto-icono {
+    width: 3.2rem;
+    height: 3.2rem;
 
-  flex-basis: 3.2rem;
-}
+    flex-basis: 3.2rem;
+  }
 
-.producto-icono .material-symbols-outlined {
-  font-size: 1.6rem;
-}
+  .producto-icono .material-symbols-outlined {
+    font-size: 1.6rem;
+  }
 
-.producto h2 {
-  font-size: 1.65rem;
-}
+  .producto h2 {
+    font-size: 1.65rem;
+  }
 
-.producto-linea {
-  height: 4px;
-}
+  .producto-linea {
+    height: 4px;
+  }
 
-.producto-cuerpo {
-  margin-left: 0;
+  .producto-cuerpo {
+    margin-left: 0;
 
-  padding-top: 1.2rem;
-}
+    padding-top: 1.2rem;
+  }
 
-.producto-subtitulo {
-  font-size: 1rem;
-}
+  .producto-subtitulo {
+    font-size: 1rem;
+  }
 
-.producto-descripcion {
-  font-size: 0.9rem;
-}
+  .producto-descripcion {
+    font-size: 0.9rem;
+  }
 
-.producto li {
-  font-size: 0.9rem;
-}
+  .producto li {
+    font-size: 0.9rem;
+  }
 
-.conocer-mas {
-  min-width: 160px;
-}
+  .conocer-mas {
+    min-width: 160px;
+  }
 
-.producto-video,
-.producto-video video {
-  min-height: 230px;
-}
+  .producto-video,
+  .producto-video video {
+    min-height: 230px;
+  }
 }

@@ -17,6 +17,7 @@
     "@astrojs/sitemap": "^3.2.1",
     "@astrojs/tailwind": "^5.1.4",
     "@fontsource-variable/inter": "^5.1.1",
+    "@iconify-json/hugeicons": "^1.2.35",
     "@tailwindcss/typography": "^0.5.16",
     "astro-icon": "^0.8.2",
     "astro-navbar": "^2.3.9",
