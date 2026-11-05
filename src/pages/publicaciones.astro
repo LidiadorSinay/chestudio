@@ -3,29 +3,28 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
 import Navbarlight from "@components/navbar/navbarlight.astro";
 import { SEO } from "astro-seo";
-
-
-// Importar el archivo JSON desde la carpeta public/data
-import publicaciones from '../../public/data/publicaciones.json';
 import Wh from "@components/wh.astro";
 
-const canonicalURL = "https://chestudioabogados.com/publicaciones"; // Enlace canónico de la página de publicaciones
+import publicaciones from "../../public/data/publicaciones.json";
+
+const canonicalURL = "https://chestudioabogados.com/publicaciones";
 ---
 
 <style>
   * {
     font-family: "Archivo", sans-serif;
   }
-  
-  h1, h2, h3 {
+
+  h1,
+  h2,
+  h3 {
     font-family: "Literata", serif;
   }
 </style>
 
 <Layout title="Publicaciones">
   <Navbarlight />
-  
-  <!-- SEO para la página de publicaciones -->
+
   <SEO
     title="Publicaciones | Chestudio"
     description="Accede a los artículos y comentarios publicados sobre las últimas tendencias legales en derecho tecnológico y digital."
@@ -35,30 +34,41 @@ const canonicalURL = "https://chestudioabogados.com/publicaciones"; // Enlace ca
         url: canonicalURL,
         type: "website",
         title: "Publicaciones | Chestudio",
-        image: "https://chestudioabogados.com/opengraph-publicaciones.jpg", // Imagen predeterminada
+        image: "https://chestudioabogados.com/opengraph-publicaciones.jpg",
       },
       image: {
         alt: "Publicaciones de Chestudio",
       },
     }}
   />
-  
+
   <Container>
     <div class="mx-auto max-w-3xl mt-14 text-center">
       <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-1 lg:leading-tight pb-5">
         Artículos y comentarios publicados
       </h1>
-      <p class="text-lg text-gray-600 mt-2">Acá podés encontrar nuestros artículos y comentarios publicados, donde acordamos las últimas tendencias, novedades legales y temas relevantes en el ámbito del derecho tecnológico y digital</p>
+
+      <p class="text-lg text-gray-600 mt-2">
+        Acá podés encontrar nuestros artículos y comentarios publicados, donde
+        abordamos las últimas tendencias, novedades legales y temas relevantes
+        en el ámbito del derecho tecnológico y digital.
+      </p>
+
       <div class="mt-6">
         <ul>
-          {publicaciones.map((row, index) => (
-            <li key={index} class="mb-6 border-b border-gray-300 pb-6">
-              <div class="flex justify-between items-center">
-                <h3 class="text-xl font-semibold text-gray-800">{row.titulo}</h3> {/* Titulo */}
-                <a 
-                  href={row.url}  {/* URL (columna B) */}
-                  target="_blank" 
-                  class="uppercase text-c pill mt-3 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:#2d3748 transition-colors duration-300 ease-in-out">
+          {publicaciones.map((row) => (
+            <li class="mb-6 border-b border-gray-300 pb-6">
+              <div class="flex justify-between items-center gap-4">
+                <h3 class="text-xl font-semibold text-gray-800">
+                  {row.titulo}
+                </h3>
+
+                <a
+                  href={row.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="uppercase text-c pill mt-3 px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-slate-800 transition-colors duration-300 ease-in-out"
+                >
                   Ver publicación
                 </a>
               </div>
@@ -67,6 +77,7 @@ const canonicalURL = "https://chestudioabogados.com/publicaciones"; // Enlace ca
         </ul>
       </div>
     </div>
-        <Wh phone="5491171387291" />
   </Container>
+
+  <Wh phone="5491171387291" />
 </Layout>
