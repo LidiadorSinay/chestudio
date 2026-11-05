@@ -1,29 +1,96 @@
+
 ---
 import { Icon } from "astro-icon";
-import featuresData from "../../public/data/features.json"; // Importación del JSON
+import featuresData from "../../public/data/features.json";
 import Link from "./ui/link.astro";
 
-const features = featuresData; // Directamente usamos el array raíz
+// Tipos de las features
+interface Feature {
+  title: string;
+  description?: string;
+  icon?: string;
+  astroIcon?: string;
+  href?: string;
+  url?: string;
+  link?: string;
+}
+
+// Datos del JSON
+const features: Feature[] = featuresData;
+
+// Rutas de las páginas individuales
+const rutasServicios = {
+  salud: "/servicios/salud",
+  recuperacion: "/servicios/recuperacion-de-cuentas",
+} as const;
+
+// Normalizar textos para detectar servicios
+const normalizar = (texto: string): string => {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+};
+
+// Obtener la ruta correspondiente
+const getHref = (item: Feature): string | null => {
+  // Priorizar rutas definidas en el JSON
+  const enlace = item.href || item.url || item.link;
+
+  if (typeof enlace === "string" && enlace.trim()) {
+    return enlace.trim();
+  }
+
+  const titulo = normalizar(item.title);
+
+  // Recuperación de cuentas
+  if (
+    titulo.includes("recuperacion") &&
+    titulo.includes("cuenta")
+  ) {
+    return rutasServicios.recuperacion;
+  }
+
+  // Salud
+  if (
+    titulo === "salud" ||
+    titulo.includes("derecho a la salud") ||
+    titulo.includes("obras sociales") ||
+    titulo.includes("medicina prepaga")
+  ) {
+    return rutasServicios.salud;
+  }
+
+  return null;
+};
 ---
 
 <style>
   section {
     background-color: var(--color-celeste-light);
   }
+
+  h2,
   h3 {
-    font-family: "Literata";
+    font-family: "Literata", serif;
   }
-  h2 {font-family: "Literata", serif;
+
+  h2 {
     font-size: 2.5rem;
-    font-weight: 400;}
-    
+    font-weight: 400;
+  }
+
   .material-symbols-outlined {
     font-size: 2.5rem;
     height: fit-content;
   }
 
-  h4{padding-bottom: 4vh;}
- .pill2 {
+  h4 {
+    padding-bottom: 4vh;
+  }
+
+  .pill2 {
     box-sizing: border-box;
     background-color: transparent;
     border: 2px solid #1f3a5f;
@@ -32,46 +99,97 @@ const features = featuresData; // Directamente usamos el array raíz
     padding: 1.25rem 2.5rem;
     transition: all 0.5s ease-in-out;
     color: #1f3a5f;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
+
   .pill2:hover {
     background-color: var(--color-azul-accent);
     box-shadow: 0 5px 15px #fff;
     color: #fff;
   }
-  
-  
+
+  .feature-link {
+    margin-top: 1.25rem;
+    padding: 0.65rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .feature-link:hover {
+    transform: translateY(-2px);
+  }
 </style>
 
 <section id="servicios" class="px-5 py-20 text-aa">
   <div class="mt-16 md:mt-0 text-center">
-    <h2 class="text-3xl lg:text-3xl lg:tracking-tight">Servicios</h2>
+    <h2 class="text-3xl lg:text-3xl lg:tracking-tight">
+      Servicios
+    </h2>
+
     <h4 class="text-lg mt-4 text-balance">
       Nos desempe&ntilde;amos en las siguientes áreas
     </h4>
-        <Link
+
+    <Link
       id="button"
       href="/servicios"
       class="pill2"
     >
-Ver más    </Link>
+      Ver más
+    </Link>
   </div>
 
-<div class="grid md:grid-cols-2 mx-auto mt-16 gap-y-8 gap-x-5 max-w-5xl justify-items-center">
-    {features.map((item) => (
-      <div class="flex gap-4 items-top">
-        <div class="bg-c rounded-full p-5 w-20 h-20 grid place-content-center shrink-0">
-          {item.icon && (
-            <span class="material-symbols-outlined">{item.icon}</span>
-          )}
-          {item.astroIcon && (
-            <Icon class="w-10 h-10" name={item.astroIcon} />
-          )}
+  <div
+    class="grid md:grid-cols-2 mx-auto mt-16 gap-y-8 gap-x-5 max-w-5xl justify-items-center"
+  >
+    {features.map((item: Feature) => {
+      const href = getHref(item);
+
+      return (
+        <div class="flex gap-4 items-start w-full">
+          {/* Ícono del servicio */}
+          <div
+            class="bg-c rounded-full p-5 w-20 h-20 grid place-content-center shrink-0"
+          >
+            {item.icon && (
+              <span class="material-symbols-outlined">
+                {item.icon}
+              </span>
+            )}
+
+            {item.astroIcon && (
+              <Icon
+                class="w-10 h-10"
+                name={item.astroIcon}
+              />
+            )}
+          </div>
+
+          {/* Información del servicio */}
+          <div class="max-w-xs flex flex-col items-start">
+            <h3 class="font-semibold text-lg">
+              {item.title}
+            </h3>
+
+            <p class="font-light mt-2 leading-relaxed">
+              {item.description}
+            </p>
+
+            {/* Botón a la página individual */}
+            {href && (
+              <Link
+                href={href}
+                class="pill2 feature-link"
+              >
+                Ver más
+              </Link>
+            )}
+          </div>
         </div>
-        <div class="max-w-xs">
-          <h3 class="font-semibold text-lg">{item.title}</h3>
-          <p class="font-light mt-2 leading-relaxed">{item.description}</p>
-        </div>
-      </div>
-    ))}
+      );
+    })}
   </div>
 </section>

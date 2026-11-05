@@ -1,22 +1,66 @@
+
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 import Navbarlight from "@components/navbar/navbarlight.astro";
 import Container from "@components/container.astro";
 import { SEO } from "astro-seo";
-import Wh from '@components/wh.astro';
-
+import Wh from "@components/wh.astro";
 import { Icon } from "astro-icon";
 import featuresData from "../../public/data/features2.json";
 import "../style/servicios.css";
 
-const features = featuresData;
+interface Servicio {
+  title: string;
+  icon?: string;
+  inicio: string;
+  ampliado: string;
+  image?: string;
+  href?: string;
+}
 
-// SEO
+const features: Servicio[] = featuresData;
+
 const title = "Servicios | Chestudio";
-const description = "Descubre los servicios de Chestudio: ciberseguridad, recuperación de cuentas, contratos, litigios, propiedad intelectual, salud y defensa del consumidor.";
-const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
+
+const description =
+  "Descubre los servicios de Chestudio: ciberseguridad, recuperación de cuentas, contratos, litigios, propiedad intelectual, salud y defensa del consumidor.";
+
+const canonicalURL = new URL(
+  Astro.url.pathname,
+  Astro.site ?? Astro.url
+).toString();
+
 const image = "/opengraph.jpg";
-const openGraphImage = new URL(image, Astro.site).toString();
+
+const openGraphImage = new URL(
+  image,
+  Astro.site ?? Astro.url
+).toString();
+
+// Enlaces individuales
+const getHref = (item: Servicio): string | null => {
+  if (item.href?.trim()) {
+    return item.href.trim();
+  }
+
+  const titulo = item.title
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "");
+
+  if (
+    titulo.includes("recuperacion") &&
+    titulo.includes("cuenta")
+  ) {
+    return "/servicios/recuperacion-de-cuentas";
+  }
+
+  if (titulo === "salud") {
+    return "/servicios/salud";
+  }
+
+  return null;
+};
 ---
 
 <SEO
@@ -36,8 +80,6 @@ const openGraphImage = new URL(image, Astro.site).toString();
   }}
 />
 
-
-
 <Layout title="Servicios">
   <Navbarlight />
 
@@ -45,30 +87,116 @@ const openGraphImage = new URL(image, Astro.site).toString();
     <Container>
       <div class="text-center mb-12">
         <h2>Servicios</h2>
-        <p class="intro">Nos desempeñamos en las siguientes áreas</p>
+        <p class="intro">
+          Nos desempeñamos en las siguientes áreas
+        </p>
       </div>
 
       <div class="servicios-lista">
-  {features.map((item, index) => (
-    <div class="servicio-franja" class:listado-alternado={index % 2 === 1}>
-      <div class="bloque-texto">
-        <div class="icono-titulo">
-          {item.icon && <Icon name={item.icon} />}
-          <h3>{item.title}</h3>
-        </div>
-        <div class="divisor"></div>
-        <p class="inicio">{item.inicio}</p>
-{item.ampliado.split('\n\n').map(parrafo => (
-  <p class="ampliado">{parrafo}</p>
-))}      </div>
-      <div class="bloque-imagen">
-        {item.image && <img src={item.image} alt={item.title} loading="lazy" />}
+        {features.map((item: Servicio, index: number) => {
+          const href = getHref(item);
+
+          return (
+            <div
+              class="servicio-franja"
+              class:listado-alternado={index % 2 === 1}
+            >
+              <div class="bloque-texto">
+                <div class="icono-titulo">
+                  {item.icon && (
+                    <Icon name={item.icon} />
+                  )}
+
+                  <h3>{item.title}</h3>
+                </div>
+
+                <div class="divisor"></div>
+
+                <p class="inicio">
+                  {item.inicio}
+                </p>
+
+                {item.ampliado
+                  .split("\n\n")
+                  .map((parrafo: string) => (
+                    <p class="ampliado">
+                      {parrafo}
+                    </p>
+                  ))}
+
+                {/* Botón a la página individual */}
+                {href && (
+                  <a
+                    href={href}
+                    class="servicio-boton"
+                    aria-label={`Conocer más sobre ${item.title}`}
+                  >
+                    Saber más
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                )}
+              </div>
+
+              <div class="bloque-imagen">
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                  />
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
-    </div>
-  ))}
-</div>
     </Container>
   </section>
 
   <Wh phone="5491171387291" />
 </Layout>
+
+<style>
+  .servicio-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+    padding: 0.85rem 1.65rem;
+    border: 2px solid #1f3a5f;
+    border-radius: 4rem;
+    background: transparent;
+    color: #1f3a5f;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .servicio-boton:hover {
+    background: var(--color-azul-accent, #1f3a5f);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(31, 58, 95, 0.15);
+  }
+
+  .servicio-boton:focus-visible {
+    outline: 3px solid var(--color-azul-accent, #1f3a5f);
+    outline-offset: 4px;
+  }
+
+  .servicio-boton span {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+  }
+
+  .servicio-boton:hover span {
+    transform: translate(2px, -2px);
+  }
+</style>
