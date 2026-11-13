@@ -1,13 +1,10 @@
----
-import Icon from "astro-icon";
----
 
 <style>
   #contacto {
     padding-top: 6rem;
     padding-bottom: 6rem;
     text-align: center;
-    max-width: 700px; /* Más ancho para desktop */
+    max-width: 700px;
     margin: 0 auto;
   }
 
@@ -21,7 +18,7 @@ import Icon from "astro-icon";
 
   .contacto-lista {
     display: flex;
-    flex-direction: column; /* vertical por defecto (mobile) */
+    flex-direction: column;
     gap: 1.5rem;
     align-items: center;
   }
@@ -36,18 +33,17 @@ import Icon from "astro-icon";
     color: var(--color-c);
     text-decoration: underline;
     border-radius: 0.75rem;
-    background-color: var(--color-celeste-light); /* color celeste en mobile */
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1); /* sombra más marcada en mobile */
+    background-color: var(--color-celeste-light);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     min-width: 280px;
     justify-content: center;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    white-space: nowrap; /* evita quiebre de texto */
+    white-space: nowrap;
   }
 
-  /* Hover en mobile y desktop */
   .contacto-link:hover {
     background-color: var(--color-celeste-light);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
     text-decoration: none;
   }
 
@@ -57,42 +53,54 @@ import Icon from "astro-icon";
     color: var(--color-azul-accent);
     flex-shrink: 0;
     pointer-events: none;
+    display: inline-block;
   }
 
-  /* Diferenciar iconos con colores */
+  .material-symbols-outlined.contacto-icon {
+    font-family: "Material Symbols Outlined";
+    font-size: 1.75rem;
+    line-height: 1;
+    font-weight: normal;
+    font-style: normal;
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+  }
+
   .contacto-link.whatsapp .contacto-icon {
-    color: #25d366; /* verde WhatsApp */
+    color: #25d366;
   }
 
-  /* Ajustes para desktop */
   @media (min-width: 601px) {
     .contacto-lista {
-      flex-direction: row; /* horizontal en desktop */
+      flex-direction: row;
       justify-content: center;
-      flex-wrap: wrap; /* permite que bajen si no hay espacio */
-      gap: 2rem; /* un poco más de espacio horizontal */
+      flex-wrap: wrap;
+      gap: 2rem;
     }
+
     .contacto-link {
-      background-color: white; /* fondo blanco en desktop */
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       text-decoration: underline;
       min-width: 280px;
       padding: 0.75rem 1.5rem;
     }
+
     .contacto-link:hover {
       background-color: var(--color-celeste-light);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       text-decoration: none;
     }
   }
 
-  /* Ajustes para móviles */
   @media (max-width: 600px) {
     #contacto {
       padding-top: 3rem;
       padding-bottom: 1rem;
       max-width: 95vw;
     }
+
     .contacto-link {
       font-size: 1.25rem;
       min-width: unset;
@@ -103,13 +111,19 @@ import Icon from "astro-icon";
 
 <section id="contacto">
   <h2>Contacto</h2>
+
   <div class="contacto-lista">
-   <a
-  href="mailto:achalhub@chestudioabogados.com"
-  class="contacto-link mail"
-  id="mailtoLink"
->
-      <Icon name="mdi:email" class="contacto-icon" />
+    <a
+      href="mailto:achalhub@chestudioabogados.com"
+      class="contacto-link mail"
+      id="mailtoLink"
+    >
+      <span
+        class="material-symbols-outlined contacto-icon"
+        aria-hidden="true"
+      >
+        mail
+      </span>
       achalhub@chestudioabogados.com
     </a>
 
@@ -119,7 +133,15 @@ import Icon from "astro-icon";
       target="_blank"
       class="contacto-link whatsapp"
     >
-      <Icon name="mdi:whatsapp" class="contacto-icon" />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="contacto-icon"
+        aria-hidden="true"
+      >
+        <path d="M12.04 2C6.52 2 2.04 6.48 2.04 12c0 1.77.46 3.49 1.34 5.01L2 22l5.12-1.34A9.94 9.94 0 0 0 12.04 22C17.56 22 22.04 17.52 22.04 12S17.56 2 12.04 2zm0 18.17a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.04.8.81-2.96-.2-.31a8.15 8.15 0 0 1-1.25-4.38c0-4.5 3.66-8.16 8.16-8.16s8.16 3.66 8.16 8.16-3.66 8.17-8.16 8.17zm4.48-6.11c-.24-.12-1.44-.71-1.66-.79-.22-.08-.38-.12-.54.12-.16.24-.62.79-.76.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.63-1.19-1.42-1.33-1.66-.14-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.41-.54-.42h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.69 2.58 4.1 3.62.57.25 1.02.4 1.37.51.58.18 1.1.15 1.51.09.46-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28z" />
+      </svg>
       +54 9 11-7138-7291
     </a>
   </div>

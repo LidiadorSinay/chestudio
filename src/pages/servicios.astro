@@ -5,7 +5,6 @@ import Navbarlight from "@components/navbar/navbarlight.astro";
 import Container from "@components/container.astro";
 import { SEO } from "astro-seo";
 import Wh from "@components/wh.astro";
-import { Icon } from "astro-icon";
 import featuresData from "../../public/data/features2.json";
 import "../style/servicios.css";
 
@@ -37,16 +36,43 @@ const openGraphImage = new URL(
   Astro.site ?? Astro.url
 ).toString();
 
+// Equivalencias entre MDI y Material Symbols
+const iconos: Record<string, string> = {
+  "mdi:laptop": "laptop",
+  "mdi:account-reactivate": "manage_accounts",
+  "mdi:account-check-outline": "manage_accounts",
+  "mdi:file-document-outline": "description",
+  "mdi:gavel": "gavel",
+  "mdi:lightbulb-outline": "lightbulb",
+  "mdi:heart-pulse": "ecg_heart",
+  "mdi:car": "directions_car",
+};
+
+// Resolver el nombre del ícono
+const getIconName = (icon?: string): string => {
+  if (!icon?.trim()) return "";
+
+  const nombre = icon.trim();
+
+  return iconos[nombre] ?? nombre;
+};
+
+// Normalizar títulos
+const normalizar = (texto: string): string => {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim();
+};
+
 // Enlaces individuales
 const getHref = (item: Servicio): string | null => {
   if (item.href?.trim()) {
     return item.href.trim();
   }
 
-  const titulo = item.title
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "");
+  const titulo = normalizar(item.title);
 
   if (
     titulo.includes("recuperacion") &&
@@ -55,7 +81,12 @@ const getHref = (item: Servicio): string | null => {
     return "/servicios/recuperacion-de-cuentas";
   }
 
-  if (titulo === "salud") {
+  if (
+    titulo === "salud" ||
+    titulo.includes("derecho a la salud") ||
+    titulo.includes("obras sociales") ||
+    titulo.includes("medicina prepaga")
+  ) {
     return "/servicios/salud";
   }
 
@@ -95,6 +126,7 @@ const getHref = (item: Servicio): string | null => {
       <div class="servicios-lista">
         {features.map((item: Servicio, index: number) => {
           const href = getHref(item);
+          const iconName = getIconName(item.icon);
 
           return (
             <div
@@ -103,8 +135,13 @@ const getHref = (item: Servicio): string | null => {
             >
               <div class="bloque-texto">
                 <div class="icono-titulo">
-                  {item.icon && (
-                    <Icon name={item.icon} />
+                  {iconName && (
+                    <span
+                      class="material-symbols-outlined servicio-icono"
+                      aria-hidden="true"
+                    >
+                      {iconName}
+                    </span>
                   )}
 
                   <h3>{item.title}</h3>
@@ -157,6 +194,26 @@ const getHref = (item: Servicio): string | null => {
 </Layout>
 
 <style>
+  /* Íconos Material Symbols */
+  .icono-titulo .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    flex-shrink: 0;
+    white-space: nowrap;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    color: #1f3a5f;
+  }
+
+  /* Botón individual */
   .servicio-boton {
     display: inline-flex;
     align-items: center;
@@ -191,7 +248,7 @@ const getHref = (item: Servicio): string | null => {
     outline-offset: 4px;
   }
 
-  .servicio-boton span {
+  .servicio-boton span:not(.material-symbols-outlined) {
     font-size: 1.2rem;
     transition: transform 0.3s ease;
   }

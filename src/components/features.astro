@@ -1,10 +1,8 @@
 
 ---
-import { Icon } from "astro-icon";
 import featuresData from "../../public/data/features.json";
 import Link from "./ui/link.astro";
 
-// Tipos de las features
 interface Feature {
   title: string;
   description?: string;
@@ -15,16 +13,13 @@ interface Feature {
   link?: string;
 }
 
-// Datos del JSON
 const features: Feature[] = featuresData;
 
-// Rutas de las páginas individuales
 const rutasServicios = {
   salud: "/servicios/salud",
   recuperacion: "/servicios/recuperacion-de-cuentas",
 } as const;
 
-// Normalizar textos para detectar servicios
 const normalizar = (texto: string): string => {
   return texto
     .toLowerCase()
@@ -33,9 +28,30 @@ const normalizar = (texto: string): string => {
     .trim();
 };
 
-// Obtener la ruta correspondiente
+// Resolver íconos Material Symbols
+const getIconName = (item: Feature): string => {
+  const icono = item.icon?.trim() || "";
+
+  // Compatibilidad con el nombre anterior
+  if (
+    icono === "account-reactivate" ||
+    icono === "account-reactivate-outline" ||
+    icono === "account-check-outline"
+  ) {
+    return "manage_accounts";
+  }
+
+  // Compatibilidad con datos anteriores
+  if (!icono && item.astroIcon?.startsWith("mdi:")) {
+    if (normalizar(item.title).includes("recuperacion")) {
+      return "manage_accounts";
+    }
+  }
+
+  return icono;
+};
+
 const getHref = (item: Feature): string | null => {
-  // Priorizar rutas definidas en el JSON
   const enlace = item.href || item.url || item.link;
 
   if (typeof enlace === "string" && enlace.trim()) {
@@ -44,7 +60,6 @@ const getHref = (item: Feature): string | null => {
 
   const titulo = normalizar(item.title);
 
-  // Recuperación de cuentas
   if (
     titulo.includes("recuperacion") &&
     titulo.includes("cuenta")
@@ -52,7 +67,6 @@ const getHref = (item: Feature): string | null => {
     return rutasServicios.recuperacion;
   }
 
-  // Salud
   if (
     titulo === "salud" ||
     titulo.includes("derecho a la salud") ||
@@ -81,13 +95,26 @@ const getHref = (item: Feature): string | null => {
     font-weight: 400;
   }
 
-  .material-symbols-outlined {
-    font-size: 2.5rem;
-    height: fit-content;
-  }
-
   h4 {
     padding-bottom: 4vh;
+  }
+
+  .material-symbols-outlined {
+    font-family: "Material Symbols Outlined";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2.5rem;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-feature-settings: "liga";
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    color: #1f3a5f;
   }
 
   .pill2 {
@@ -130,7 +157,7 @@ const getHref = (item: Feature): string | null => {
     </h2>
 
     <h4 class="text-lg mt-4 text-balance">
-      Nos desempe&ntilde;amos en las siguientes áreas
+      Nos desempeñamos en las siguientes áreas
     </h4>
 
     <Link
@@ -147,24 +174,19 @@ const getHref = (item: Feature): string | null => {
   >
     {features.map((item: Feature) => {
       const href = getHref(item);
+      const iconName = getIconName(item);
 
       return (
         <div class="flex gap-4 items-start w-full">
-          {/* Ícono del servicio */}
-          <div
-            class="bg-c rounded-full p-5 w-20 h-20 grid place-content-center shrink-0"
-          >
-            {item.icon && (
-              <span class="material-symbols-outlined">
-                {item.icon}
+          {/* Ícono Material Symbols */}
+          <div class="bg-c rounded-full p-5 w-20 h-20 grid place-content-center shrink-0">
+            {iconName && (
+              <span
+                class="material-symbols-outlined"
+                aria-hidden="true"
+              >
+                {iconName}
               </span>
-            )}
-
-            {item.astroIcon && (
-              <Icon
-                class="w-10 h-10"
-                name={item.astroIcon}
-              />
             )}
           </div>
 
@@ -178,7 +200,6 @@ const getHref = (item: Feature): string | null => {
               {item.description}
             </p>
 
-            {/* Botón a la página individual */}
             {href && (
               <Link
                 href={href}
